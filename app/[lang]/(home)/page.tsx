@@ -96,12 +96,12 @@ export default function HomePage() {
       />
       <main className="flex flex-1 flex-col items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="mb-4 text-2xl font-bold">Welcome to RMinte Docs</h1>
-          <p className="text-fd-muted-foreground">
+          <h1 className="text-black mb-4 text-2xl font-bold">Welcome to RMinte Docs</h1>
+          <p className="text-white">
             You can open{' '}
             <Link
               href="/docs"
-              className="text-fd-foreground font-semibold underline"
+              className="text-black font-semibold underline"
             >
               /docs
             </Link>{' '}
