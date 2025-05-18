@@ -1,0 +1,711 @@
+---
+title: Enterprise Quick Start Guide
+icon: Rocket
+---
+
+import { Callout } from 'fumadocs-ui/components/callout'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Step, Steps } from 'fumadocs-ui/components/steps'
+import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  This document provides enterprise users with a concise guide to using the RM-01, helping you and your team quickly master this revolutionary AI supercomputer and implement AI applications to meet business needs.
+</Callout>
+
+## Device Overview
+
+<div className="mb-8 bg-gradient-to-br from-blue-50/95 to-indigo-50/95 dark:from-blue-950/20 dark:to-indigo-950/30 rounded-xl border border-blue-100/70 dark:border-blue-800/40 overflow-hidden shadow-sm backdrop-blur-md">
+  <div className="p-7">
+    <h3 className="text-xl font-bold text-center mb-5 text-blue-800 dark:text-blue-200">RM-01 AI Supercomputer</h3>
+    
+    <p className="text-center mb-7 max-w-3xl mx-auto text-slate-700 dark:text-slate-300 leading-relaxed">
+      RM-01 is a portable AI supercomputer that combines high performance, high security, and ease of use, specifically designed for enterprise-level AI applications. It operates offline with local computation, significantly reducing data security risks and operational costs.
+    </p>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-blue-200/50 dark:border-blue-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-800/40 dark:to-blue-900/60 text-blue-600 dark:text-blue-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+            <span className="text-xl">💪</span>
+          </div>
+          <h4 className="text-lg font-semibold text-blue-800 dark:text-blue-200">Powerful Performance</h4>
+        </div>
+        <div className="pl-3 border-l-2 border-blue-200 dark:border-blue-700/60">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex items-start">
+              <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+              <span>Supports 300+ mainstream open-source models</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+              <span>Up to 800 TOPS computing power</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+              <span>128GB LPDDR5 high-speed memory</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-indigo-200/50 dark:border-indigo-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-indigo-50 dark:from-indigo-800/40 dark:to-indigo-900/60 text-indigo-600 dark:text-indigo-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+            <span className="text-xl">🔒</span>
+          </div>
+          <h4 className="text-lg font-semibold text-indigo-800 dark:text-indigo-200">Ultimate Security</h4>
+        </div>
+        <div className="pl-3 border-l-2 border-indigo-200 dark:border-indigo-700/60">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex items-start">
+              <span className="text-indigo-500 dark:text-indigo-400 mr-2">•</span>
+              <span>Hardware-level asymmetric encryption protection</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-indigo-500 dark:text-indigo-400 mr-2">•</span>
+              <span>Data processed locally, never transmitted externally</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-indigo-500 dark:text-indigo-400 mr-2">•</span>
+              <span>Anti-tamper physical security design</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-purple-200/50 dark:border-purple-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-800/40 dark:to-purple-900/60 text-purple-600 dark:text-purple-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+            <span className="text-xl">🚀</span>
+          </div>
+          <h4 className="text-lg font-semibold text-purple-800 dark:text-purple-200">Simple Deployment</h4>
+        </div>
+        <div className="pl-3 border-l-2 border-purple-200 dark:border-purple-700/60">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex items-start">
+              <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+              <span>Deployment setup completed within 5 minutes</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+              <span>Plug-and-play, no professional IT support needed</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+              <span>Maximum power consumption only 100W (TDP 60W)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Device Appearance and Interfaces
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/50 backdrop-blur-md rounded-lg border border-slate-200/70 dark:border-slate-700/40 p-5 shadow-sm hover:shadow-md transition-all">
+    <h4 className="font-semibold mb-4 text-center text-slate-800 dark:text-slate-200">Front and Side Interfaces</h4>
+    
+    <div className="space-y-4">
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 mr-3 text-blue-600 dark:text-blue-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">⏻</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">Power Button</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">Short press to turn on/off, long press for 5 seconds to force shutdown</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 mr-3 text-green-600 dark:text-green-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">●</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">Status Indicator</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">White: Running, Blue: Starting, Red: Error</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/50 backdrop-blur-md rounded-lg border border-slate-200/70 dark:border-slate-700/40 p-5 shadow-sm hover:shadow-md transition-all">
+    <h4 className="font-semibold mb-4 text-center text-slate-800 dark:text-slate-200">Top Interfaces</h4>
+    
+    <div className="space-y-4">
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900/30 mr-3 text-purple-600 dark:text-purple-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">💾</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">CFexpress Slot</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">For model storage, supports hot-swapping</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-teal-50 dark:bg-teal-900/30 mr-3 text-teal-600 dark:text-teal-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">📇</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">MicroSD Slot</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">For application and data storage</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-orange-50 dark:bg-orange-900/30 mr-3 text-orange-600 dark:text-orange-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">🔌</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">Ext. Port</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">For connecting external expansion devices</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/50 backdrop-blur-md rounded-lg border border-slate-200/70 dark:border-slate-700/40 p-5 shadow-sm hover:shadow-md transition-all">
+    <h4 className="font-semibold mb-4 text-center text-slate-800 dark:text-slate-200">Back and Expansion Interfaces</h4>
+    
+    <div className="space-y-4">
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-amber-50 dark:bg-amber-900/30 mr-3 text-amber-600 dark:text-amber-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">⚡</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">USB-C Power Port</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">Connect to power adapter (supports PD3.1)</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-indigo-50 dark:bg-indigo-900/30 mr-3 text-indigo-600 dark:text-indigo-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">🔌</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">USB-C Network Port</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">Connect to enterprise network or devices</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-red-50 dark:bg-red-900/30 mr-3 text-red-600 dark:text-red-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">♨️</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">Ventilation</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">Ensure good ventilation, do not block</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Quick Start
+
+### First-time Setup
+
+<Steps>
+  <Step>
+    ### Unboxing Inspection
+    Confirm the package contains the following items:
+    - RM-01 Main Unit
+    - USB-C Power Adapter
+    - USB-C to Network Adapter
+    - CFexpress Card with pre-installed models and applications
+    - Quick Start Guide
+  </Step>
+
+  <Step>
+    ### Connect Power
+    - Connect the USB-C power adapter to the RM-01
+    - Connect the power adapter to a power outlet
+  </Step>
+
+  <Step>
+    ### Start the Device
+    - Press the power button
+    - Wait for the device to boot (about 1-2 minutes)
+    - A steady white indicator light means the device is running normally
+  </Step>
+
+  <Step>
+    ### Device Connection
+    - Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, etc.)
+  </Step>
+</Steps>
+
+### Accessing the Management Interface
+
+<Tabs items={['Web Interface', 'Mobile App']}>
+  <Tab>
+    1. Open a browser on a computer in the same local network
+    2. Enter the device IP address or hostname (format: `http://rm01-xxxxx.local`, where xxxxx is the device serial number)
+    3. Log in using the default credentials:
+       - Username: `admin`
+       - Password: see label on device bottom
+  </Tab>
+  <Tab>
+    1. Download and install the "RM-01 Companion" app
+    2. Open the app and scan the QR code on the device
+    3. Follow the in-app prompts to complete the connection
+  </Tab>
+</Tabs>
+
+<Callout type="warning" className="border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm">
+  After first login, immediately change the default administrator password:
+  1. Log in to the management interface
+  2. Click the "Settings" icon in the top right corner
+  3. Select "Account Security"
+  4. Click "Change Password"
+  5. Enter and confirm the new password
+</Callout>
+
+## Using AI Applications
+
+### View and Launch Applications
+
+<Steps>
+  <Step>
+    ### View Available Applications
+    1. Log in to the management interface
+    2. Click the "App Library" tab
+    3. Browse the list of installed AI applications
+  </Step>
+
+  <Step>
+    ### Get Application Details
+    Click on the application name to view details, including functionality introduction, usage scenarios, and required resources
+  </Step>
+
+  <Step>
+    ### Launch Application
+    1. Click the "Launch" button
+    2. The application will open in a new tab
+    3. Follow the application prompts to operate
+  </Step>
+</Steps>
+
+### Common Application Types and Usage Scenarios
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-8">
+  <div className="group bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-800/40 dark:to-blue-900/20 rounded-lg shadow-sm p-5 border border-blue-100/60 dark:border-blue-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-800/50 dark:to-blue-900/70 text-blue-600 dark:text-blue-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">📄</span>
+      </div>
+      <h4 className="text-base font-semibold text-blue-800 dark:text-blue-200 group-hover:translate-x-1 transition-transform duration-300">Intelligent Document Assistant</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 opacity-70">•</span>
+        <span>Upload enterprise documents (contracts, reports, policies, etc.)</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 opacity-70">•</span>
+        <span>AI automatically analyzes and extracts key information</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 opacity-70">•</span>
+        <span>Answer precise queries about document content</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="group bg-gradient-to-br from-white/80 to-teal-50/80 dark:from-gray-800/40 dark:to-teal-900/20 rounded-lg shadow-sm p-5 border border-teal-100/60 dark:border-teal-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-teal-100 to-teal-50 dark:from-teal-800/50 dark:to-teal-900/70 text-teal-600 dark:text-teal-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">📊</span>
+      </div>
+      <h4 className="text-base font-semibold text-teal-800 dark:text-teal-200 group-hover:translate-x-1 transition-transform duration-300">Data Analysis Assistant</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-teal-500 dark:text-teal-400 mr-2 opacity-70">•</span>
+        <span>Upload enterprise data (CSV, Excel, JSON formats)</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-teal-500 dark:text-teal-400 mr-2 opacity-70">•</span>
+        <span>AI automatically analyzes data trends and anomalies</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-teal-500 dark:text-teal-400 mr-2 opacity-70">•</span>
+        <span>Generate interactive data visualization reports</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="group bg-gradient-to-br from-white/80 to-purple-50/80 dark:from-gray-800/40 dark:to-purple-900/20 rounded-lg shadow-sm p-5 border border-purple-100/60 dark:border-purple-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-800/50 dark:to-purple-900/70 text-purple-600 dark:text-purple-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">👥</span>
+      </div>
+      <h4 className="text-base font-semibold text-purple-800 dark:text-purple-200 group-hover:translate-x-1 transition-transform duration-300">Customer Service Assistant</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-purple-500 dark:text-purple-400 mr-2 opacity-70">•</span>
+        <span>Analyze customer feedback and inquiry patterns</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-purple-500 dark:text-purple-400 mr-2 opacity-70">•</span>
+        <span>Automatically generate personalized response suggestions</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-purple-500 dark:text-purple-400 mr-2 opacity-70">•</span>
+        <span>Extract customer needs insights and improvement directions</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="group bg-gradient-to-br from-white/80 to-amber-50/80 dark:from-gray-800/40 dark:to-amber-900/20 rounded-lg shadow-sm p-5 border border-amber-100/60 dark:border-amber-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-100 to-amber-50 dark:from-amber-800/50 dark:to-amber-900/70 text-amber-600 dark:text-amber-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">✍️</span>
+      </div>
+      <h4 className="text-base font-semibold text-amber-800 dark:text-amber-200 group-hover:translate-x-1 transition-transform duration-300">Content Creation Assistant</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 opacity-70">•</span>
+        <span>Assist in writing marketing copy, product descriptions, reports</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 opacity-70">•</span>
+        <span>Provide style consistency and content revision suggestions</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 opacity-70">•</span>
+        <span>Support translation and localization in 30+ languages</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+## Data Management
+
+### Data Import
+
+<Tabs items={['Single File Upload', 'Batch Import']}>
+  <Tab>
+    1. Find the "Upload" or "Import" button in the application
+    2. Select the file to upload
+    3. Wait for the upload to complete
+  </Tab>
+  <Tab>
+    1. Prepare the files to be imported
+    2. Use the provided batch import tool
+    3. Select the folder or multiple files
+    4. Start the import process
+  </Tab>
+</Tabs>
+
+### Data Security Guarantees
+
+<Callout type="info" emoji="🔒" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  RM-01 uses multiple security measures to protect your data
+</Callout>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <Card title="Local Processing">
+    All data is processed within the device, never uploaded to the cloud
+  </Card>
+  <Card title="Hardware Encryption">
+    Uses asymmetric encryption technology to protect stored data
+  </Card>
+  <Card title="IP5X Sealing">
+    Dust and moisture-proof design, prevents physical disassembly
+  </Card>
+  <Card title="Permission Control">
+    Granular user permission management system
+  </Card>
+</div>
+
+### Data Backup (Optional)
+
+<Callout type="tip" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+  Although RM-01 has high reliability, regular backups of important data are recommended
+</Callout>
+
+<Steps>
+  <Step>
+    ### Access Backup Interface
+    In the management interface, select "System Maintenance", then click "Create Backup"
+  </Step>
+  
+  <Step>
+    ### Select Backup Content
+    You can choose application data, user settings, etc.
+  </Step>
+  
+  <Step>
+    ### Select Backup Location
+    Options include local network, external storage, etc.
+  </Step>
+  
+  <Step>
+    ### Start Backup
+    Click "Start Backup" and wait for completion
+  </Step>
+</Steps>
+
+## User Management
+
+### Adding Users
+
+<Steps>
+  <Step>
+    ### Log in as Administrator
+    Use an administrator account to access the management interface
+  </Step>
+  
+  <Step>
+    ### Enter User Management
+    Click on the "User Management" option in the left navigation bar
+  </Step>
+  
+  <Step>
+    ### Create New User
+    Click the "Add User" button
+  </Step>
+  
+  <Step>
+    ### Fill in User Information
+    Enter username, email, initial password, and permission level
+  </Step>
+  
+  <Step>
+    ### Complete Creation
+    Click the "Create" button to complete user addition
+  </Step>
+</Steps>
+
+### Permission Settings
+
+RM-01 supports granular permission control:
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <Card title="Administrator">
+    Full access permissions, including system settings
+  </Card>
+  <Card title="Advanced User">
+    Can use all applications, manage their own data
+  </Card>
+  <Card title="Standard User">
+    Can use designated applications, restricted data access
+  </Card>
+  <Card title="Guest">
+    Can only use specific demo applications
+  </Card>
+</div>
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  **Adjusting User Permissions**
+  1. Enter "User Management"
+  2. Select the user to modify
+  3. Click "Edit Permissions"
+  4. Set application access permissions and data access scope
+  5. Save changes
+</Callout>
+
+## Regular Maintenance
+
+### Status Monitoring
+
+<Callout type="tip" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+  Regular system status checks ensure smooth operation
+</Callout>
+
+After logging into the management interface, check the system status information on the dashboard:
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+  <Card title="Performance Metrics">
+    - CPU usage
+    - Memory usage
+  </Card>
+  <Card title="Storage Status">
+    - Storage space usage
+    - Data read/write speed
+  </Card>
+  <Card title="System Status">
+    - Operating temperature
+    - Network connection status
+  </Card>
+</div>
+
+### Update Management
+
+<Tabs items={['Model Updates', 'Application Updates', 'System Updates']}>
+  <Tab>
+    1. Log in to the management interface
+    2. Go to "Model Management"
+    3. Check for available updates
+    4. Select the models to update
+    5. Click the "Update" button
+  </Tab>
+  <Tab>
+    1. Go to "App Library"
+    2. Check for applications marked as "Updatable"
+    3. Click the "Update" button
+    4. Wait for the update to complete
+  </Tab>
+  <Tab>
+    1. Go to "System Maintenance"
+    2. Select "Check for Updates"
+    3. If updates are available, click "Install Updates"
+    4. The device will automatically complete the update and restart
+  </Tab>
+</Tabs>
+
+### Performance Optimization
+
+<Callout type="warning" className="border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm">
+  If you notice device performance degradation, try the following steps
+</Callout>
+
+<Steps>
+  <Step>
+    ### Close Unused Applications
+    Go to "Application Management" and stop any applications you don't need
+  </Step>
+  
+  <Step>
+    ### Clear Cache
+    Go to "System Maintenance" and select the "Clear Cache" option
+  </Step>
+  
+  <Step>
+    ### Restart Device
+    Select "Restart" in the management interface, or short press the power button and select "Restart"
+  </Step>
+</Steps>
+
+## Frequently Asked Questions
+
+<Tabs items={['Device Issues', 'Application Issues', 'Network Issues', 'Performance Issues']}>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **Device won't start**
+    </Callout>
+    
+    **Possible causes and solutions**:
+    - **Power issue**: Check power adapter connection, ensure using original power supply
+    - **Storage card issue**: Try removing and reinserting the storage card
+    - **System issue**: Hold the power button for 10 seconds to force shutdown, then restart
+  </Tab>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **Application won't start**
+    </Callout>
+    
+    **Possible causes and solutions**:
+    - **Insufficient resources**: Close other running applications
+    - **Corrupted application**: Reinstall the application
+    - **Model issue**: Check if the required models are correctly loaded
+  </Tab>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **Can't connect to network**
+    </Callout>
+    
+    **Possible causes and solutions**:
+    - **Network adapter issue**: Check the USB-C network adapter connection
+    - **Network settings error**: Check network configuration, especially IP address settings
+    - **Firewall restrictions**: Confirm the enterprise firewall is not blocking the device connection
+  </Tab>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **Poor performance**
+    </Callout>
+    
+    **Possible causes and solutions**:
+    - **Multiple applications running simultaneously**: Reduce the number of running applications
+    - **Large model load**: Switch to a smaller model
+    - **High temperature**: Ensure good device ventilation, avoid stacking
+    - **Insufficient storage space**: Clear unnecessary data
+  </Tab>
+</Tabs>
+
+## Getting Support
+
+### Service Provider Contact Information
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <Card title="Technical Support Hotline" icon="📞">
+    400-XXX-XXXX (Weekdays 9:00-18:00)
+  </Card>
+  <Card title="Email" icon="✉️">
+    support@rminte.com
+  </Card>
+  <Card title="Online Support" icon="💬">
+    https://support.rminte.com
+  </Card>
+</div>
+
+### Enterprise-Exclusive Support Channels
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  As an enterprise user, you enjoy exclusive support services
+</Callout>
+
+<Steps>
+  <Step>
+    ### Log in to Management Interface
+    Use an administrator account to log in to the system
+  </Step>
+  
+  <Step>
+    ### Enter Support Center
+    Click the "Support Center" option
+  </Step>
+  
+  <Step>
+    ### Submit Ticket
+    Click the "Submit Ticket" button
+  </Step>
+  
+  <Step>
+    ### Describe the Issue
+    Provide a detailed description of the problem you're experiencing
+  </Step>
+  
+  <Step>
+    ### Add Attachments
+    Attach relevant logs or screenshots (if available)
+  </Step>
+  
+  <Step>
+    ### Submit Ticket
+    After submission, dedicated technical support will respond within 2 hours
+  </Step>
+</Steps>
+
+### Learning Resources
+
+<Cards>
+  <Card title="Knowledge Base" href="https://kb.rminte.com" icon="📚" />
+  <Card title="Video Tutorials" href="https://academy.rminte.com" icon="🎬" />
+  <Card title="Developer Community" href="https://developer.rminte.com" icon="👨‍💻" />
+  <Card title="User Forum" href="https://forum.rminte.com" icon="💬" />
+</Cards>
+
+---
+
+<Callout type="success" emoji="🎉" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+  Congratulations! You have completed the basic setup and usage overview of RM-01! Now you can start exploring the endless possibilities that AI technology brings to your enterprise. If you have any questions, please contact your service provider or visit our support center for assistance.
+</Callout>
+
+<div className="text-sm text-gray-500 mt-8">
+  © 2025 RMinte Inc. All rights reserved.
+</div>
+
+## Next Steps
+
+<Cards>
+  <Card title="Learn More About RM-01 Features" href="/docs/product-features" icon="✨" />
+  <Card title="Explore RM-01 Use Cases" href="/docs/use-cases" icon="🚀" />
+  <Card title="Developer Resources" href="/docs/developer" icon="💻" />
+</Cards>

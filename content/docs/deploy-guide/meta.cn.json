@@ -1,0 +1,14 @@
+{
+  "title": "企业服务与部署",
+  "description": "RM-01 企业部署流程",
+  "root": true,
+  "icon": "Building",
+  "iconColor": "color-fd-primary",
+  "pages": [
+    "---快速上手---",
+    "find-source",
+    "---部署指南---",
+    "deploy",
+    "security-guide"
+  ]
+}

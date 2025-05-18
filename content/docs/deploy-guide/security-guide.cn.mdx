@@ -1,0 +1,1042 @@
+---
+title: 部署安全实践
+icon: Fingerprint
+---
+import { Step, Steps } from 'fumadocs-ui/components/steps'
+import { Callout } from 'fumadocs-ui/components/callout'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+    本文档详细介绍了如何在 RM-01 平台上安全地部署模型和应用，保护知识产权和企业数据安全，同时确保稳定高效的运行。面向服务提供商、应用开发者和企业 IT 管理员，提供了全面的安全指导。
+</Callout>
+
+## 概览
+
+- [安全架构概述](#安全架构概述) - RM-01 的多层次安全架构设计与零信任安全模型
+- [密钥管理](#密钥管理) - 设备、渠道商与开发者密钥的生成与安全管理
+- [模型安全部署](#模型安全部署) - 模型加密、安全传输和完整性验证方案
+- [应用安全分发](#应用安全分发) - 应用打包、签名和零信任分发流程
+- [数据安全处理](#数据安全处理) - 数据隔离、加密与生命周期安全管理
+- [企业环境安全集成](#企业环境安全集成) - 与企业身份认证、网络与监控系统的安全集成
+- [安全审计与合规](#安全审计与合规) - 审计日志配置与多种合规标准支持
+- [安全最佳实践清单](#安全最佳实践清单) - 全面的安全部署检查清单
+
+## 安全架构概述
+
+<div className="mb-6 bg-gradient-to-br from-gray-50/90 to-gray-100/90 dark:from-gray-800/30 dark:to-gray-900/50 rounded-lg p-6 border border-gray-200/70 dark:border-gray-700/40 backdrop-blur-md">
+  <p className="text-slate-700 dark:text-slate-300">
+    RM-01 采用多层次安全架构，从硬件到应用层面提供全方位保护，确保模型、应用和数据的安全性。
+  </p>
+</div>
+
+### 三大核心安全模块
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-blue-200/50 dark:border-blue-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-800/40 dark:to-blue-900/60 text-blue-600 dark:text-blue-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+        <span className="text-xl">🔐</span>
+      </div>
+      <h4 className="text-lg font-semibold text-blue-800 dark:text-blue-200">SAM (安全认证模块)</h4>
+    </div>
+    <div className="pl-3 border-l-2 border-blue-200 dark:border-blue-700/60">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>基于 ESP32 芯片的硬件级非对称加密</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>管理设备唯一密钥对</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>处理所有加密和认证操作</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-purple-200/50 dark:border-purple-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-800/40 dark:to-purple-900/60 text-purple-600 dark:text-purple-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+        <span className="text-xl">🧠</span>
+      </div>
+      <h4 className="text-lg font-semibold text-purple-800 dark:text-purple-200">MIM (模型推理模块)</h4>
+    </div>
+    <div className="pl-3 border-l-2 border-purple-200 dark:border-purple-700/60">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+          <span>物理隔离设计，无法直接访问</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+          <span>模型加载过程中进行完整性验证</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+          <span>运行时内存保护机制</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-teal-200/50 dark:border-teal-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-teal-100 to-teal-50 dark:from-teal-800/40 dark:to-teal-900/60 text-teal-600 dark:text-teal-30 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+        <span className="text-xl">📱</span>
+      </div>
+      <h4 className="text-lg font-semibold text-teal-800 dark:text-teal-200">ADM (应用部署模块)</h4>
+    </div>
+    <div className="pl-3 border-l-2 border-teal-200 dark:border-teal-700/60">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-teal-500 dark:text-teal-400 mr-2">•</span>
+          <span>应用沙箱隔离技术</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-teal-500 dark:text-teal-400 mr-2">•</span>
+          <span>Docker 容器化运行环境</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-teal-500 dark:text-teal-400 mr-2">•</span>
+          <span>强制访问控制策略</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### 零信任安全模型
+
+<div className="bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900/30 dark:to-gray-900/30 rounded-lg p-6 mb-6 border border-gray-200/80 dark:border-gray-700/40 backdrop-blur-sm">
+  <h4 className="text-lg font-semibold mb-4 text-slate-800 dark:text-slate-200">RM-01 实现了完整的零信任安全模型</h4>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mr-3">
+        <span className="text-sm">🔍</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">设备认证</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">每台 RM-01 都有唯一硬件指纹</p>
+      </div>
+    </div>
+    
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-300 mr-3">
+        <span className="text-sm">✓</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">应用认证</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">所有应用必须经过签名验证</p>
+      </div>
+    </div>
+    
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 mr-3">
+        <span className="text-sm">⟳</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">持续验证</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">运行时持续进行完整性检查</p>
+      </div>
+    </div>
+    
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 mr-3">
+        <span className="text-sm">🛡️</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">最小权限</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">应用只能访问所需的最小资源集</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 密钥管理
+
+<div className="mb-6 bg-gradient-to-r from-amber-50/90 to-yellow-50/90 dark:from-amber-900/20 dark:to-yellow-900/20 rounded-lg p-6 border border-amber-100/70 dark:border-amber-700/30 backdrop-blur-sm">
+  <p className="text-slate-700 dark:text-slate-300">
+    密钥是 RM-01 安全架构的基础，正确管理密钥至关重要。加密密钥的生成、分发、使用和存储必须遵循严格的安全协议。
+  </p>
+</div>
+
+### 密钥体系架构
+
+<div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-gray-200/50 dark:border-gray-600/30 backdrop-blur-sm mb-6">
+  <div className="grid grid-cols-3 gap-4 mb-4">
+    <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg text-center border border-blue-100 dark:border-blue-800/50">
+      <div className="font-medium text-blue-800 dark:text-blue-300">开发者公钥</div>
+      <div className="text-xs text-blue-600 dark:text-blue-400 mt-1">应用签名</div>
+    </div>
+    <div className="bg-purple-50 dark:bg-purple-900/30 p-3 rounded-lg text-center border border-purple-100 dark:border-purple-800/50">
+      <div className="font-medium text-purple-800 dark:text-purple-300">设备密钥对</div>
+      <div className="text-xs text-purple-600 dark:text-purple-400 mt-1">硬件绑定</div>
+    </div>
+    <div className="bg-teal-50 dark:bg-teal-900/30 p-3 rounded-lg text-center border border-teal-100 dark:border-teal-800/50">
+      <div className="font-medium text-teal-800 dark:text-teal-300">服务商公钥</div>
+      <div className="text-xs text-teal-600 dark:text-teal-400 mt-1">模型加密</div>
+    </div>
+  </div>
+
+  <div className="text-sm text-slate-600 dark:text-slate-300 pl-4 border-l-2 border-amber-300 dark:border-amber-700/60 py-1 mb-4">
+    所有密钥均采用非对称加密技术（RSA-4096 或 ECC），私钥受硬件保护永不导出
+  </div>
+</div>
+
+### 设备密钥生成与管理
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 border border-gray-200/60 dark:border-gray-700/30 backdrop-blur-sm">
+    <h4 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">密钥生成流程</h4>
+    <div className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        1. 设备初始化启动 SAM 安全模块
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        2. 识别唯一设备指纹（基于硬件码）
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        3. 生成 ECC 密钥对，私钥存储在安全区
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        4. 公钥绑定设备指纹并生成证书
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        5. 设备证书在后台激活并注册
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 border border-gray-200/60 dark:border-gray-700/30 backdrop-blur-sm">
+    <h4 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">安全特性</h4>
+    <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>私钥永不离开硬件安全区，无法导出</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>密钥绑定物理设备指纹，防止克隆</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>启用防篡改保护，检测物理攻击</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>支持密钥撤销和证书状态检查</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>采用 NIST P-384 曲线，抵御量子计算威胁</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+### 开发者密钥管理
+
+<div className="mb-6 bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+  <div className="flex items-start mb-4">
+    <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mr-3">
+      <span className="text-lg">🔑</span>
+    </div>
+    <div>
+      <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200">开发者密钥申请流程</h4>
+      <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
+        通过安全认证后，开发者可获取用于签名应用的密钥对
+      </p>
+    </div>
+  </div>
+  
+  <div className="border-l-2 border-blue-300 dark:border-blue-700 pl-4 ml-2 space-y-4">
+    <Steps>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">申请密钥</span> - 
+          在开发者门户完成身份验证并申请密钥
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">身份核验</span> - 
+          平台验证开发者身份和资质
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">密钥生成</span> - 
+          生成专属开发者密钥对，私钥安全传输
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">权限配置</span> - 
+          设置密钥权限范围和使用限制
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">密钥使用</span> - 
+          使用密钥签名应用并发布
+        </div>
+      </Step>
+    </Steps>
+  </div>
+</div>
+
+### 密钥安全最佳实践
+
+<div className="bg-gradient-to-r from-amber-50/80 to-amber-50/80 dark:from-amber-900/20 dark:to-amber-900/20 rounded-lg p-5 mb-6 border border-amber-100/70 dark:border-amber-800/30">
+  <h4 className="text-lg font-semibold mb-3 text-amber-800 dark:text-amber-300">开发者密钥保护建议</h4>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded border border-amber-200/50 dark:border-amber-700/30 p-3">
+      <h5 className="font-medium text-amber-700 dark:text-amber-400 mb-2 text-sm">存储安全</h5>
+      <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>使用硬件安全密钥存储设备</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>避免存储在开发环境</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>使用密钥管理系统</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded border border-amber-200/50 dark:border-amber-700/30 p-3">
+      <h5 className="font-medium text-amber-700 dark:text-amber-400 mb-2 text-sm">访问控制</h5>
+      <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>实施最小权限原则</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>使用多因素认证</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>记录所有访问操作</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded border border-amber-200/50 dark:border-amber-700/30 p-3">
+      <h5 className="font-medium text-amber-700 dark:text-amber-400 mb-2 text-sm">使用策略</h5>
+      <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>定期轮换密钥</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>仅在安全环境使用</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>安全处理密钥备份</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="mt-4 pt-3 border-t border-amber-200/50 dark:border-amber-700/30 text-sm text-slate-600 dark:text-slate-300 italic">
+    遵循密钥安全最佳实践对保护应用和数据至关重要，一旦密钥泄露可能导致整个安全链条失效
+  </div>
+</div>
+
+## 模型安全部署
+
+<div className="mb-6 bg-gradient-to-r from-indigo-50/90 to-blue-50/90 dark:from-indigo-900/20 dark:to-blue-900/20 rounded-lg p-6 border border-indigo-100/70 dark:border-indigo-700/30 backdrop-blur-sm">
+  <p className="text-slate-700 dark:text-slate-300">
+    模型是 RM-01 平台最核心的资产，安全部署模型对保护知识产权和防止未授权使用至关重要。整个部署流程包括模型准备、加密分发和安全加载三个阶段。
+  </p>
+</div>
+
+### 模型准备
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-5 border border-indigo-200/60 dark:border-indigo-700/30 backdrop-blur-sm">
+    <h4 className="flex items-center text-lg font-semibold mb-3 text-indigo-800 dark:text-indigo-300">
+      <span className="w-7 h-7 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 mr-2 text-sm">1</span>
+      模型加密与签名
+    </h4>
+
+    <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+      <p>
+        模型发布前必须进行加密和签名，确保只能在授权设备上运行
+      </p>
+
+      <pre className="bg-indigo-50/70 dark:bg-indigo-900/30 p-3 rounded border border-indigo-100 dark:border-indigo-800/40 font-mono text-xs">
+<span className="text-indigo-600 dark:text-indigo-400">$</span> rminte-cli encrypt-model \
+  --model-path ./models/my-model.bin \
+  --target-devices "device-id-1,device-id-2" \
+  --expiry "2025-12-31" \
+  --output ./encrypted/
+      </pre>
+
+      <div className="pl-3 border-l-2 border-indigo-300 dark:border-indigo-700 text-xs italic">
+        此过程使用目标设备的公钥加密模型，确保只有指定设备可以解密
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-5 border border-indigo-200/60 dark:border-indigo-700/30 backdrop-blur-sm">
+    <h4 className="flex items-center text-lg font-semibold mb-3 text-indigo-800 dark:text-indigo-300">
+      <span className="w-7 h-7 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 mr-2 text-sm">2</span>
+      模型验证与打包
+    </h4>
+
+    <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+      <p>
+        对加密模型进行验证和打包，添加元数据和访问控制信息
+      </p>
+
+      <pre className="bg-indigo-50/70 dark:bg-indigo-900/30 p-3 rounded border border-indigo-100 dark:border-indigo-800/40 font-mono text-xs">
+<span className="text-indigo-600 dark:text-indigo-400">$</span> rminte-cli package-model \
+  --encrypted-model ./encrypted/my-model.enc \
+  --metadata ./meta/model-info.json \
+  --permissions "inference=allow,export=deny" \
+  --output ./dist/my-model.rmpkg
+      </pre>
+
+      <div className="pl-3 border-l-2 border-indigo-300 dark:border-indigo-700 text-xs italic">
+        打包过程添加模型元数据，包括版本、创建者、权限和使用限制
+      </div>
+    </div>
+  </div>
+</div>
+
+### 安全传输到存储卡
+
+<Steps>
+  <Step>
+    #### 准备 CFexpress 卡
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-green-500 dark:text-green-400 mr-2">•</span>
+          <span>使用 RM-01 认证的 CFexpress 卡</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-green-500 dark:text-green-400 mr-2">•</span>
+          <span>格式化为 RM-01 专用格式</span>
+        </li>
+      </ul>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md mt-3 overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-storage-cli format --device /dev/sdX --type cfexpress
+      </div>
+    </div>
+  </Step>
+  
+  <Step>
+    #### 模型传输
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md mb-3 overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-storage-cli copy --source ./encrypted_model --target /mnt/cfexpress --verify
+      </div>
+      <p className="text-sm text-slate-600 dark:text-slate-300 italic">
+        <span className="text-amber-600 dark:text-amber-400 font-semibold">--verify</span> 参数非常重要，确保数据传输过程中没有被篡改或损坏。
+      </p>
+    </div>
+  </Step>
+  
+  <Step>
+    #### 物理安全
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>使用加密传输箱运送存储卡</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>使用篡改证明封条</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>追踪存储卡运送过程</span>
+        </li>
+      </ul>
+    </div>
+  </Step>
+</Steps>
+
+### 模型加载验证
+
+<Tabs items={['完整性验证', '性能验证', '安全扫描']} className="mt-4">
+  <Tab>
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+        RM-01 在加载模型时自动验证签名和完整性，检查加载日志确认验证成功：
+      </p>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-cli logs --module model-loader --last 50
+      </div>
+      <div className="mt-3 p-2 rounded bg-slate-100 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        INFO [model-loader] 加载模型 "glm-4" 中...<br/>
+        INFO [model-loader] 验证模型签名...<br/>
+        INFO [model-loader] 签名验证成功<br/>
+        INFO [model-loader] 检查模型完整性...<br/>
+        INFO [model-loader] 完整性检查通过<br/>
+        INFO [model-loader] 模型加载成功
+      </div>
+    </div>
+  </Tab>
+  <Tab>
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+        运行标准推理测试确保模型能够正常工作并达到预期性能：
+      </p>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-cli benchmark --model model_name --iterations 100
+      </div>
+      <div className="mt-3 p-2 rounded bg-slate-100 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        运行性能测试: 100 次迭代<br/>
+        平均推理时间: 25.3 ms<br/>
+        吞吐量: 39.5 推理/秒<br/>
+        95% 延迟: 31.2 ms<br/>
+        内存使用: 5.2 GB
+      </div>
+    </div>
+  </Tab>
+  <Tab>
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+        运行模型安全扫描检测潜在后门和安全漏洞：
+      </p>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-security-cli scan-model --model model_name
+      </div>
+      <div className="mt-3 p-2 rounded bg-slate-100 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        运行模型安全扫描...<br/>
+        检查后门触发器...<br/>
+        检查权重异常...<br/>
+        验证激活函数...<br/>
+        扫描完成，未发现安全漏洞
+      </div>
+    </div>
+  </Tab>
+</Tabs>
+
+## 应用安全分发
+
+### 应用准备
+
+1. **应用打包**
+   ```bash
+   # 将应用打包为 RM-01 格式
+   rm01-dev-cli package --app-dir ./myapp --output myapp.rmap
+   ```
+
+2. **应用签名**
+   ```bash
+   # 使用开发者密钥签名应用
+   rm01-dev-cli sign --app myapp.rmap --key developer_private.pem --output signed_myapp.rmap
+   ```
+
+3. **应用加密**
+   ```bash
+   # 使用渠道商公钥或设备公钥加密应用
+   rm01-dev-cli encrypt --app signed_myapp.rmap --public-key distributor_public.pem --output encrypted_myapp.rmap
+   ```
+
+### 零信任应用分发
+
+以下流程确保应用只能在授权的设备上运行：
+
+1. **渠道商阶段**
+   ```bash
+   # 渠道商获取设备公钥并添加到分发系统
+   rm01-distributor-cli add-device --public-key device_public.pem --device-id "RM01-12345"
+   
+   # 将应用重新加密为特定设备专用
+   rm01-distributor-cli reencrypt --app encrypted_myapp.rmap --device-id "RM01-12345" --output device_specific_app.rmap
+   ```
+
+2. **存储卡准备**
+   ```bash
+   # 将应用复制到 microSD 卡
+   rm01-storage-cli copy --source device_specific_app.rmap --target /mnt/microsd/apps/ --verify
+   ```
+
+3. **应用部署验证**
+   - 插入存储卡到目标 RM-01 设备
+   - 设备会自动验证并解密应用
+   - 查看部署日志确认成功
+   ```bash
+   rm01-cli logs --module app-deployer --last 50
+   ```
+
+### 应用更新安全
+
+1. **增量更新包**
+   ```bash
+   # 创建增量更新包（减小分发体积）
+   rm01-dev-cli create-update --old-version myapp_v1.rmap --new-version myapp_v2.rmap --output update_patch.rmap
+   ```
+
+2. **更新包签名和加密**
+   ```bash
+   # 签名
+   rm01-dev-cli sign --app update_patch.rmap --key developer_private.pem --output signed_update.rmap
+   
+   # 加密
+   rm01-dev-cli encrypt --app signed_update.rmap --public-key distributor_public.pem --output encrypted_update.rmap
+   ```
+
+3. **安全分发更新**
+   - 通过存储卡分发
+   - 或通过安全更新服务器（如企业内有网络连接）
+
+## 数据安全处理
+
+### 数据隔离
+
+1. **应用数据隔离**
+   ```yaml
+   # 应用 manifest.yaml 中的数据隔离配置
+   security:
+     data_isolation:
+       level: "strict"
+       storage:
+         private: "/data/private"
+         shared: "/data/shared"
+       network:
+         isolated: true
+   ```
+
+2. **多租户隔离**
+   ```yaml
+   # 系统配置中的多用户隔离
+   system:
+     multi_tenant:
+       enabled: true
+       isolation:
+         storage: true
+         memory: true
+         process: true
+   ```
+
+### 数据加密
+
+1. **静态数据加密**
+   ```python
+   from rminte.security import DataEncryptor
+   
+   # 初始化加密器
+   encryptor = DataEncryptor()
+   
+   # 加密数据
+   encrypted_data = encryptor.encrypt(sensitive_data)
+   
+   # 安全存储
+   with open('secure_data.enc', 'wb') as f:
+       f.write(encrypted_data)
+   ```
+
+2. **传输中数据加密**
+   ```python
+   from rminte.security import SecureChannel
+   
+   # 初始化安全通道
+   secure_channel = SecureChannel()
+   
+   # 加密通信
+   encrypted_message = secure_channel.encrypt(message, recipient_public_key)
+   
+   # 发送加密消息
+   send_data(encrypted_message)
+   ```
+
+3. **内存数据保护**
+   ```python
+   from rminte.security import SecureMemory
+   
+   # 创建安全内存区
+   secure_mem = SecureMemory(size_mb=10)
+   
+   # 在安全内存中处理敏感数据
+   with secure_mem.context() as mem:
+       mem.write(sensitive_data)
+       # 处理数据
+       result = process_sensitive_data(mem.read())
+   
+   # 退出上下文后，安全内存自动清除
+   ```
+
+### 数据生命周期管理
+
+1. **数据留存策略**
+   ```yaml
+   # 应用中的数据留存配置
+   data_retention:
+     temp_data: "session"  # 会话结束后删除
+     cache: "1d"  # 保留 1 天
+     logs: "30d"  # 保留 30 天
+     user_data: "persistent"  # 永久保留，除非手动删除
+   ```
+
+2. **自动数据清理**
+   ```python
+   from rminte.security import DataCleaner
+   
+   # 配置数据清理器
+   cleaner = DataCleaner(
+       temp_dir="/app/temp",
+       retention="4h",
+       secure_delete=True
+   )
+   
+   # 注册清理任务
+   cleaner.register()
+   
+   # 手动触发清理
+   cleaner.cleanup()
+   ```
+
+3. **安全删除**
+   ```python
+   from rminte.security import SecureDelete
+   
+   # 安全删除文件（多次覆写）
+   SecureDelete.file("/path/to/sensitive-file.dat")
+   
+   # 安全清理目录
+   SecureDelete.directory("/path/to/sensitive-dir")
+   ```
+
+## 企业环境安全集成
+
+### 企业认证集成
+
+1. **LDAP/Active Directory 集成**
+   ```yaml
+   # 系统认证配置
+   authentication:
+     ldap:
+       enabled: true
+       server: "ldap://ldap.company.com:389"
+       bind_dn: "cn=rm01bind,ou=serviceaccounts,dc=company,dc=com"
+       bind_password: "${SECURE_LDAP_PASSWORD}"
+       user_base_dn: "ou=users,dc=company,dc=com"
+       group_base_dn: "ou=groups,dc=company,dc=com"
+       require_group: "cn=ai-users,ou=groups,dc=company,dc=com"
+   ```
+
+2. **单点登录集成**
+   ```yaml
+   # SSO 配置
+   authentication:
+     sso:
+       enabled: true
+       provider: "oauth2"
+       client_id: "${SSO_CLIENT_ID}"
+       client_secret: "${SSO_CLIENT_SECRET}"
+       auth_url: "https://auth.company.com/authorize"
+       token_url: "https://auth.company.com/token"
+       userinfo_url: "https://auth.company.com/userinfo"
+       scope: "openid profile email"
+       role_attribute: "groups"
+   ```
+
+### 网络安全设置
+
+1. **网络隔离配置**
+   ```yaml
+   # 网络安全配置
+   network:
+     isolation:
+       enabled: true
+       allow_outbound: false
+       allow_inbound:
+         - port: 8443
+           protocol: "tcp"
+           description: "管理接口"
+           ip_restrict: ["10.0.0.0/8", "192.168.0.0/16"]
+   ```
+
+2. **TLS 配置**
+   ```yaml
+   # TLS/HTTPS 配置
+   tls:
+     enabled: true
+     cert_source: "provided"  # 或 "self-signed", "acme"
+     cert_path: "/etc/rm01/certs/server.crt"
+     key_path: "/etc/rm01/certs/server.key"
+     min_version: "TLS1.2"
+     ciphers:
+       - "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+       - "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+   ```
+
+### 安全日志与监控
+
+1. **日志聚合集成**
+   ```yaml
+   # 日志配置
+   logging:
+     level: "info"  # debug, info, warning, error
+     format: "json"
+     aggregation:
+       enabled: true
+       destination: "syslog"  # syslog, splunk, elasticsearch
+       syslog:
+         server: "10.0.0.15"
+         port: 514
+         protocol: "tls"
+         facility: "local4"
+   ```
+
+2. **SIEM 集成**
+   ```yaml
+   # 安全信息与事件管理集成
+   security_monitoring:
+     siem:
+       enabled: true
+       type: "splunk"  # splunk, elastic, qradar
+       splunk:
+         hec_url: "https://splunk.company.com:8088"
+         token: "${SPLUNK_HEC_TOKEN}"
+         index: "rm01_security"
+         source_type: "rm01:security"
+   ```
+
+3. **安全告警配置**
+   ```yaml
+   # 安全告警配置
+   alerts:
+     channels:
+       - type: "email"
+         name: "security_team"
+         recipients: ["security@company.com"]
+       - type: "webhook"
+         name: "security_slack"
+         url: "https://hooks.slack.com/services/XXX/YYY/ZZZ"
+     
+     rules:
+       - name: "unauthorized_access"
+         description: "检测到未授权访问尝试"
+         condition: "event.category == 'auth' && event.result == 'failure' && event.count > 5"
+         window: "5m"
+         severity: "high"
+         channels: ["security_team", "security_slack"]
+   ```
+
+## 安全审计与合规
+
+### 安全审计配置
+
+1. **审计日志设置**
+   ```yaml
+   # 审计配置
+   audit:
+     enabled: true
+     log_path: "/var/log/rm01/audit.log"
+     rotation:
+       size: "100MB"
+       keep: 30
+     events:
+       - category: "auth"
+         actions: ["login", "logout", "failed"]
+       - category: "admin"
+         actions: ["all"]
+       - category: "data"
+         actions: ["access", "modify", "delete"]
+       - category: "model"
+         actions: ["load", "unload", "inference"]
+       - category: "app"
+         actions: ["install", "uninstall", "update", "run"]
+   ```
+
+2. **合规报告生成**
+   ```bash
+   # 生成合规报告
+   rm01-cli report --type compliance --period last-month --output report.pdf
+   ```
+
+3. **安全基线检查**
+   ```bash
+   # 运行安全基线检查
+   rm01-security-cli baseline-check --standard cis --level 2
+   ```
+
+### 合规性支持
+
+RM-01 设计满足多种合规标准要求：
+
+1. **数据保护合规**
+   - GDPR (一般数据保护条例)
+   - CCPA (加州消费者隐私法案)
+   - 中国个人信息保护法
+
+2. **行业特定合规**
+   - HIPAA (医疗健康)
+   - PCI DSS (支付卡)
+   - FISMA (政府机构)
+
+3. **合规功能**
+   - 数据处理记录
+   - 访问控制记录
+   - 敏感操作双重验证
+   - 数据留存政策执行
+
+### 安全漏洞管理
+
+1. **漏洞扫描与修复**
+   ```bash
+   # 运行漏洞扫描
+   rm01-security-cli vulnerability-scan
+   
+   # 应用安全补丁
+   rm01-cli update --security-only
+   ```
+
+2. **安全配置验证**
+   ```
+
+## 安全最佳实践清单
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+  {/* 物理安全 */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-blue-400 dark:border-blue-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mr-3">
+        <span className="text-lg">🏢</span>
+      </div>
+      <h4 className="text-lg font-semibold text-blue-700 dark:text-blue-300">物理安全</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">设备放置在安全控制区域</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">使用锁具或安全柜保护设备</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">控制存储卡的物理访问</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">定期检查设备是否有物理篡改迹象</span>
+      </label>
+    </div>
+  </div>
+
+  {/* 密钥管理 */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-purple-400 dark:border-purple-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 mr-3">
+        <span className="text-lg">🔑</span>
+      </div>
+      <h4 className="text-lg font-semibold text-purple-700 dark:text-purple-300">密钥管理</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">安全生成并存储所有密钥</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">实施密钥轮换策略</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">使用硬件安全模块存储关键密钥</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">建立密钥备份和恢复流程</span>
+      </label>
+    </div>
+  </div>
+
+  {/* 模型安全 */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-indigo-400 dark:border-indigo-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 mr-3">
+        <span className="text-lg">🧠</span>
+      </div>
+      <h4 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">模型安全</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">对所有模型进行加密</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">验证模型来源和完整性</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">实施模型访问控制</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">定期扫描漏洞并更新模型</span>
+      </label>
+    </div>
+  </div>
+
+  {/* 应用安全 */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-teal-400 dark:border-teal-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-300 mr-3">
+        <span className="text-lg">📱</span>
+      </div>
+      <h4 className="text-lg font-semibold text-teal-700 dark:text-teal-300">应用安全</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">对所有应用进行签名和加密</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">使用零信任分发机制</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">实施应用隔离和权限控制</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">定期更新应用和依赖项</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/40 rounded-lg p-6 border border-slate-200/60 dark:border-slate-700/40 backdrop-blur-md mb-8">
+  <p className="text-slate-700 dark:text-slate-300 mb-0">
+    通过遵循本文档中的指导和最佳实践，服务提供商和应用开发者可以确保 RM-01 平台的安全部署，保护企业数据和知识产权，同时提供强大的 AI 能力。
+  </p>
+</div>
+
+<div className="my-8 text-center">
+  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+</div>
+
+## 探索更多资源
+
+<Cards>
+  <Card title="安全最佳实践详解" href="/docs/security/best-practices" icon="🔒" />
+  <Card title="合规性认证指南" href="/docs/security/compliance" icon="📋" />
+  <Card title="RM-01 安全白皮书" href="/resources/whitepaper-security.pdf" icon="📄" />
+</Cards>

@@ -1,0 +1,128 @@
+---
+title: Welcome to RM-01 Documentation
+description: Comprehensive documentation for the RM-01 AI HPC
+---
+
+import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Callout } from 'fumadocs-ui/components/callout'
+
+<Tabs items={['English', '中文']}>
+  <Tab>
+    <div className="space-y-6">
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-100 dark:border-blue-800/30 backdrop-blur-sm">
+        <h1 className="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-3">Welcome to RM-01 Documentation</h1>
+        <p className="text-slate-700 dark:text-slate-300">
+          This comprehensive documentation provides detailed information about the RM-01 AI supercomputer, including deployment guides, developer resources, and best practices.
+          Whether you're an enterprise user, developer, or service provider, you'll find the resources you need to maximize the potential of your RM-01 device.
+        </p>
+      </div>
+
+      <Callout type="info">
+        The RM-01 is a state-of-the-art AI supercomputer designed for local, private deployment of large language models with enterprise-grade security features and powerful inference capabilities.
+      </Callout>
+
+      <h2 className="text-xl font-semibold mt-8 mb-4">Documentation Categories</h2>
+
+      <Cards>
+        <Card title="Enterprise Quick Start Guide" href="/docs/deploy-guide/find-source" icon="🚀">
+          Get started with your RM-01 device, including hardware setup, management interface access, using AI applications, and more.
+        </Card>
+        <Card title="Developer Implementation Guide" href="/docs/develop-guide/develop" icon="💻">
+          Technical guide for developers building applications on RM-01, covering hardware architecture, environment setup, model integration, and more.
+        </Card>
+        <Card title="Deployment Guide" href="/docs/deploy-guide/deploy" icon="🌐">
+          Step-by-step instructions for deploying RM-01 in your enterprise environment, including network configuration and system integration.
+        </Card>
+        <Card title="Security Best Practices" href="/docs/deploy-guide/security-guide" icon="🔒">
+          Comprehensive security guidelines to protect your models, applications, and data with RM-01's multi-layered security architecture.
+        </Card>
+      </Cards>
+
+      <h2 className="text-xl font-semibold mt-8 mb-4">Key Features</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-blue-600 dark:text-blue-400 text-lg mb-2">High-Performance Inference</div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Up to 800 TOPS computing power with 32/64GB LPDDR5 memory for efficient local AI inference.
+          </p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-purple-600 dark:text-purple-400 text-lg mb-2">Enterprise Security</div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Hardware-level encryption, secure key management, and zero-trust architecture to protect your data.
+          </p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-green-600 dark:text-green-400 text-lg mb-2">Private Deployment</div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Fully private, on-premises operation with no data leaving your infrastructure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Tab>
+  
+  <Tab>
+    <div className="space-y-6">
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-100 dark:border-blue-800/30 backdrop-blur-sm">
+        <h1 className="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-3">欢迎使用 RM-01 文档中心</h1>
+        <p className="text-slate-700 dark:text-slate-300">
+          本文档中心提供了关于 RM-01 AI 超级计算机的详细信息，包括部署指南、开发者资源和最佳实践。
+          无论您是企业用户、开发者还是服务提供商，您都能找到充分发挥 RM-01 设备潜力所需的资源。
+        </p>
+      </div>
+
+      <Callout type="info">
+        RM-01 是一款最先进的 AI 超级计算机，专为本地私有部署大型语言模型而设计，具有企业级安全特性和强大的推理能力。
+      </Callout>
+
+      <h2 className="text-xl font-semibold mt-8 mb-4">文档分类</h2>
+
+      <Cards>
+        <Card title="企业快速入门指南" href="/docs/deploy-guide/find-source.cn" icon="🚀">
+          开始使用您的 RM-01 设备，包括硬件设置、管理界面访问、使用 AI 应用程序等。
+        </Card>
+        <Card title="应用开发者技术实施指南" href="/docs/develop-guide/develop.cn" icon="💻">
+          面向在 RM-01 上构建应用程序的开发者的技术指南，涵盖硬件架构、环境搭建、模型集成等。
+        </Card>
+        <Card title="部署指南" href="/docs/deploy-guide/deploy.cn" icon="🌐">
+          在企业环境中部署 RM-01 的分步说明，包括网络配置和系统集成。
+        </Card>
+        <Card title="安全最佳实践" href="/docs/deploy-guide/security-guide.cn" icon="🔒">
+          全面的安全指南，利用 RM-01 的多层安全架构保护您的模型、应用程序和数据。
+        </Card>
+      </Cards>
+
+      <h2 className="text-xl font-semibold mt-8 mb-4">核心特性</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-blue-600 dark:text-blue-400 text-lg mb-2">高性能推理</div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            高达 800 TOPS 算力，配备 32/64GB LPDDR5 内存，实现高效本地 AI 推理。
+          </p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-purple-600 dark:text-purple-400 text-lg mb-2">企业级安全</div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            硬件级加密、安全密钥管理和零信任架构，全面保护您的数据。
+          </p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-green-600 dark:text-green-400 text-lg mb-2">私有化部署</div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            完全私有、本地运行，数据不会离开您的基础设施。
+          </p>
+        </div>
+      </div>
+    </div>
+  </Tab>
+</Tabs>
+
+<div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-800">
+  <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
+    © 2025 RMinte Inc. All rights reserved.
+  </div>
+</div>

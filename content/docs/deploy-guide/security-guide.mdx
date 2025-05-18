@@ -1,0 +1,1048 @@
+---
+title: Deployment Security Best Practices
+icon: Fingerprint
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps'
+import { Callout } from 'fumadocs-ui/components/callout'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+    This document provides detailed instructions on how to securely deploy models and applications on the RM-01 platform, protecting intellectual property and enterprise data security, while ensuring stable and efficient operation. It is intended for service providers, application developers, and enterprise IT administrators, offering comprehensive security guidance.
+</Callout>
+
+## Table of Contents
+
+- [Security Architecture Overview](#security-architecture-overview) - RM-01's multi-layered security architecture design and zero-trust security model
+- [Key Management](#key-management) - Generation and secure management of device, distributor, and developer keys
+- [Secure Model Deployment](#secure-model-deployment) - Model encryption, secure transmission, and integrity verification schemes
+- [Secure Application Distribution](#secure-application-distribution) - Application packaging, signing, and zero-trust distribution processes
+- [Data Security Processing](#data-security-processing) - Data isolation, encryption, and secure lifecycle management
+- [Enterprise Environment Security Integration](#enterprise-environment-security-integration) - Secure integration with enterprise identity authentication, network, and monitoring systems
+- [Security Auditing and Compliance](#security-auditing-and-compliance) - Audit log configuration and support for various compliance standards
+- [Security Best Practices Checklist](#security-best-practices-checklist) - Comprehensive security deployment checklist
+
+## Security Architecture Overview
+
+<div className="mb-6 bg-gradient-to-br from-gray-50/90 to-gray-100/90 dark:from-gray-800/30 dark:to-gray-900/50 rounded-lg p-6 border border-gray-200/70 dark:border-gray-700/40 backdrop-blur-md">
+  <p className="text-slate-700 dark:text-slate-300">
+    RM-01 adopts a multi-layered security architecture, providing comprehensive protection from hardware to application layer, ensuring the security of models, applications, and data.
+  </p>
+</div>
+
+### Three Core Security Modules
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-blue-200/50 dark:border-blue-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-800/40 dark:to-blue-900/60 text-blue-600 dark:text-blue-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+        <span className="text-xl">🔐</span>
+      </div>
+      <h4 className="text-lg font-semibold text-blue-800 dark:text-blue-200">SAM (Security Authentication Module)</h4>
+    </div>
+    <div className="pl-3 border-l-2 border-blue-200 dark:border-blue-700/60">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>Hardware-level asymmetric encryption based on ESP32 chip</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>Manages unique device key pairs</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>Handles all encryption and authentication operations</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-purple-200/50 dark:border-purple-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-800/40 dark:to-purple-900/60 text-purple-600 dark:text-purple-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+        <span className="text-xl">🧠</span>
+      </div>
+      <h4 className="text-lg font-semibold text-purple-800 dark:text-purple-200">MIM (Model Inference Module)</h4>
+    </div>
+    <div className="pl-3 border-l-2 border-purple-200 dark:border-purple-700/60">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+          <span>Physical isolation design, cannot be directly accessed</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+          <span>Integrity verification during model loading</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+          <span>Runtime memory protection mechanisms</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-teal-200/50 dark:border-teal-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-teal-100 to-teal-50 dark:from-teal-800/40 dark:to-teal-900/60 text-teal-600 dark:text-teal-30 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+        <span className="text-xl">📱</span>
+      </div>
+      <h4 className="text-lg font-semibold text-teal-800 dark:text-teal-200">ADM (Application Deployment Module)</h4>
+    </div>
+    <div className="pl-3 border-l-2 border-teal-200 dark:border-teal-700/60">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-teal-500 dark:text-teal-400 mr-2">•</span>
+          <span>Application sandbox isolation technology</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-teal-500 dark:text-teal-400 mr-2">•</span>
+          <span>Docker containerized runtime environment</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-teal-500 dark:text-teal-400 mr-2">•</span>
+          <span>Mandatory access control policies</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### Zero-Trust Security Model
+
+<div className="bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900/30 dark:to-gray-900/30 rounded-lg p-6 mb-6 border border-gray-200/80 dark:border-gray-700/40 backdrop-blur-sm">
+  <h4 className="text-lg font-semibold mb-4 text-slate-800 dark:text-slate-200">RM-01 implements a complete zero-trust security model</h4>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mr-3">
+        <span className="text-sm">🔍</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">Device Authentication</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">Each RM-01 has a unique hardware fingerprint</p>
+      </div>
+    </div>
+    
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-300 mr-3">
+        <span className="text-sm">✓</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">Application Authentication</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">All applications must be signed and verified</p>
+      </div>
+    </div>
+    
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 mr-3">
+        <span className="text-sm">⟳</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">Continuous Verification</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">Continuous integrity checks during runtime</p>
+      </div>
+    </div>
+    
+    <div className="flex items-start p-3 bg-white/60 dark:bg-gray-800/50 rounded-lg border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 mr-3">
+        <span className="text-sm">🛡️</span>
+      </div>
+      <div>
+        <h5 className="font-medium text-slate-900 dark:text-slate-100">Least Privilege</h5>
+        <p className="text-sm text-slate-600 dark:text-slate-300">Applications can only access the minimum required resources</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Key Management
+
+<div className="mb-6 bg-gradient-to-r from-amber-50/90 to-yellow-50/90 dark:from-amber-900/20 dark:to-yellow-900/20 rounded-lg p-6 border border-amber-100/70 dark:border-amber-700/30 backdrop-blur-sm">
+  <p className="text-slate-700 dark:text-slate-300">
+    Keys are the foundation of RM-01's security architecture, and proper key management is critical. The generation, distribution, use, and storage of encryption keys must follow strict security protocols.
+  </p>
+</div>
+
+### Key System Architecture
+
+<div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-gray-200/50 dark:border-gray-600/30 backdrop-blur-sm mb-6">
+  <div className="grid grid-cols-3 gap-4 mb-4">
+    <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg text-center border border-blue-100 dark:border-blue-800/50">
+      <div className="font-medium text-blue-800 dark:text-blue-300">Developer Public Key</div>
+      <div className="text-xs text-blue-600 dark:text-blue-400 mt-1">Application Signing</div>
+    </div>
+    <div className="bg-purple-50 dark:bg-purple-900/30 p-3 rounded-lg text-center border border-purple-100 dark:border-purple-800/50">
+      <div className="font-medium text-purple-800 dark:text-purple-300">Device Key Pair</div>
+      <div className="text-xs text-purple-600 dark:text-purple-400 mt-1">Hardware Binding</div>
+    </div>
+    <div className="bg-teal-50 dark:bg-teal-900/30 p-3 rounded-lg text-center border border-teal-100 dark:border-teal-800/50">
+      <div className="font-medium text-teal-800 dark:text-teal-300">Service Provider Public Key</div>
+      <div className="text-xs text-teal-600 dark:text-teal-400 mt-1">Model Encryption</div>
+    </div>
+  </div>
+
+  <div className="text-sm text-slate-600 dark:text-slate-300 pl-4 border-l-2 border-amber-300 dark:border-amber-700/60 py-1 mb-4">
+    All keys use asymmetric encryption technology (RSA-4096 or ECC), with private keys protected by hardware and never exported
+  </div>
+</div>
+
+### Device Key Generation and Management
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 border border-gray-200/60 dark:border-gray-700/30 backdrop-blur-sm">
+    <h4 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Key Generation Process</h4>
+    <div className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        1. Device initialization starts the SAM security module
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        2. Identifies unique device fingerprint (based on hardware code)
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        3. Generates ECC key pair, private key stored in secure zone
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        4. Public key bound to device fingerprint and certificate generated
+      </div>
+      <div className="p-2 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/60 dark:to-gray-700/60 rounded border border-gray-200/50 dark:border-gray-600/30">
+        5. Device certificate activated and registered in the backend
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 border border-gray-200/60 dark:border-gray-700/30 backdrop-blur-sm">
+    <h4 className="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Security Features</h4>
+    <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>Private key never leaves the hardware security zone, cannot be exported</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>Keys bound to physical device fingerprint, preventing cloning</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>Tamper protection enabled, detects physical attacks</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>Supports key revocation and certificate status checking</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 font-bold">✓</span>
+        <span>Uses NIST P-384 curve, resistant to quantum computing threats</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+### Developer Key Management
+
+<div className="mb-6 bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 border border-gray-200/60 dark:border-gray-600/30 backdrop-blur-sm">
+  <div className="flex items-start mb-4">
+    <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mr-3">
+      <span className="text-lg">🔑</span>
+    </div>
+    <div>
+      <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200">Developer Key Application Process</h4>
+      <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
+        After security authentication, developers can obtain key pairs for signing applications
+      </p>
+    </div>
+  </div>
+  
+  <div className="border-l-2 border-blue-300 dark:border-blue-700 pl-4 ml-2 space-y-4">
+    <Steps>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">Apply for Key</span> - 
+          Complete identity verification and apply for key in the developer portal
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">Identity Verification</span> - 
+          Platform verifies developer identity and qualifications
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">Key Generation</span> - 
+          Generate dedicated developer key pair, private key securely transmitted
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">Permission Configuration</span> - 
+          Set key permission scope and usage limitations
+        </div>
+      </Step>
+      <Step>
+        <div className="text-sm text-slate-700 dark:text-slate-300">
+          <span className="font-medium text-blue-600 dark:text-blue-400">Key Usage</span> - 
+          Use key to sign applications and publish
+        </div>
+      </Step>
+    </Steps>
+  </div>
+</div>
+
+### Key Security Best Practices
+
+<div className="bg-gradient-to-r from-amber-50/80 to-amber-50/80 dark:from-amber-900/20 dark:to-amber-900/20 rounded-lg p-5 mb-6 border border-amber-100/70 dark:border-amber-800/30">
+  <h4 className="text-lg font-semibold mb-3 text-amber-800 dark:text-amber-300">Developer Key Protection Recommendations</h4>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded border border-amber-200/50 dark:border-amber-700/30 p-3">
+      <h5 className="font-medium text-amber-700 dark:text-amber-400 mb-2 text-sm">Storage Security</h5>
+      <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Use hardware security key storage devices</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Avoid storing in development environments</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Use key management systems</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded border border-amber-200/50 dark:border-amber-700/30 p-3">
+      <h5 className="font-medium text-amber-700 dark:text-amber-400 mb-2 text-sm">Access Control</h5>
+      <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Implement least privilege principle</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Use multi-factor authentication</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Log all access operations</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded border border-amber-200/50 dark:border-amber-700/30 p-3">
+      <h5 className="font-medium text-amber-700 dark:text-amber-400 mb-2 text-sm">Usage Policy</h5>
+      <ul className="text-xs space-y-1 text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Rotate keys regularly</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Use only in secure environments</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-amber-500 dark:text-amber-400 mr-1">•</span>
+          <span>Securely handle key backups</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="mt-4 pt-3 border-t border-amber-200/50 dark:border-amber-700/30 text-sm text-slate-600 dark:text-slate-300 italic">
+    Following key security best practices is critical to protecting applications and data; once a key is compromised, the entire security chain may fail
+  </div>
+</div>
+
+## Secure Model Deployment
+
+<div className="mb-6 bg-gradient-to-r from-indigo-50/90 to-blue-50/90 dark:from-indigo-900/20 dark:to-blue-900/20 rounded-lg p-6 border border-indigo-100/70 dark:border-indigo-700/30 backdrop-blur-sm">
+  <p className="text-slate-700 dark:text-slate-300">
+    Models are the core assets of the RM-01 platform, and securely deploying them is crucial for protecting intellectual property and preventing unauthorized use. The entire deployment process includes model preparation, encrypted distribution, and secure loading.
+  </p>
+</div>
+
+### Model Preparation
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-5 border border-indigo-200/60 dark:border-indigo-700/30 backdrop-blur-sm">
+    <h4 className="flex items-center text-lg font-semibold mb-3 text-indigo-800 dark:text-indigo-300">
+      <span className="w-7 h-7 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 mr-2 text-sm">1</span>
+      Model Encryption and Signing
+    </h4>
+
+    <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+      <p>
+        Models must be encrypted and signed before release to ensure they can only run on authorized devices
+      </p>
+
+      <pre className="bg-indigo-50/70 dark:bg-indigo-900/30 p-3 rounded border border-indigo-100 dark:border-indigo-800/40 font-mono text-xs">
+<span className="text-indigo-600 dark:text-indigo-400">$</span> rminte-cli encrypt-model \
+  --model-path ./models/my-model.bin \
+  --target-devices "device-id-1,device-id-2" \
+  --expiry "2025-12-31" \
+  --output ./encrypted/
+      </pre>
+
+      <div className="pl-3 border-l-2 border-indigo-300 dark:border-indigo-700 text-xs italic">
+        This process encrypts the model using the target device's public key, ensuring only specified devices can decrypt it
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-5 border border-indigo-200/60 dark:border-indigo-700/30 backdrop-blur-sm">
+    <h4 className="flex items-center text-lg font-semibold mb-3 text-indigo-800 dark:text-indigo-300">
+      <span className="w-7 h-7 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 mr-2 text-sm">2</span>
+      Model Validation and Packaging
+    </h4>
+
+    <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+      <p>
+        Validate and package the encrypted model, adding metadata and access control information
+      </p>
+
+      <pre className="bg-indigo-50/70 dark:bg-indigo-900/30 p-3 rounded border border-indigo-100 dark:border-indigo-800/40 font-mono text-xs">
+<span className="text-indigo-600 dark:text-indigo-400">$</span> rminte-cli package-model \
+  --encrypted-model ./encrypted/my-model.enc \
+  --metadata ./meta/model-info.json \
+  --permissions "inference=allow,export=deny" \
+  --output ./dist/my-model.rmpkg
+      </pre>
+
+      <div className="pl-3 border-l-2 border-indigo-300 dark:border-indigo-700 text-xs italic">
+        The packaging process adds model metadata, including version, creator, permissions, and usage limitations
+      </div>
+    </div>
+  </div>
+</div>
+
+### Secure Transfer to Storage Card
+
+<Steps>
+  <Step>
+    #### Prepare CFexpress Card
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-green-500 dark:text-green-400 mr-2">•</span>
+          <span>Use RM-01 certified CFexpress card</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-green-500 dark:text-green-400 mr-2">•</span>
+          <span>Format to RM-01 specific format</span>
+        </li>
+      </ul>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md mt-3 overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-storage-cli format --device /dev/sdX --type cfexpress
+      </div>
+    </div>
+  </Step>
+  
+  <Step>
+    #### Model Transfer
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md mb-3 overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-storage-cli copy --source ./encrypted_model --target /mnt/cfexpress --verify
+      </div>
+      <p className="text-sm text-slate-600 dark:text-slate-300 italic">
+        <span className="text-amber-600 dark:text-amber-400 font-semibold">--verify</span> parameter is very important, ensuring that data was not tampered with or corrupted during transfer.
+      </p>
+    </div>
+  </Step>
+  
+  <Step>
+    #### Physical Security
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>Use encrypted transport case for storage card</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>Use tamper-evident seals</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+          <span>Track storage card delivery process</span>
+        </li>
+      </ul>
+    </div>
+  </Step>
+</Steps>
+
+### Model Loading Verification
+
+<Tabs items={['Integrity Verification', 'Performance Verification', 'Security Scanning']} className="mt-4">
+  <Tab>
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+        RM-01 automatically verifies signature and integrity when loading models. Check loading logs to confirm verification success:
+      </p>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-cli logs --module model-loader --last 50
+      </div>
+      <div className="mt-3 p-2 rounded bg-slate-100 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        INFO [model-loader] Loading model "glm-4"...<br/>
+        INFO [model-loader] Verifying model signature...<br/>
+        INFO [model-loader] Signature verification successful<br/>
+        INFO [model-loader] Checking model integrity...<br/>
+        INFO [model-loader] Integrity check passed<br/>
+        INFO [model-loader] Model loaded successfully
+      </div>
+    </div>
+  </Tab>
+  <Tab>
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+        Run standard inference tests to ensure the model works properly and meets expected performance:
+      </p>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-cli benchmark --model model_name --iterations 100
+      </div>
+      <div className="mt-3 p-2 rounded bg-slate-100 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        Running performance test: 100 iterations<br/>
+        Average inference time: 25.3 ms<br/>
+        Throughput: 39.5 inferences/second<br/>
+        95% latency: 31.2 ms<br/>
+        Memory usage: 5.2 GB
+      </div>
+    </div>
+  </Tab>
+  <Tab>
+    <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg p-4 border border-slate-200/60 dark:border-slate-700/30 my-3">
+      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+        Run model security scans to detect potential backdoors and security vulnerabilities:
+      </p>
+      <div className="bg-slate-800/90 dark:bg-slate-900 text-slate-200 px-3 py-2 text-xs font-mono rounded-md overflow-auto border border-slate-300/10 dark:border-slate-700/30 shadow-sm">
+rm01-security-cli scan-model --model model_name
+      </div>
+      <div className="mt-3 p-2 rounded bg-slate-100 dark:bg-slate-900/50 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        Running model security scan...<br/>
+        Checking for backdoor triggers...<br/>
+        Checking for weight anomalies...<br/>
+        Verifying activation functions...<br/>
+        Scan complete, no security vulnerabilities found
+      </div>
+    </div>
+  </Tab>
+</Tabs>
+
+## Secure Application Distribution
+
+### Application Preparation
+
+1. **Application Packaging**
+   ```bash
+   # Package the application in RM-01 format
+   rm01-dev-cli package --app-dir ./myapp --output myapp.rmap
+   ```
+
+2. **Application Signing**
+   ```bash
+   # Sign the application using developer key
+   rm01-dev-cli sign --app myapp.rmap --key developer_private.pem --output signed_myapp.rmap
+   ```
+
+3. **Application Encryption**
+   ```bash
+   # Encrypt the application using distributor's public key or device public key
+   rm01-dev-cli encrypt --app signed_myapp.rmap --public-key distributor_public.pem --output encrypted_myapp.rmap
+   ```
+
+### Zero-Trust Application Distribution
+
+The following workflow ensures applications can only run on authorized devices:
+
+1. **Distributor Stage**
+   ```bash
+   # Distributor gets device public key and adds it to distribution system
+   rm01-distributor-cli add-device --public-key device_public.pem --device-id "RM01-12345"
+   
+   # Re-encrypt application for specific device
+   rm01-distributor-cli reencrypt --app encrypted_myapp.rmap --device-id "RM01-12345" --output device_specific_app.rmap
+   ```
+
+2. **Storage Card Preparation**
+   ```bash
+   # Copy application to microSD card
+   rm01-storage-cli copy --source device_specific_app.rmap --target /mnt/microsd/apps/ --verify
+   ```
+
+3. **Application Deployment Verification**
+   - Insert storage card into target RM-01 device
+   - Device automatically verifies and decrypts application
+   - Check deployment logs to confirm success
+   ```bash
+   rm01-cli logs --module app-deployer --last 50
+   ```
+
+### Secure Application Updates
+
+1. **Incremental Update Package**
+   ```bash
+   # Create incremental update package (reduces distribution size)
+   rm01-dev-cli create-update --old-version myapp_v1.rmap --new-version myapp_v2.rmap --output update_patch.rmap
+   ```
+
+2. **Update Package Signing and Encryption**
+   ```bash
+   # Signing
+   rm01-dev-cli sign --app update_patch.rmap --key developer_private.pem --output signed_update.rmap
+   
+   # Encryption
+   rm01-dev-cli encrypt --app signed_update.rmap --public-key distributor_public.pem --output encrypted_update.rmap
+   ```
+
+3. **Secure Update Distribution**
+   - Distribute via storage card
+   - Or via secure update server (if network connection available in enterprise)
+
+## Data Security Processing
+
+### Data Isolation
+
+1. **Application Data Isolation**
+   ```yaml
+   # Application manifest.yaml data isolation configuration
+   security:
+     data_isolation:
+       level: "strict"
+       storage:
+         private: "/data/private"
+         shared: "/data/shared"
+       network:
+         isolated: true
+   ```
+
+2. **Multi-tenant Isolation**
+   ```yaml
+   # System configuration for multi-user isolation
+   system:
+     multi_tenant:
+       enabled: true
+       isolation:
+         storage: true
+         memory: true
+         process: true
+   ```
+
+### Data Encryption
+
+1. **Static Data Encryption**
+   ```python
+   from rminte.security import DataEncryptor
+   
+   # Initialize encryptor
+   encryptor = DataEncryptor()
+   
+   # Encrypt data
+   encrypted_data = encryptor.encrypt(sensitive_data)
+   
+   # Secure storage
+   with open('secure_data.enc', 'wb') as f:
+       f.write(encrypted_data)
+   ```
+
+2. **Data-in-Transit Encryption**
+   ```python
+   from rminte.security import SecureChannel
+   
+   # Initialize secure channel
+   secure_channel = SecureChannel()
+   
+   # Encrypt communication
+   encrypted_message = secure_channel.encrypt(message, recipient_public_key)
+   
+   # Send encrypted message
+   send_data(encrypted_message)
+   ```
+
+3. **Memory Data Protection**
+   ```python
+   from rminte.security import SecureMemory
+   
+   # Create secure memory region
+   secure_mem = SecureMemory(size_mb=10)
+   
+   # Process sensitive data in secure memory
+   with secure_mem.context() as mem:
+       mem.write(sensitive_data)
+       # Process data
+       result = process_sensitive_data(mem.read())
+   
+   # Secure memory is automatically cleared after exiting context
+   ```
+
+### Data Lifecycle Management
+
+1. **Data Retention Policy**
+   ```yaml
+   # Data retention configuration in application
+   data_retention:
+     temp_data: "session"  # Delete after session ends
+     cache: "1d"  # Keep for 1 day
+     logs: "30d"  # Keep for 30 days
+     user_data: "persistent"  # Keep permanently unless manually deleted
+   ```
+
+2. **Automatic Data Cleanup**
+   ```python
+   from rminte.security import DataCleaner
+   
+   # Configure data cleaner
+   cleaner = DataCleaner(
+       temp_dir="/app/temp",
+       retention="4h",
+       secure_delete=True
+   )
+   
+   # Register cleanup task
+   cleaner.register()
+   
+   # Manually trigger cleanup
+   cleaner.cleanup()
+   ```
+
+3. **Secure Deletion**
+   ```python
+   from rminte.security import SecureDelete
+   
+   # Securely delete file (multiple overwrites)
+   SecureDelete.file("/path/to/sensitive-file.dat")
+   
+   # Securely clean directory
+   SecureDelete.directory("/path/to/sensitive-dir")
+   ```
+
+## Enterprise Environment Security Integration
+
+### Enterprise Authentication Integration
+
+1. **LDAP/Active Directory Integration**
+   ```yaml
+   # System authentication configuration
+   authentication:
+     ldap:
+       enabled: true
+       server: "ldap://ldap.company.com:389"
+       bind_dn: "cn=rm01bind,ou=serviceaccounts,dc=company,dc=com"
+       bind_password: "${SECURE_LDAP_PASSWORD}"
+       user_base_dn: "ou=users,dc=company,dc=com"
+       group_base_dn: "ou=groups,dc=company,dc=com"
+       require_group: "cn=ai-users,ou=groups,dc=company,dc=com"
+   ```
+
+2. **Single Sign-On Integration**
+   ```yaml
+   # SSO configuration
+   authentication:
+     sso:
+       enabled: true
+       provider: "oauth2"
+       client_id: "${SSO_CLIENT_ID}"
+       client_secret: "${SSO_CLIENT_SECRET}"
+       auth_url: "https://auth.company.com/authorize"
+       token_url: "https://auth.company.com/token"
+       userinfo_url: "https://auth.company.com/userinfo"
+       scope: "openid profile email"
+       role_attribute: "groups"
+   ```
+
+### Network Security Settings
+
+1. **Network Isolation Configuration**
+   ```yaml
+   # Network security configuration
+   network:
+     isolation:
+       enabled: true
+       allow_outbound: false
+       allow_inbound:
+         - port: 8443
+           protocol: "tcp"
+           description: "Management interface"
+           ip_restrict: ["10.0.0.0/8", "192.168.0.0/16"]
+   ```
+
+2. **TLS Configuration**
+   ```yaml
+   # TLS/HTTPS configuration
+   tls:
+     enabled: true
+     cert_source: "provided"  # or "self-signed", "acme"
+     cert_path: "/etc/rm01/certs/server.crt"
+     key_path: "/etc/rm01/certs/server.key"
+     min_version: "TLS1.2"
+     ciphers:
+       - "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+       - "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+   ```
+
+### Security Logging and Monitoring
+
+1. **Log Aggregation Integration**
+   ```yaml
+   # Logging configuration
+   logging:
+     level: "info"  # debug, info, warning, error
+     format: "json"
+     aggregation:
+       enabled: true
+       destination: "syslog"  # syslog, splunk, elasticsearch
+       syslog:
+         server: "10.0.0.15"
+         port: 514
+         protocol: "tls"
+         facility: "local4"
+   ```
+
+2. **SIEM Integration**
+   ```yaml
+   # Security Information and Event Management integration
+   security_monitoring:
+     siem:
+       enabled: true
+       type: "splunk"  # splunk, elastic, qradar
+       splunk:
+         hec_url: "https://splunk.company.com:8088"
+         token: "${SPLUNK_HEC_TOKEN}"
+         index: "rm01_security"
+         source_type: "rm01:security"
+   ```
+
+3. **Security Alert Configuration**
+   ```yaml
+   # Security alert configuration
+   alerts:
+     channels:
+       - type: "email"
+         name: "security_team"
+         recipients: ["security@company.com"]
+       - type: "webhook"
+         name: "security_slack"
+         url: "https://hooks.slack.com/services/XXX/YYY/ZZZ"
+     
+     rules:
+       - name: "unauthorized_access"
+         description: "Unauthorized access attempt detected"
+         condition: "event.category == 'auth' && event.result == 'failure' && event.count > 5"
+         window: "5m"
+         severity: "high"
+         channels: ["security_team", "security_slack"]
+   ```
+
+## Security Auditing and Compliance
+
+### Security Audit Configuration
+
+1. **Audit Log Settings**
+   ```yaml
+   # Audit configuration
+   audit:
+     enabled: true
+     log_path: "/var/log/rm01/audit.log"
+     rotation:
+       size: "100MB"
+       keep: 30
+     events:
+       - category: "auth"
+         actions: ["login", "logout", "failed"]
+       - category: "admin"
+         actions: ["all"]
+       - category: "data"
+         actions: ["access", "modify", "delete"]
+       - category: "model"
+         actions: ["load", "unload", "inference"]
+       - category: "app"
+         actions: ["install", "uninstall", "update", "run"]
+   ```
+
+2. **Compliance Report Generation**
+   ```bash
+   # Generate compliance report
+   rm01-cli report --type compliance --period last-month --output report.pdf
+   ```
+
+3. **Security Baseline Check**
+   ```bash
+   # Run security baseline check
+   rm01-security-cli baseline-check --standard cis --level 2
+   ```
+
+### Compliance Support
+
+RM-01 is designed to meet requirements of various compliance standards:
+
+1. **Data Protection Compliance**
+   - GDPR (General Data Protection Regulation)
+   - CCPA (California Consumer Privacy Act)
+   - China Personal Information Protection Law
+
+2. **Industry-Specific Compliance**
+   - HIPAA (Healthcare)
+   - PCI DSS (Payment Card)
+   - FISMA (Government Agencies)
+
+3. **Compliance Features**
+   - Data processing records
+   - Access control records
+   - Two-factor verification for sensitive operations
+   - Data retention policy enforcement
+
+### Vulnerability Management
+
+1. **Vulnerability Scanning and Remediation**
+   ```bash
+   # Run vulnerability scan
+   rm01-security-cli vulnerability-scan
+   
+   # Apply security patches
+   rm01-cli update --security-only
+   ```
+
+2. **Security Configuration Verification**
+   ```bash
+   # Verify security configuration
+   rm01-security-cli config-check --profile enterprise
+   
+   # Generate security posture report
+   rm01-cli security-posture --output report.html
+   ```
+
+## Security Best Practices Checklist
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+  {/* Physical Security */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-blue-400 dark:border-blue-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mr-3">
+        <span className="text-lg">🏢</span>
+      </div>
+      <h4 className="text-lg font-semibold text-blue-700 dark:text-blue-300">Physical Security</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Place devices in secure controlled areas</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Use locks or security cabinets to protect devices</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Control physical access to storage cards</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-blue-300 dark:border-blue-600 text-blue-500 focus:ring-blue-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Regularly check devices for signs of physical tampering</span>
+      </label>
+    </div>
+  </div>
+
+  {/* Key Management */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-purple-400 dark:border-purple-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 mr-3">
+        <span className="text-lg">🔑</span>
+      </div>
+      <h4 className="text-lg font-semibold text-purple-700 dark:text-purple-300">Key Management</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Securely generate and store all keys</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Implement key rotation policy</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Use hardware security modules for critical keys</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-purple-300 dark:border-purple-600 text-purple-500 focus:ring-purple-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Establish key backup and recovery procedures</span>
+      </label>
+    </div>
+  </div>
+
+  {/* Model Security */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-indigo-400 dark:border-indigo-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 mr-3">
+        <span className="text-lg">🧠</span>
+      </div>
+      <h4 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">Model Security</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Encrypt all models</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Verify model source and integrity</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Implement model access controls</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-indigo-300 dark:border-indigo-600 text-indigo-500 focus:ring-indigo-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Regularly scan for vulnerabilities and update models</span>
+      </label>
+    </div>
+  </div>
+
+  {/* Application Security */}
+  <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border-l-4 border-teal-400 dark:border-teal-600 hover:shadow-md transition-all duration-300">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-300 mr-3">
+        <span className="text-lg">📱</span>
+      </div>
+      <h4 className="text-lg font-semibold text-teal-700 dark:text-teal-300">Application Security</h4>
+    </div>
+    <div className="space-y-2">
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Sign and encrypt all applications</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Use zero-trust distribution mechanism</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Implement application isolation and permission controls</span>
+      </label>
+      <label className="flex items-center cursor-pointer group">
+        <input type="checkbox" className="form-checkbox h-5 w-5 mr-2 rounded border-teal-300 dark:border-teal-600 text-teal-500 focus:ring-teal-500 focus:ring-opacity-40 transition duration-150" />
+        <span className="text-slate-700 dark:text-slate-300 text-sm group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Regularly update applications and dependencies</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/40 rounded-lg p-6 border border-slate-200/60 dark:border-slate-700/40 backdrop-blur-md mb-8">
+  <p className="text-slate-700 dark:text-slate-300 mb-0">
+    By following the guidance and best practices in this document, service providers and application developers can ensure secure deployment of the RM-01 platform, protecting enterprise data and intellectual property while providing powerful AI capabilities.
+  </p>
+</div>
+
+<div className="my-8 text-center">
+  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+</div>
+
+## Explore More Resources
+
+<Cards>
+  <Card title="Security Best Practices Detailed Guide" href="/docs/security/best-practices" icon="🔒" />
+  <Card title="Compliance Certification Guide" href="/docs/security/compliance" icon="📋" />
+  <Card title="RM-01 Security Whitepaper" href="/resources/whitepaper-security.pdf" icon="📄" />
+</Cards>

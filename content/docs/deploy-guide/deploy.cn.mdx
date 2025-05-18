@@ -1,0 +1,960 @@
+---
+title: 服务商部署指南
+icon: Compass
+---
+import { Step, Steps } from 'fumadocs-ui/components/steps'
+import { Callout } from 'fumadocs-ui/components/callout'
+
+<Callout type="info">
+  欢迎使用 RMinte RM-01 便携式 AI 超算部署指南。本文档旨在帮助服务提供商了解如何借助 RM-01 为企业客户快速部署模型及 AI 应用，实现真正的"即插即用"AI 体验。
+</Callout>
+
+## 概览
+
+- [💼 服务商部署流程](#服务商部署流程)
+- [❓ 常见问题解答](#常见问题解答)
+- [🛟 技术支持](#技术支持)
+
+## 服务商部署流程
+
+作为服务提供商，您是连接RM-01设备解决方案与企业实际需求的桥梁。本章节将指导您如何高效地为企业客户部署 RM-01 设备并提供相关技术支持。
+
+### 1. 前期准备工作
+
+<Steps>
+  <Step>
+    #### 设备与配件核对
+    
+    在交付企业前，请确保以下物品齐全：
+    
+    <div className="p-4 border rounded-lg">
+      <strong>RM-01 配件包</strong>
+      <ul className="list-disc pl-6 mt-2">
+        <li>RM-01 主机</li>
+        <li>CFexpress Type B 存储卡（预装模型及应用）</li>
+        <li>MicroSD 卡（可选，用于加密）</li>
+        <li>USB-C 电源适配器（PD3.1，最高 140W）</li>
+        <li>USB-C 转网线适配器</li>
+        <li>快速入门指南</li>
+        <li>保修卡</li>
+      </ul>
+    </div>
+  </Step>
+  
+  <Step>
+    #### 模型与应用准备
+    
+    根据企业需求，提前准备好适合的模型和应用：
+    
+    - **标准模型包**：包含常用的开源模型，如 DeepSeek、智谱、Qwen 等
+    - **行业专用模型包**：根据企业所在行业，选择适合的垂直领域模型
+    - **企业定制模型**：如企业有自己训练的模型，确保已转换为适合 RM-01 运行的格式
+  </Step>
+  
+  <Step>
+    #### 企业环境评估
+    
+    在部署前进行环境评估：
+    
+    - **网络环境**：虽然 RM-01 支持离线运行，但可能需要接入企业内部网络进行连接
+    - **电力供应**：确保部署场所有稳定的电源供应
+    - **物理安全**：评估设备放置位置的物理安全措施
+    - **IT 基础设施**：了解企业现有 IT 基础设施，确保 RM-01 能够顺利集成
+  </Step>
+</Steps>
+
+### 2. 硬件部署流程
+
+<Steps>
+  <Step>
+    #### 设备安装
+    
+    1. 选择合适的位置放置 RM-01（桌面或专用机柜）
+    2. 连接电源适配器
+    3. 如需有线网络，连接 USB-C 转网线适配器
+    4. 插入预装有所需模型和应用的 CFexpress 存储卡
+    5. 插入预装有应用的 MicroSD 卡（如适用）
+    
+    <Callout type="warning">
+      确保设备放置在通风良好的环境中，避免阻塞散热口。
+    </Callout>
+  </Step>
+  
+  <Step>
+    #### 开机与初始化
+    
+    1. 按下电源按钮开机
+    2. 设备将自动初始化并加载存储卡中的模型和应用（约需 5 分钟）
+    3. 在初始化过程中，可通过 USB-C 端口连接笔记本电脑进行设备状态监控
+  </Step>
+  
+  <Step>
+    #### 网络配置
+    
+    1. 通过 USB-C 网络接口连接到企业局域网
+    2. 配置网络参数：
+       - IP 地址（静态/DHCP）
+       - 子网掩码
+       - 网关
+       - DNS 服务器
+    3. 验证网络连接
+  </Step>
+</Steps>
+
+### 3. 软件配置与应用部署
+
+<div className="mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-lg border border-blue-100 dark:border-blue-800 overflow-hidden">
+  <div className="p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">⚙️</span>
+          </div>
+          <h4 className="text-lg font-semibold dark:text-white">管理界面设置</h4>
+        </div>
+        
+        <ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
+          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+            <strong className="dark:text-white">访问管理界面：</strong> 浏览器访问 http://rm01-xxxxx.local（xxxxx 为设备序列号）
+          </li>
+          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+            <strong className="dark:text-white">初始登录：</strong> 用户名：admin，密码：见设备底部标签
+          </li>
+          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+            <strong className="dark:text-white">基础配置：</strong> 修改管理员密码、设置设备名称与时区
+          </li>
+          <li>
+            <strong className="dark:text-white">安全设置：</strong> 配置访问控制策略
+          </li>
+        </ol>
+        
+        <div className="mt-3 p-2 bg-amber-50 dark:bg-amber-950/40 rounded-md text-amber-800 dark:text-amber-300 text-xs">
+          请务必在首次登录后立即修改默认密码，确保系统安全
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">🧠</span>
+          </div>
+          <h4 className="text-lg font-semibold dark:text-white">模型管理</h4>
+        </div>
+        
+        <ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
+          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+            <strong className="dark:text-white">访问模型管理：</strong> 导航至管理界面中的"模型管理"
+          </li>
+          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+            <strong className="dark:text-white">查看模型状态：</strong> 检查已加载模型列表与运行状态
+          </li>
+          <li>
+            <strong className="dark:text-white">加载新模型：</strong>
+            <ul className="list-disc pl-5 mt-1 space-y-1 dark:text-gray-400">
+              <li>将模型文件存入 CFexpress 卡</li>
+              <li>插入 RM-01 设备</li>
+              <li>点击"扫描模型"按钮</li>
+              <li>等待加载完成并验证状态</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-green-200 dark:border-green-700">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">📱</span>
+          </div>
+          <h4 className="text-lg font-semibold dark:text-white">应用部署</h4>
+        </div>
+        
+        <div className="space-y-3 text-sm dark:text-gray-300">
+          <div>
+            <strong className="block mb-1 dark:text-white">部署流程：</strong>
+            <ol className="list-decimal pl-5 space-y-1">
+              <li>进入"应用管理"</li>
+              <li>点击"部署新应用"</li>
+              <li>选择部署方式</li>
+              <li>等待部署完成</li>
+              <li>配置应用参数</li>
+            </ol>
+          </div>
+          
+          <div>
+            <strong className="block mb-1 dark:text-white">部署方式：</strong>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="p-2 bg-green-50 dark:bg-green-900/30 rounded text-center border border-green-100 dark:border-green-800">
+                <div className="text-xs font-medium dark:text-green-300">存储卡加载</div>
+                <div className="text-xs text-green-700 dark:text-green-400">推荐</div>
+              </div>
+              <div className="p-2 bg-blue-50 dark:bg-blue-900/30 rounded text-center border border-blue-100 dark:border-blue-800">
+                <div className="text-xs font-medium dark:text-blue-300">门户下载</div>
+                <div className="text-xs text-blue-700 dark:text-blue-400">需联网</div>
+              </div>
+              <div className="p-2 bg-purple-50 dark:bg-purple-900/30 rounded text-center border border-purple-100 dark:border-purple-800">
+                <div className="text-xs font-medium dark:text-purple-300">Docker镜像</div>
+                <div className="text-xs text-purple-700 dark:text-purple-400">高级选项</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-orange-200 dark:border-orange-800">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">🔐</span>
+          </div>
+          <h4 className="text-lg font-semibold dark:text-white">权限与访问控制</h4>
+        </div>
+        
+        <div className="space-y-3 text-sm dark:text-gray-300">
+          <div className="flex flex-col space-y-2">
+            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 mr-2 text-xs">1</span>
+              <span><strong className="dark:text-white">创建企业管理员账户</strong>（管理模型和应用）</span>
+            </div>
+            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-2 text-xs">2</span>
+              <span><strong className="dark:text-white">创建普通用户账户</strong>（使用应用）</span>
+            </div>
+            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-2 text-xs">3</span>
+              <span><strong className="dark:text-white">设置访问权限</strong>（模型、应用级别）</span>
+            </div>
+            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 text-xs">4</span>
+              <span><strong className="dark:text-white">配置身份验证策略</strong>（单点登录/LDAP）</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### 4. 验证与测试
+
+<div className="mb-8 rounded-lg overflow-hidden">
+  <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 p-5 border border-emerald-100 dark:border-emerald-800">
+    <h4 className="text-lg font-bold mb-4 text-center dark:text-white">全面测试清单</h4>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
+        <div className="flex items-center mb-3">
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-2" style={{ minWidth: '2rem' }}>
+            <span className="text-sm">✓</span>
+          </div>
+          <h5 className="font-semibold text-blue-800 dark:text-blue-300">功能测试</h5>
+        </div>
+        
+        <ul className="pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300">
+          <li>模型加载与运行测试</li>
+          <li>应用基本功能测试</li>
+          <li>用户授权与访问控制</li>
+          <li>离线环境功能验证</li>
+        </ul>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 border-l-4 border-purple-400">
+        <div className="flex items-center mb-3">
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 mr-2" style={{ minWidth: '2rem' }}>
+            <span className="text-sm">⚡</span>
+          </div>
+          <h5 className="font-semibold text-purple-800 dark:text-purple-300">性能测试</h5>
+        </div>
+        
+        <ul className="pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300">
+          <li>模型推理速度测试</li>
+          <li>并发处理能力测试</li>
+          <li>高负载稳定性测试</li>
+          <li>资源使用监控</li>
+        </ul>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 border-l-4 border-green-400">
+        <div className="flex items-center mb-3">
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2" style={{ minWidth: '2rem' }}>
+            <span className="text-sm">🔄</span>
+          </div>
+          <h5 className="font-semibold text-green-800 dark:text-green-300">连接性测试</h5>
+        </div>
+        
+        <ul className="pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300">
+          <li>内部系统集成测试</li>
+          <li>API 连接测试</li>
+          <li>外部应用调用测试</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div className="mt-4 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-teal-100 dark:border-teal-800">
+      <div className="flex">
+        <div className="w-10 flex-shrink-0 pt-1">
+          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900 text-amber-600 dark:text-amber-300">
+            <span className="text-xs">💡</span>
+          </div>
+        </div>
+        <div className="flex-grow">
+          <h5 className="font-semibold text-sm mb-1 dark:text-white">专业测试建议</h5>
+          <p className="text-xs text-slate-600 dark:text-slate-400">使用 RM-01 诊断工具包进行全面的性能基准测试，确保设备在客户环境中达到最佳性能。测试完成后生成性能报告，作为交付文档的一部分。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### 5. 培训与交付
+
+<div className="mb-8 rounded-lg overflow-hidden">
+  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 p-6 border border-blue-100 dark:border-blue-800/60">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="col-span-1 md:col-span-2 bg-white dark:bg-gray-800/90 rounded-xl shadow-sm p-4 border border-indigo-100 dark:border-indigo-700/50">
+        <h4 className="text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300">培训与交付流程图</h4>
+        <div className="flex flex-wrap justify-center items-center text-center">
+          <div className="w-full md:w-1/4 p-2">
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-100 dark:border-blue-700/40 h-full">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 mx-auto mb-2">
+                <span className="text-blue-600 dark:text-blue-300 text-lg">1</span>
+              </div>
+              <div className="font-medium text-sm dark:text-white">管理员培训</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">基础配置与日常管理</div>
+            </div>
+          </div>
+          <div className="hidden md:block w-10 text-gray-300 dark:text-gray-600">→</div>
+          <div className="w-full md:w-1/4 p-2">
+            <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-3 border border-indigo-100 dark:border-indigo-700/40 h-full">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 mx-auto mb-2">
+                <span className="text-indigo-600 dark:text-indigo-300 text-lg">2</span>
+              </div>
+              <div className="font-medium text-sm dark:text-white">用户培训</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">应用操作与使用技巧</div>
+            </div>
+          </div>
+          <div className="hidden md:block w-10 text-gray-300 dark:text-gray-600">→</div>
+          <div className="w-full md:w-1/4 p-2">
+            <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3 border border-purple-100 dark:border-purple-700/40 h-full">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 mx-auto mb-2">
+                <span className="text-purple-600 dark:text-purple-300 text-lg">3</span>
+              </div>
+              <div className="font-medium text-sm dark:text-white">文档交付</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">使用手册与技术文档</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700/50 flex flex-col h-full">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-3">
+            <span className="text-xl">👨‍💼</span>
+          </div>
+          <h5 className="text-lg font-semibold dark:text-white">企业管理员培训</h5>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 flex-grow">
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start">
+            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+              <span className="text-xs">1</span>
+            </div>
+            <div>
+              <div className="font-medium text-sm dark:text-white">设备操作与维护</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">基本启停、硬件维护</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start">
+            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+              <span className="text-xs">2</span>
+            </div>
+            <div>
+              <div className="font-medium text-sm dark:text-white">管理界面使用</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">系统设置与监控</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start">
+            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+              <span className="text-xs">3</span>
+            </div>
+            <div>
+              <div className="font-medium text-sm dark:text-white">模型与应用管理</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">更新与配置</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start">
+            <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+              <span className="text-xs">4</span>
+            </div>
+            <div>
+              <div className="font-medium text-sm dark:text-white">故障排查</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">常见问题诊断与解决</div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-3 p-2 bg-amber-50 dark:bg-amber-900/20 rounded-md text-xs text-amber-800 dark:text-amber-300">
+          建议录制培训视频，以便管理员后续参考
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700/50 flex flex-col h-full">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 text-indigo-600 dark:text-indigo-300 mr-3">
+            <span className="text-xl">👥</span>
+          </div>
+          <h5 className="text-lg font-semibold dark:text-white">最终用户培训</h5>
+        </div>
+        
+        <ul className="pl-6 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300 flex-grow">
+          <li>
+            <strong className="text-indigo-700 dark:text-indigo-300">应用访问方式</strong>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">如何登录并找到需要的应用</div>
+          </li>
+          <li>
+            <strong className="text-indigo-700 dark:text-indigo-300">基本操作指导</strong>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">常用功能与操作流程演示</div>
+          </li>
+          <li>
+            <strong className="text-indigo-700 dark:text-indigo-300">使用技巧与最佳实践</strong>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">提高效率的专业建议</div>
+          </li>
+          <li>
+            <strong className="text-indigo-700 dark:text-indigo-300">常见问题解决</strong>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">操作错误与异常情况处理</div>
+          </li>
+        </ul>
+        
+        <div className="mt-3 p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-md text-xs text-indigo-800 dark:text-indigo-300">
+          推荐针对不同部门用户定制培训内容，提高培训效果
+        </div>
+      </div>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-purple-200 dark:border-purple-700/50">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 text-purple-600 dark:text-purple-300 mr-3">
+            <span className="text-xl">📄</span>
+          </div>
+          <h5 className="text-lg font-semibold dark:text-white">文档交付</h5>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-3 text-sm">
+          <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40">
+            <div className="font-medium mb-1 text-purple-800 dark:text-purple-300">设备使用手册</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400">硬件规格与基本操作指导</div>
+          </div>
+          
+          <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40">
+            <div className="font-medium mb-1 text-purple-800 dark:text-purple-300">管理员指南</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400">系统管理与故障排除</div>
+          </div>
+          
+          <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40">
+            <div className="font-medium mb-1 text-purple-800 dark:text-purple-300">用户操作指南</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400">应用使用步骤与说明</div>
+          </div>
+          
+          <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40">
+            <div className="font-medium mb-1 text-purple-800 dark:text-purple-300">故障排除指南</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400">常见问题与解决方案</div>
+          </div>
+        </div>
+        
+        <div className="mt-3 text-xs text-slate-600 dark:text-slate-400">
+          所有文档均提供电子版与打印版，可通过管理界面随时获取最新版本
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-emerald-200 dark:border-emerald-700/50">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-3">
+            <span className="text-xl">✅</span>
+          </div>
+          <h5 className="text-lg font-semibold dark:text-white">设备交付确认</h5>
+        </div>
+        
+        <div className="space-y-2">
+          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
+            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
+              <span className="text-xs">✓</span>
+            </span>
+            <span className="text-sm dark:text-gray-300">获取企业签署的验收单</span>
+          </div>
+          
+          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
+            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
+              <span className="text-xs">✓</span>
+            </span>
+            <span className="text-sm dark:text-gray-300">确认所有配置与培训已完成</span>
+          </div>
+          
+          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
+            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
+              <span className="text-xs">✓</span>
+            </span>
+            <span className="text-sm dark:text-gray-300">提供保修信息与支持联系方式</span>
+          </div>
+          
+          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
+            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
+              <span className="text-xs">✓</span>
+            </span>
+            <span className="text-sm dark:text-gray-300">预约首次远程检查与回访时间</span>
+          </div>
+        </div>
+        
+        <div className="mt-3 p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-md text-xs text-emerald-800 dark:text-emerald-300">
+          推荐使用标准化交付清单确保所有交付项目无遗漏
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### 6. 售后支持
+
+<div className="mb-8 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-950/30 dark:to-indigo-950/30 rounded-lg border border-purple-100 dark:border-purple-700 overflow-hidden">
+  <div className="p-6">
+    <h4 className="text-lg font-bold mb-5 text-center dark:text-white">全方位售后服务体系</h4>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border-l-4 border-blue-400 flex flex-col">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">💻</span>
+          </div>
+          <h5 className="text-lg font-semibold">远程支持服务</h5>
+        </div>
+        
+        <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
+          <li>提供远程监控和管理支持</li>
+          <li>定期检查设备健康状态</li>
+          <li>远程故障诊断和解决</li>
+          <li>7×24 小时紧急技术支持</li>
+        </ul>
+        
+        <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-center text-blue-600">
+          标准服务包含 12 个月远程支持
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border-l-4 border-purple-400 flex flex-col">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">🔄</span>
+          </div>
+          <h5 className="text-lg font-semibold">更新与维护</h5>
+        </div>
+        
+        <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
+          <li>定期提供模型和应用更新</li>
+          <li>协助企业进行固件更新</li>
+          <li>系统性能优化服务</li>
+          <li>资源使用效率建议</li>
+        </ul>
+        
+        <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-center text-purple-600">
+          推荐每季度进行一次系统全面检查
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border-l-4 border-green-400 flex flex-col">
+        <div className="flex items-center mb-3">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3" style={{ minWidth: '2.5rem' }}>
+            <span className="text-xl">🚀</span>
+          </div>
+          <h5 className="text-lg font-semibold">扩展服务</h5>
+        </div>
+        
+        <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
+          <li>模型定制与优化服务</li>
+          <li>企业专属应用开发</li>
+          <li>数据集成与分析服务</li>
+          <li>现场技术支持服务</li>
+        </ul>
+        
+        <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-center text-green-600">
+          可按需购买额外增值服务
+        </div>
+      </div>
+    </div>
+    
+    <div className="mt-6 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-indigo-100">
+      <div className="flex items-start">
+        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900 text-amber-600 dark:text-amber-300 mr-3 mt-1" style={{ minWidth: '2.5rem' }}>
+          <span className="text-lg">📋</span>
+        </div>
+        <div>
+          <h5 className="font-semibold text-sm mb-2">服务级别协议 (SLA)</h5>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mt-2">
+            <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+              <div className="font-medium text-blue-700 dark:text-blue-300">标准响应</div>
+              <div className="mt-1 dark:text-gray-300">工作时间内 4 小时内响应</div>
+            </div>
+            <div className="p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg">
+              <div className="font-medium text-indigo-700 dark:text-indigo-300">高级响应</div>
+              <div className="mt-1 dark:text-gray-300">工作时间内 2 小时内响应</div>
+            </div>
+            <div className="p-2 bg-violet-50 dark:bg-violet-900/20 rounded-lg">
+              <div className="font-medium text-violet-700 dark:text-violet-300">紧急响应</div>
+              <div className="mt-1 dark:text-gray-300">全天候 30 分钟内响应</div>
+            </div>
+          </div>
+          <p className="text-xs text-slate-600 mt-3">
+            提供灵活的服务级别协议选项，可根据企业需求定制具体响应时间和服务内容。所有 SLA 承诺均有服务质量保证，不达标准将提供服务补偿。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 常见问题解答
+
+<div className="mb-8 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/50 dark:to-gray-900/50 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+  <div className="p-6">
+    <div className="mb-6 text-center">
+      <h3 className="text-xl font-bold mb-2 dark:text-white">解答客户疑问</h3>
+      <p className="text-sm text-slate-600 dark:text-slate-400">以下是客户最常询问的问题及其答案，助您高效推进销售流程</p>
+    </div>
+    
+    <div className="grid grid-cols-1 gap-6">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-100 dark:border-blue-800">
+        <h4 className="text-lg font-bold mb-3 text-blue-800 dark:text-blue-300">关于设备</h4>
+        
+        <div className="space-y-4">
+          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">RM-01 需要持续联网吗？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">不需要。RM-01 设计为完全离线运行。</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">RM-01 的功耗是多少？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">RM-01 的最大功耗为 100W，TDP 为 60W，比传统 AI 服务器节能 98.6%，全年 24 小时不间断运行的电费约为 4800 元。</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">RM-01 支持哪些模型规模？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">RM-01 支持参数规模从 0.5B 至 235B（GPTQ Int4）的模型，覆盖主流开源模型。</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">设备需要专业 IT 人员维护吗？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">不需要。RM-01 采用零运维设计，普通用户也能轻松使用和管理。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-purple-100 dark:border-purple-800">
+        <h4 className="text-lg font-bold mb-3 text-purple-800 dark:text-purple-300">关于软件与应用</h4>
+        
+        <div className="space-y-4">
+          <div className="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">如何为 RM-01 添加新的模型？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">将模型文件存入 CFexpress 存储卡，插入设备，系统会自动识别并加载模型。</div>
+            </div>
+          </div>
+          
+          <div className="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">企业自有数据如何保密？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">RM-01 采用硬件级非对称加密，所有数据本地处理，不会上传云端，确保企业数据绝对安全。</div>
+            </div>
+          </div>
+          
+          <div className="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">应用开发需要特殊技能吗？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">熟悉 Docker 和常见 Web 开发技术的开发者可以快速为 RM-01 开发应用。RMinte 提供完整的开发者文档和 SDK。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-pink-100 dark:border-pink-800/60">
+        <h4 className="text-lg font-bold mb-3 text-pink-800 dark:text-pink-300">关于商业模式</h4>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">应用开发者如何从 RM-01 获利？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">开发者可以在 RMinte 开发者平台发布付费应用，通过应用销售或订阅获得收入。</div>
+            </div>
+          </div>
+          
+          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">企业如何评估 RM-01 的投资回报？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">相比传统 AI 部署，RM-01 初始投入节省 80%，运维成本降低 98%，3 年总拥有成本节约 99%。</div>
+            </div>
+          </div>
+          
+          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">是否有租赁或订阅模式？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">是的，RMinte 提供设备租赁和 DaaS（Device as a Service）订阅模式，降低企业初始投入。</div>
+            </div>
+          </div>
+          
+          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
+            <div className="flex items-start">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
+                <span className="text-xs">Q</span>
+              </div>
+              <div className="font-bold text-sm dark:text-white">是否提供试用服务？</div>
+            </div>
+            <div className="flex items-start mt-2">
+              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
+                <span className="text-xs">A</span>
+              </div>
+              <div className="text-sm dark:text-gray-300">是的，我们为企业客户提供 7 天免费试用服务，并提供专业技术人员现场支持。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 技术支持
+
+<div className="mb-8 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 rounded-lg border border-blue-100 dark:border-blue-700 overflow-hidden">
+  <div className="p-6">
+    <h3 className="text-xl font-bold mb-5 text-center dark:text-white">多渠道专业支持</h3>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700">
+        <h4 className="text-lg font-semibold mb-4 text-center text-blue-800 dark:text-blue-300">联系方式</h4>
+        
+        <div className="space-y-4">
+          <div className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+            <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-4">
+              <span className="text-2xl">📞</span>
+            </div>
+            <div>
+              <div className="font-medium dark:text-white">技术支持热线</div>
+              <div className="text-sm text-blue-700 dark:text-blue-300">400-XXX-XXXX</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">工作时间：周一至周五 9:00-18:00</div>
+            </div>
+          </div>
+          
+          <div className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+            <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-4">
+              <span className="text-2xl">📧</span>
+            </div>
+            <div>
+              <div className="font-medium dark:text-white">电子邮箱</div>
+              <div className="text-sm text-blue-700 dark:text-blue-300">support@rminte.com</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">24小时内响应</div>
+            </div>
+          </div>
+          
+          <div className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+            <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-4">
+              <span className="text-2xl">💬</span>
+            </div>
+            <div>
+              <div className="font-medium dark:text-white">在线支持</div>
+              <div className="text-sm text-blue-700 dark:text-blue-300">https://support.rminte.com</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">实时在线客服，工作时间秒级响应</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-cyan-200 dark:border-cyan-700">
+        <h4 className="text-lg font-semibold mb-4 text-center text-cyan-800 dark:text-cyan-300">支持流程</h4>
+        
+        <div className="flex flex-col space-y-4">
+          <div className="flex">
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
+              <span className="font-semibold">1</span>
+            </div>
+            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
+              <div className="font-medium text-sm dark:text-white">提交支持请求</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">通过电话、邮件或在线客服提交支持请求</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
+              <span className="font-semibold">2</span>
+            </div>
+            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
+              <div className="font-medium text-sm dark:text-white">确认与分级</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">技术支持团队确认问题并进行优先级分级</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
+              <span className="font-semibold">3</span>
+            </div>
+            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
+              <div className="font-medium text-sm dark:text-white">远程或现场支持</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">根据问题性质提供远程诊断或安排现场支持</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
+              <span className="font-semibold">4</span>
+            </div>
+            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
+              <div className="font-medium text-sm dark:text-white">问题解决与确认</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">解决问题后与客户确认，并记录解决方案</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm border border-blue-100 dark:border-blue-700">
+      <h4 className="text-lg font-semibold mb-4 text-center dark:text-white">资源与文档</h4>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
+          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mb-3">
+            <span className="text-2xl">📚</span>
+          </div>
+          <div className="font-medium text-sm mb-1 dark:text-white">产品文档</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">详细技术文档与指南</div>
+          <div className="mt-2">
+            <a href="https://docs.rminte.com" className="text-xs text-blue-600 dark:text-blue-300 font-medium">docs.rminte.com</a>
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
+          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 mb-3">
+            <span className="text-2xl">👨‍💻</span>
+          </div>
+          <div className="font-medium text-sm mb-1 dark:text-white">开发者社区</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">技术交流与最佳实践</div>
+          <div className="mt-2">
+            <a href="https://developer.rminte.com" className="text-xs text-blue-600 dark:text-blue-300 font-medium">developer.rminte.com</a>
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
+          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 mb-3">
+            <span className="text-2xl">🛒</span>
+          </div>
+          <div className="font-medium text-sm mb-1 dark:text-white">应用商店</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">发现与下载专业应用</div>
+          <div className="mt-2">
+            <a href="https://apps.rminte.com" className="text-xs text-blue-600 dark:text-blue-300 font-medium">apps.rminte.com</a>
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
+          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 mb-3">
+            <span className="text-2xl">🎓</span>
+          </div>
+          <div className="font-medium text-sm mb-1 dark:text-white">教程与视频</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">学习与培训资源</div>
+          <div className="mt-2">
+            <a href="https://academy.rminte.com" className="text-xs text-blue-600 dark:text-blue-300 font-medium">academy.rminte.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="my-8 text-center">
+  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+</div>
+

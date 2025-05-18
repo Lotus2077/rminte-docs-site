@@ -1,0 +1,14 @@
+{
+  "title": "Enterprise Deployment",
+  "description": "RM-01 Deployment Guide",
+  "root": true,
+  "icon": "Building",
+  "iconColor": "color-fd-primary",
+  "pages": [
+    "---Quick Start---",
+    "find-source",
+    "---Deployment Guide---",
+    "deploy",
+    "security-guide"
+  ]
+}

@@ -1,0 +1,711 @@
+---
+title: 企业快速上手指南
+icon: Rocket
+---
+
+import { Callout } from 'fumadocs-ui/components/callout'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Step, Steps } from 'fumadocs-ui/components/steps'
+import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  本文档为企业用户提供简明的 RM-01 使用指南，帮助您和您的团队迅速掌握这款革命性 AI 超算的操作方法，实现 AI 应用的快速满足业务需求。
+</Callout>
+
+## 设备概述
+
+<div className="mb-8 bg-gradient-to-br from-blue-50/95 to-indigo-50/95 dark:from-blue-950/20 dark:to-indigo-950/30 rounded-xl border border-blue-100/70 dark:border-blue-800/40 overflow-hidden shadow-sm backdrop-blur-md">
+  <div className="p-7">
+    <h3 className="text-xl font-bold text-center mb-5 text-blue-800 dark:text-blue-200">RM-01 AI 超算设备</h3>
+    
+    <p className="text-center mb-7 max-w-3xl mx-auto text-slate-700 dark:text-slate-300 leading-relaxed">
+      RM-01 是一款集高性能、高安全性与易用性于一体的便携式 AI 超算设备，专为企业级 AI 应用落地设计。无需云连接，本地运算，大幅降低数据安全风险与使用成本。
+    </p>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-blue-200/50 dark:border-blue-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-800/40 dark:to-blue-900/60 text-blue-600 dark:text-blue-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+            <span className="text-xl">💪</span>
+          </div>
+          <h4 className="text-lg font-semibold text-blue-800 dark:text-blue-200">超强性能</h4>
+        </div>
+        <div className="pl-3 border-l-2 border-blue-200 dark:border-blue-700/60">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex items-start">
+              <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+              <span>支持 300+ 主流开源大模型</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+              <span>最高 800 TOPS 算力</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
+              <span>128GB LPDDR5 高速内存</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-indigo-200/50 dark:border-indigo-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-indigo-50 dark:from-indigo-800/40 dark:to-indigo-900/60 text-indigo-600 dark:text-indigo-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+            <span className="text-xl">🔒</span>
+          </div>
+          <h4 className="text-lg font-semibold text-indigo-800 dark:text-indigo-200">极致安全</h4>
+        </div>
+        <div className="pl-3 border-l-2 border-indigo-200 dark:border-indigo-700/60">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex items-start">
+              <span className="text-indigo-500 dark:text-indigo-400 mr-2">•</span>
+              <span>硬件级非对称加密保护</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-indigo-500 dark:text-indigo-400 mr-2">•</span>
+              <span>数据本地处理，绝不外传</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-indigo-500 dark:text-indigo-400 mr-2">•</span>
+              <span>防拆解物理安全设计</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="bg-white/70 dark:bg-gray-800/40 rounded-lg shadow-sm p-5 border border-purple-200/50 dark:border-purple-700/30 backdrop-blur-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-800/40 dark:to-purple-900/60 text-purple-600 dark:text-purple-300 mr-3 shadow-sm" style={{ minWidth: '2.75rem' }}>
+            <span className="text-xl">🚀</span>
+          </div>
+          <h4 className="text-lg font-semibold text-purple-800 dark:text-purple-200">极简部署</h4>
+        </div>
+        <div className="pl-3 border-l-2 border-purple-200 dark:border-purple-700/60">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li className="flex items-start">
+              <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+              <span>5 分钟内完成部署设置</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+              <span>即插即用，无需专业IT支持</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-500 dark:text-purple-400 mr-2">•</span>
+              <span>最大功耗仅 100W (TDP 60W)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### 设备外观与接口
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/50 backdrop-blur-md rounded-lg border border-slate-200/70 dark:border-slate-700/40 p-5 shadow-sm hover:shadow-md transition-all">
+    <h4 className="font-semibold mb-4 text-center text-slate-800 dark:text-slate-200">正面与侧面接口</h4>
+    
+    <div className="space-y-4">
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 mr-3 text-blue-600 dark:text-blue-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">⏻</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">电源按钮</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">短按开/关机，长按5秒强制关机</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 mr-3 text-green-600 dark:text-green-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">●</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">状态指示灯</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">白色：运行中，蓝色：启动中，红色：错误</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/50 backdrop-blur-md rounded-lg border border-slate-200/70 dark:border-slate-700/40 p-5 shadow-sm hover:shadow-md transition-all">
+    <h4 className="font-semibold mb-4 text-center text-slate-800 dark:text-slate-200">上方接口</h4>
+    
+    <div className="space-y-4">
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900/30 mr-3 text-purple-600 dark:text-purple-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">💾</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">CFexpress 卡槽</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">用于模型存储，支持热插拔</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-teal-50 dark:bg-teal-900/30 mr-3 text-teal-600 dark:text-teal-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">📇</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">MicroSD 卡槽</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">用于应用和数据存储</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-orange-50 dark:bg-orange-900/30 mr-3 text-orange-600 dark:text-orange-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">🔌</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">Ext. 接口</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">用于连接外部扩展设备</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="bg-gradient-to-br from-slate-50/90 to-slate-100/90 dark:from-slate-800/30 dark:to-slate-900/50 backdrop-blur-md rounded-lg border border-slate-200/70 dark:border-slate-700/40 p-5 shadow-sm hover:shadow-md transition-all">
+    <h4 className="font-semibold mb-4 text-center text-slate-800 dark:text-slate-200">背面与扩展接口</h4>
+    
+    <div className="space-y-4">
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-amber-50 dark:bg-amber-900/30 mr-3 text-amber-600 dark:text-amber-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">⚡</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">USB-C 电源接口</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">连接电源适配器（支持 PD3.1）</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-indigo-50 dark:bg-indigo-900/30 mr-3 text-indigo-600 dark:text-indigo-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">🔌</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">USB-C 网络接口</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">连接到企业网络或设备</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center p-3 bg-white/60 dark:bg-slate-800/50 rounded-lg border border-slate-200/60 dark:border-slate-600/30 hover:border-slate-300 dark:hover:border-slate-500/50 transition-all backdrop-blur-sm">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-red-50 dark:bg-red-900/30 mr-3 text-red-600 dark:text-red-300 shadow-sm" style={{ minWidth: '2.25rem' }}>
+          <span className="text-lg">♨️</span>
+        </div>
+        <div>
+          <strong className="text-slate-900 dark:text-slate-100">散热口</strong>
+          <p className="text-sm text-slate-600 dark:text-slate-300">请确保通风良好，勿遮挡</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 快速入门
+
+### 首次设置
+
+<Steps>
+  <Step>
+    ### 开箱检查
+    确认包装内包含以下物品：
+    - RM-01 主机
+    - USB-C 电源适配器
+    - USB-C 转网络适配器
+    - 预装模型及应用的 CFexpress 卡
+    - 快速入门指南
+  </Step>
+
+  <Step>
+    ### 连接电源
+    - 将 USB-C 电源适配器连接到 RM-01
+    - 连接电源适配器到电源插座
+  </Step>
+
+  <Step>
+    ### 启动设备
+    - 按下电源按钮
+    - 等待设备启动（约 1-2 分钟）
+    - 白色指示灯常亮表示设备正常运行
+  </Step>
+
+  <Step>
+    ### 设备连接
+    - 使用 USB-C 转网络适配器连接到局域网或接入个人设备（如手机、平板等）
+  </Step>
+</Steps>
+
+### 访问管理界面
+
+<Tabs items={['网页界面', '移动应用']}>
+  <Tab>
+    1. 在同一局域网的电脑上打开浏览器
+    2. 输入设备 IP 地址或主机名（格式：`http://rm01-xxxxx.local`，xxxxx 为设备序列号）
+    3. 使用默认凭据登录：
+       - 用户名：`admin`
+       - 密码：见设备底部标签
+  </Tab>
+  <Tab>
+    1. 下载并安装"RM-01 Companion"应用
+    2. 打开应用并扫描设备上的 QR 码
+    3. 按照应用内提示完成连接
+  </Tab>
+</Tabs>
+
+<Callout type="warning" className="border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm">
+  首次登录后，请立即修改默认管理员密码：
+  1. 登录管理界面
+  2. 点击右上角的"设置"图标
+  3. 选择"账户安全"
+  4. 点击"修改密码"
+  5. 输入新密码并确认
+</Callout>
+
+## 使用 AI 应用
+
+### 查看与启动应用
+
+<Steps>
+  <Step>
+    ### 查看可用应用
+    1. 登录管理界面
+    2. 点击"应用库"选项卡
+    3. 浏览已安装的 AI 应用列表
+  </Step>
+
+  <Step>
+    ### 获取应用详情 
+    点击应用名称查看详情，包括功能介绍、使用场景和所需资源
+  </Step>
+
+  <Step>
+    ### 启动应用
+    1. 点击"启动"按钮
+    2. 应用将在新标签页中打开
+    3. 根据应用提示进行操作
+  </Step>
+</Steps>
+
+### 常见应用类型及使用场景
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-8">
+  <div className="group bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-800/40 dark:to-blue-900/20 rounded-lg shadow-sm p-5 border border-blue-100/60 dark:border-blue-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-800/50 dark:to-blue-900/70 text-blue-600 dark:text-blue-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">📄</span>
+      </div>
+      <h4 className="text-base font-semibold text-blue-800 dark:text-blue-200 group-hover:translate-x-1 transition-transform duration-300">智能文档助手</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 opacity-70">•</span>
+        <span>上传企业文档（合同、报告、政策等）</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 opacity-70">•</span>
+        <span>AI 自动分析并提取关键信息</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 opacity-70">•</span>
+        <span>回答关于文档内容的精确查询</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="group bg-gradient-to-br from-white/80 to-teal-50/80 dark:from-gray-800/40 dark:to-teal-900/20 rounded-lg shadow-sm p-5 border border-teal-100/60 dark:border-teal-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-teal-100 to-teal-50 dark:from-teal-800/50 dark:to-teal-900/70 text-teal-600 dark:text-teal-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">📊</span>
+      </div>
+      <h4 className="text-base font-semibold text-teal-800 dark:text-teal-200 group-hover:translate-x-1 transition-transform duration-300">数据分析助手</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-teal-500 dark:text-teal-400 mr-2 opacity-70">•</span>
+        <span>上传企业数据（CSV、Excel、JSON 格式）</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-teal-500 dark:text-teal-400 mr-2 opacity-70">•</span>
+        <span>AI 自动分析数据趋势和异常</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-teal-500 dark:text-teal-400 mr-2 opacity-70">•</span>
+        <span>生成交互式数据可视化报表</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="group bg-gradient-to-br from-white/80 to-purple-50/80 dark:from-gray-800/40 dark:to-purple-900/20 rounded-lg shadow-sm p-5 border border-purple-100/60 dark:border-purple-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-800/50 dark:to-purple-900/70 text-purple-600 dark:text-purple-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">👥</span>
+      </div>
+      <h4 className="text-base font-semibold text-purple-800 dark:text-purple-200 group-hover:translate-x-1 transition-transform duration-300">客户服务助手</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-purple-500 dark:text-purple-400 mr-2 opacity-70">•</span>
+        <span>分析客户反馈和问询模式</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-purple-500 dark:text-purple-400 mr-2 opacity-70">•</span>
+        <span>自动生成个性化回复建议</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-purple-500 dark:text-purple-400 mr-2 opacity-70">•</span>
+        <span>提炼客户需求洞察和改进方向</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div className="group bg-gradient-to-br from-white/80 to-amber-50/80 dark:from-gray-800/40 dark:to-amber-900/20 rounded-lg shadow-sm p-5 border border-amber-100/60 dark:border-amber-700/30 hover:shadow-md transition-all duration-300 backdrop-blur-sm">
+    <div className="flex items-center mb-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-100 to-amber-50 dark:from-amber-800/50 dark:to-amber-900/70 text-amber-600 dark:text-amber-300 mr-3 shadow-sm group-hover:shadow group-hover:scale-105 transition-all duration-300" style={{ minWidth: '2.5rem' }}>
+        <span className="text-lg">✍️</span>
+      </div>
+      <h4 className="text-base font-semibold text-amber-800 dark:text-amber-200 group-hover:translate-x-1 transition-transform duration-300">内容创作助手</h4>
+    </div>
+    <ul className="pl-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-none ml-2">
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 opacity-70">•</span>
+        <span>协助撰写营销文案、产品说明、报告</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 opacity-70">•</span>
+        <span>提供风格一致性和内容修改建议</span>
+      </li>
+      <li className="flex items-start">
+        <span className="text-amber-500 dark:text-amber-400 mr-2 opacity-70">•</span>
+        <span>支持30+语言翻译和本地化</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+## 数据管理
+
+### 数据导入
+
+<Tabs items={['单文件上传', '批量导入']}>
+  <Tab>
+    1. 在应用中找到"上传"或"导入"按钮
+    2. 选择需要上传的文件
+    3. 等待上传完成
+  </Tab>
+  <Tab>
+    1. 准备好需要导入的文件
+    2. 使用提供的批量导入工具
+    3. 选择文件夹或多个文件
+    4. 启动导入过程
+  </Tab>
+</Tabs>
+
+### 数据安全保障
+
+<Callout type="info" emoji="🔒" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  RM-01 采用多重安全措施保护您的数据
+</Callout>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <Card title="本地处理">
+    所有数据在设备内处理，不会上传云端
+  </Card>
+  <Card title="硬件加密">
+    采用非对称加密技术，保护存储数据
+  </Card>
+  <Card title="IP5X 密封">
+    防尘防潮设计，防止物理拆解
+  </Card>
+  <Card title="权限控制">
+    精细化的用户权限管理系统
+  </Card>
+</div>
+
+### 数据备份（可选）
+
+<Callout type="tip" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+  虽然 RM-01 具有高可靠性，但重要数据建议定期备份
+</Callout>
+
+<Steps>
+  <Step>
+    ### 进入备份界面
+    在管理界面选择"系统维护"，点击"创建备份"
+  </Step>
+  
+  <Step>
+    ### 选择备份内容
+    可选择应用数据、用户设置等
+  </Step>
+  
+  <Step>
+    ### 选择备份位置
+    可选择本地网络、外部存储等
+  </Step>
+  
+  <Step>
+    ### 启动备份
+    点击"开始备份"并等待完成
+  </Step>
+</Steps>
+
+## 用户管理
+
+### 添加用户
+
+<Steps>
+  <Step>
+    ### 登录管理员账户
+    使用管理员账户访问管理界面
+  </Step>
+  
+  <Step>
+    ### 进入用户管理
+    点击左侧导航栏的"用户管理"选项
+  </Step>
+  
+  <Step>
+    ### 创建新用户
+    点击"添加用户"按钮
+  </Step>
+  
+  <Step>
+    ### 填写用户信息
+    输入用户名、电子邮件、初始密码和权限级别
+  </Step>
+  
+  <Step>
+    ### 完成创建
+    点击"创建"按钮完成用户添加
+  </Step>
+</Steps>
+
+### 权限设置
+
+RM-01 支持精细化的权限控制：
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <Card title="管理员">
+    完全访问权限，包括系统设置
+  </Card>
+  <Card title="高级用户">
+    可使用所有应用，管理自己的数据
+  </Card>
+  <Card title="标准用户">
+    可使用指定应用，限制数据访问
+  </Card>
+  <Card title="访客">
+    只能使用特定演示应用
+  </Card>
+</div>
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  **调整用户权限**
+  1. 进入"用户管理"
+  2. 选择需要修改的用户
+  3. 点击"编辑权限"
+  4. 设置应用访问权限和数据访问范围
+  5. 保存更改
+</Callout>
+
+## 日常维护
+
+### 状态监控
+
+<Callout type="tip" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+  定期检查设备状态可确保系统平稳运行
+</Callout>
+
+登录管理界面后，查看仪表盘上的系统状态信息：
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+  <Card title="性能指标">
+    - CPU 使用率
+    - 内存使用情况
+  </Card>
+  <Card title="存储状态">
+    - 存储空间使用率
+    - 数据读写速度
+  </Card>
+  <Card title="系统状态">
+    - 运行温度
+    - 网络连接状态
+  </Card>
+</div>
+
+### 更新管理
+
+<Tabs items={['模型更新', '应用更新', '系统更新']}>
+  <Tab>
+    1. 登录管理界面
+    2. 进入"模型管理"
+    3. 检查可用更新
+    4. 选择需要更新的模型
+    5. 点击"更新"按钮
+  </Tab>
+  <Tab>
+    1. 进入"应用库"
+    2. 检查标记为"可更新"的应用
+    3. 点击"更新"按钮
+    4. 等待更新完成
+  </Tab>
+  <Tab>
+    1. 进入"系统维护"
+    2. 选择"检查更新"
+    3. 如有可用更新，点击"安装更新"
+    4. 设备将自动完成更新并重启
+  </Tab>
+</Tabs>
+
+### 性能优化
+
+<Callout type="warning" className="border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm">
+  如果发现设备性能下降，可尝试以下步骤
+</Callout>
+
+<Steps>
+  <Step>
+    ### 关闭未使用的应用
+    进入"应用管理"，停止不需要的应用
+  </Step>
+  
+  <Step>
+    ### 清理缓存
+    进入"系统维护"，选择"清理缓存"选项
+  </Step>
+  
+  <Step>
+    ### 重启设备
+    在管理界面选择"重启"，或短按电源按钮选择"重启"
+  </Step>
+</Steps>
+
+## 常见问题解答
+
+<Tabs items={['设备问题', '应用问题', '网络问题', '性能问题']}>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **设备无法启动**
+    </Callout>
+    
+    **可能原因与解决方案**：
+    - **电源问题**：检查电源适配器连接，确保使用原装电源
+    - **存储卡问题**：尝试移除并重新插入存储卡
+    - **系统问题**：按住电源按钮 10 秒强制关机，然后重新启动
+  </Tab>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **应用无法启动**
+    </Callout>
+    
+    **可能原因与解决方案**：
+    - **资源不足**：关闭其他运行中的应用
+    - **应用损坏**：重新安装应用
+    - **模型问题**：检查应用需要的模型是否正确加载
+  </Tab>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **无法连接网络**
+    </Callout>
+    
+    **可能原因与解决方案**：
+    - **网络适配器问题**：检查 USB-C 网络适配器连接
+    - **网络设置错误**：检查网络配置，尤其是 IP 地址设置
+    - **防火墙限制**：确认企业防火墙未阻止设备连接
+  </Tab>
+  <Tab>
+    <Callout type="error" emoji="❓" className="border-l-4 border-red-500 dark:border-red-400 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-sm">
+      **性能不佳**
+    </Callout>
+    
+    **可能原因与解决方案**：
+    - **多应用同时运行**：减少同时运行的应用数量
+    - **大模型负载**：切换到较小的模型
+    - **温度过高**：确保设备通风良好，避免堆放
+    - **存储空间不足**：清理不必要的数据
+  </Tab>
+</Tabs>
+
+## 获取支持
+
+### 服务提供商联系方式
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <Card title="技术支持热线" icon="📞">
+    400-XXX-XXXX（工作日 9:00-18:00）
+  </Card>
+  <Card title="电子邮箱" icon="✉️">
+    support@rminte.com
+  </Card>
+  <Card title="在线支持" icon="💬">
+    https://support.rminte.com
+  </Card>
+</div>
+
+### 企业专属支持渠道
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+  作为企业用户，您享有专属支持服务
+</Callout>
+
+<Steps>
+  <Step>
+    ### 登录管理界面
+    使用管理员账户登录系统
+  </Step>
+  
+  <Step>
+    ### 进入支持中心
+    点击"支持中心"选项
+  </Step>
+  
+  <Step>
+    ### 提交工单
+    点击"提交工单"按钮
+  </Step>
+  
+  <Step>
+    ### 描述问题
+    详细描述您遇到的问题
+  </Step>
+  
+  <Step>
+    ### 添加附件
+    附加相关日志或截图（如有）
+  </Step>
+  
+  <Step>
+    ### 提交工单
+    提交后，专属技术支持将在 2 小时内响应
+  </Step>
+</Steps>
+
+### 学习资源
+
+<Cards>
+  <Card title="知识库" href="https://kb.rminte.com" icon="📚" />
+  <Card title="视频教程" href="https://academy.rminte.com" icon="🎬" />
+  <Card title="开发者社区" href="https://developer.rminte.com" icon="👨‍💻" />
+  <Card title="用户论坛" href="https://forum.rminte.com" icon="💬" />
+</Cards>
+
+---
+
+<Callout type="success" emoji="🎉" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+  恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的支持中心获取帮助。
+</Callout>
+
+<div className="text-sm text-gray-500 mt-8">
+  © 2025 RMinte Inc. 保留所有权利。
+</div>
+
+## 下一步
+
+<Cards>
+  <Card title="了解更多 RM-01 产品特性" href="/docs/product-features" icon="✨" />
+  <Card title="探索 RM-01 应用场景" href="/docs/use-cases" icon="🚀" />
+  <Card title="开发者资源" href="/docs/developer" icon="💻" />
+</Cards>
