@@ -17,8 +17,6 @@ import { Callout } from 'fumadocs-ui/components/callout'
 
 ## 服务商部署流程
 
-作为服务提供商，您是连接RM-01设备解决方案与企业实际需求的桥梁。本章节将指导您如何高效地为企业客户部署 RM-01 设备并提供相关技术支持。
-
 ### 1. 前期准备工作
 
 <Steps>
@@ -48,7 +46,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
     
     - **标准模型包**：包含常用的开源模型，如 DeepSeek、智谱、Qwen 等
     - **行业专用模型包**：根据企业所在行业，选择适合的垂直领域模型
-    - **企业定制模型**：如企业有自己训练的模型，确保已转换为适合 RM-01 运行的格式
+    - **企业定制模型**：如企业有自己训练的模型，确保已转换为适合 RM-01 运行的格式，并存入 CFexpress 卡上的指定目录
   </Step>
   
   <Step>
@@ -56,7 +54,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
     
     在部署前进行环境评估：
     
-    - **网络环境**：虽然 RM-01 支持离线运行，但可能需要接入企业内部网络进行连接
+    - **网络环境**：虽然 RM-01 支持完全离线运行，但可能需要接入企业内部网络进行连接
     - **电力供应**：确保部署场所有稳定的电源供应
     - **物理安全**：评估设备放置位置的物理安全措施
     - **IT 基础设施**：了解企业现有 IT 基础设施，确保 RM-01 能够顺利集成
@@ -116,7 +114,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
         
         <ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
           <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">访问管理界面：</strong> 浏览器访问 http://rm01-xxxxx.local（xxxxx 为设备序列号）
+            <strong className="dark:text-white">访问管理界面：</strong> 浏览器访问 http://10.10.99.99:xxxx（ xxxx 为设备序列号后四位 ）
           </li>
           <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
             <strong className="dark:text-white">初始登录：</strong> 用户名：admin，密码：见设备底部标签
@@ -152,10 +150,10 @@ import { Callout } from 'fumadocs-ui/components/callout'
           <li>
             <strong className="dark:text-white">加载新模型：</strong>
             <ul className="list-disc pl-5 mt-1 space-y-1 dark:text-gray-400">
-              <li>将模型文件存入 CFexpress 卡</li>
+              <li>将模型文件存入 CFexpress 卡上的指定目录</li>
               <li>插入 RM-01 设备</li>
-              <li>点击"扫描模型"按钮</li>
-              <li>等待加载完成并验证状态</li>
+              <li>等待设备自动扫描模型</li>
+              <li>加载完成并验证状态</li>
             </ul>
           </li>
         </ol>
@@ -182,18 +180,18 @@ import { Callout } from 'fumadocs-ui/components/callout'
           </div>
           
           <div>
-            <strong className="block mb-1 dark:text-white">部署方式：</strong>
+            <strong className="block mb-1 dark:text-white">应用加载方式：</strong>
             <div className="grid grid-cols-3 gap-2">
               <div className="p-2 bg-green-50 dark:bg-green-900/30 rounded text-center border border-green-100 dark:border-green-800">
                 <div className="text-xs font-medium dark:text-green-300">存储卡加载</div>
                 <div className="text-xs text-green-700 dark:text-green-400">推荐</div>
               </div>
               <div className="p-2 bg-blue-50 dark:bg-blue-900/30 rounded text-center border border-blue-100 dark:border-blue-800">
-                <div className="text-xs font-medium dark:text-blue-300">门户下载</div>
-                <div className="text-xs text-blue-700 dark:text-blue-400">需联网</div>
+                <div className="text-xs font-medium dark:text-blue-300">Docker镜像</div>
+                <div className="text-xs text-blue-700 dark:text-blue-400">中级选项</div>
               </div>
               <div className="p-2 bg-purple-50 dark:bg-purple-900/30 rounded text-center border border-purple-100 dark:border-purple-800">
-                <div className="text-xs font-medium dark:text-purple-300">Docker镜像</div>
+                <div className="text-xs font-medium dark:text-purple-300">自研开发</div>
                 <div className="text-xs text-purple-700 dark:text-purple-400">高级选项</div>
               </div>
             </div>
@@ -298,7 +296,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
         </div>
         <div className="flex-grow">
           <h5 className="font-semibold text-sm mb-1 dark:text-white">专业测试建议</h5>
-          <p className="text-xs text-slate-600 dark:text-slate-400">使用 RM-01 诊断工具包进行全面的性能基准测试，确保设备在客户环境中达到最佳性能。测试完成后生成性能报告，作为交付文档的一部分。</p>
+          <p className="text-xs text-slate-600 dark:text-slate-400">建议基于 RM-01 全面测试清单进行全面的功能基准测试，确保设备在客户环境中达到最佳性能。测试完成后生成测试报告，作为交付文档的一部分。</p>
         </div>
       </div>
     </div>
@@ -464,7 +462,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
           </div>
         </div>
         
-        <div className="mt-3 text-xs text-slate-600 dark:text-slate-400">
+        <div className="mt-3 p-2 bg-blue-100 dark:bg-blue-800/60 rounded-md text-xs text-blue-600 dark:text-blue-300">
           所有文档均提供电子版与打印版，可通过管理界面随时获取最新版本
         </div>
       </div>
@@ -531,7 +529,6 @@ import { Callout } from 'fumadocs-ui/components/callout'
         </div>
         
         <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
-          <li>提供远程监控和管理支持</li>
           <li>定期检查设备健康状态</li>
           <li>远程故障诊断和解决</li>
           <li>7×24 小时紧急技术支持</li>
@@ -551,7 +548,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
         </div>
         
         <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
-          <li>定期提供模型和应用更新</li>
+          <li>定期提供模型更新与适配</li>
           <li>协助企业进行固件更新</li>
           <li>系统性能优化服务</li>
           <li>资源使用效率建议</li>
@@ -572,7 +569,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
         
         <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
           <li>模型定制与优化服务</li>
-          <li>企业专属应用开发</li>
+          <li>企业专属应用开发匹配</li>
           <li>数据集成与分析服务</li>
           <li>现场技术支持服务</li>
         </ul>
@@ -653,7 +650,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
               <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
                 <span className="text-xs">A</span>
               </div>
-              <div className="text-sm dark:text-gray-300">RM-01 的最大功耗为 100W，TDP 为 60W，比传统 AI 服务器节能 98.6%，全年 24 小时不间断运行的电费约为 4800 元。</div>
+              <div className="text-sm dark:text-gray-300">RM-01 的最大功耗为 100W，TDP 为 60W，比传统 AI （单卡A100）服务器节能 98.6%，全年 24 小时不间断运行的电费约为 4800 元。</div>
             </div>
           </div>
           
@@ -683,7 +680,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
               <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
                 <span className="text-xs">A</span>
               </div>
-              <div className="text-sm dark:text-gray-300">不需要。RM-01 采用零运维设计，普通用户也能轻松使用和管理。</div>
+              <div className="text-sm dark:text-gray-300">不需要。RM-01 采用零运维设计，普通用户经过简单培训也能轻松使用和管理。</div>
             </div>
           </div>
         </div>
@@ -734,7 +731,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
               <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
                 <span className="text-xs">A</span>
               </div>
-              <div className="text-sm dark:text-gray-300">熟悉 Docker 和常见 Web 开发技术的开发者可以快速为 RM-01 开发应用。RMinte 提供完整的开发者文档和 SDK。</div>
+              <div className="text-sm dark:text-gray-300">熟悉 Docker 和 Dify 开发技术的开发者可以快速为 RM-01 开发应用。RMinte 提供完整的开发者文档和 SDK。</div>
             </div>
           </div>
         </div>
@@ -755,7 +752,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
               <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
                 <span className="text-xs">A</span>
               </div>
-              <div className="text-sm dark:text-gray-300">开发者可以在 RMinte 开发者平台发布付费应用，通过应用销售或订阅获得收入。</div>
+              <div className="text-sm dark:text-gray-300">开发者可以基于 RMinte 平台开发应用，通过提供解决方案或订阅获得收入。</div>
             </div>
           </div>
           
@@ -826,8 +823,8 @@ import { Callout } from 'fumadocs-ui/components/callout'
             </div>
             <div>
               <div className="font-medium dark:text-white">技术支持热线</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300">400-XXX-XXXX</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">工作时间：周一至周五 9:00-18:00</div>
+              <div className="text-sm text-blue-700 dark:text-blue-300">158-8200-8185</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">工作时间：周一至周五 9:00-21:00</div>
             </div>
           </div>
           
@@ -848,7 +845,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
             </div>
             <div>
               <div className="font-medium dark:text-white">在线支持</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300">https://support.rminte.com</div>
+              <div className="text-sm text-blue-700 dark:text-blue-300">rminte.com</div>
               <div className="text-xs text-slate-500 dark:text-slate-400">实时在线客服，工作时间秒级响应</div>
             </div>
           </div>
@@ -932,8 +929,8 @@ import { Callout } from 'fumadocs-ui/components/callout'
           <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 mb-3">
             <span className="text-2xl">🛒</span>
           </div>
-          <div className="font-medium text-sm mb-1 dark:text-white">应用商店</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">发现与下载专业应用</div>
+          <div className="font-medium text-sm mb-1 dark:text-white">应用广场</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">发现与建联专业应用（团队）</div>
           <div className="mt-2">
             <a href="https://apps.rminte.com" className="text-xs text-blue-600 dark:text-blue-300 font-medium">apps.rminte.com</a>
           </div>
