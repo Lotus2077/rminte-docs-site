@@ -97,6 +97,30 @@ const docs = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fum
 ], [
     {
         "info": {
+            "path": "develop-guide/meta.cn.json",
+            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/develop-guide/meta.cn.json"
+        },
+        "data": {
+            "title": "应用开发及交付",
+            "description": "RM-01 应用开发及交付流程",
+            "root": true,
+            "icon": "Code"
+        }
+    },
+    {
+        "info": {
+            "path": "develop-guide/meta.json",
+            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/develop-guide/meta.json"
+        },
+        "data": {
+            "title": "Development Guide",
+            "description": "RM-01 Development Guide",
+            "root": true,
+            "icon": "Code"
+        }
+    },
+    {
+        "info": {
             "path": "deploy-guide/meta.cn.json",
             "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/deploy-guide/meta.cn.json"
         },
@@ -131,30 +155,6 @@ const docs = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fum
             "description": "RM-01 Deployment Guide",
             "root": true,
             "icon": "Building"
-        }
-    },
-    {
-        "info": {
-            "path": "develop-guide/meta.cn.json",
-            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/develop-guide/meta.cn.json"
-        },
-        "data": {
-            "title": "应用开发及交付",
-            "description": "RM-01 应用开发及交付流程",
-            "root": true,
-            "icon": "Code"
-        }
-    },
-    {
-        "info": {
-            "path": "develop-guide/meta.json",
-            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/develop-guide/meta.json"
-        },
-        "data": {
-            "title": "Development Guide",
-            "description": "RM-01 Development Guide",
-            "root": true,
-            "icon": "Code"
         }
     }
 ]);

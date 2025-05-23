@@ -19,26 +19,9 @@ import { Callout } from 'fumadocs-ui/components/callout'
 
 ### 1. 前期准备工作
 
+
+
 <Steps>
-  <Step>
-    #### 设备与配件核对
-    
-    在交付企业前，请确保以下物品齐全：
-    
-    <div className="p-4 border rounded-lg">
-      <strong>RM-01 配件包</strong>
-      <ul className="list-disc pl-6 mt-2">
-        <li>RM-01 主机</li>
-        <li>CFexpress Type B 存储卡（预装模型及应用）</li>
-        <li>MicroSD 卡（可选，用于加密）</li>
-        <li>USB-C 电源适配器（PD3.1，最高 140W）</li>
-        <li>USB-C 转网线适配器</li>
-        <li>快速入门指南</li>
-        <li>保修卡</li>
-      </ul>
-    </div>
-  </Step>
-  
   <Step>
     #### 模型与应用准备
     
@@ -47,17 +30,40 @@ import { Callout } from 'fumadocs-ui/components/callout'
     - **标准模型包**：包含常用的开源模型，如 DeepSeek、智谱、Qwen 等
     - **行业专用模型包**：根据企业所在行业，选择适合的垂直领域模型
     - **企业定制模型**：如企业有自己训练的模型，确保已转换为适合 RM-01 运行的格式，并存入 CFexpress 卡上的指定目录
+    - **企业定制化应用**：基于 RMinte 平台使用 Dify 或者其他开发工具开发的AI应用，以加密的 Docker Image 形式存入 CFexpress 卡上的指定目录
+  </Step>
+
+  <Step>
+  #### 企业环境评估
+  
+  在部署前进行环境评估：
+  
+  - **网络环境**：评估 RM-01 按客户需求接入企业内部网络进行连接的可行性
+  - **电力供应**：确保部署场所有稳定的电源供应
+  - **物理安全**：评估设备放置位置的物理安全性，并制定相应安全保障方案
+  - **IT 基础设施**：了解企业现有 IT 基础设施，确保 RM-01 能够顺利集成
   </Step>
   
   <Step>
-    #### 企业环境评估
+    #### 设备与配件核对
     
-    在部署前进行环境评估：
+    在交付企业前，请确保以下物品齐全：
     
-    - **网络环境**：虽然 RM-01 支持完全离线运行，但可能需要接入企业内部网络进行连接
-    - **电力供应**：确保部署场所有稳定的电源供应
-    - **物理安全**：评估设备放置位置的物理安全措施
-    - **IT 基础设施**：了解企业现有 IT 基础设施，确保 RM-01 能够顺利集成
+    <div className="p-4 border rounded-lg">
+      <strong>RM-01 设备包</strong>
+      <ul className="list-disc pl-6 mt-2">
+        <li>RM-01 主机</li>
+        <li>CFexpress Type B 存储卡（预装模型及应用）</li>
+        <li>快速入门指南</li>
+        <li>保修卡</li>
+      </ul>
+      <strong>RM-01 配件包</strong>
+      <ul className="list-disc pl-6 mt-2">
+        <li>MicroSD 卡（可选，用于加密）</li>
+        <li>USB-C 电源适配器（PD3.1，最高 140W）</li>
+        <li>USB-C 转网线适配器</li>
+      </ul>
+    </div>
   </Step>
 </Steps>
 
@@ -68,9 +74,9 @@ import { Callout } from 'fumadocs-ui/components/callout'
     #### 设备安装
     
     1. 选择合适的位置放置 RM-01（桌面或专用机柜）
-    2. 连接电源适配器
-    3. 如需有线网络，连接 USB-C 转网线适配器
-    4. 插入预装有所需模型和应用的 CFexpress 存储卡
+    2. 插入预装有所需模型和应用的 CFexpress 存储卡
+    3. 连接电源适配器
+    4. 如需有线网络，连接 USB-C 转网线适配器
     5. 插入预装有应用的 MicroSD 卡（如适用）
     
     <Callout type="warning">
@@ -83,13 +89,17 @@ import { Callout } from 'fumadocs-ui/components/callout'
     
     1. 按下电源按钮开机
     2. 设备将自动初始化并加载存储卡中的模型和应用（约需 5 分钟）
-    3. 在初始化过程中，可通过 USB-C 端口连接笔记本电脑进行设备状态监控
+    3. 5分钟后，RM-01 将完成模型及应用的加载，并进入可使用状态
+
+    <Callout type="info">
+      在初始化过程中，可通过 USB-C 端口连接笔记本电脑进行设备状态监控
+    </Callout>
   </Step>
   
   <Step>
     #### 网络配置
     
-    1. 通过 USB-C 网络接口连接到企业局域网
+    1. 通过 USB-C 端口（加转接器）连接到企业局域网
     2. 配置网络参数：
        - IP 地址（静态/DHCP）
        - 子网掩码
@@ -114,7 +124,7 @@ import { Callout } from 'fumadocs-ui/components/callout'
         
         <ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
           <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">访问管理界面：</strong> 浏览器访问 http://10.10.99.99:xxxx（ xxxx 为设备序列号后四位 ）
+            <strong className="dark:text-white">访问管理界面：</strong> 浏览器访问 http://分配的IP地址:xxxx（ xxxx 为设备序列号后四位 ）
           </li>
           <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
             <strong className="dark:text-white">初始登录：</strong> 用户名：admin，密码：见设备底部标签

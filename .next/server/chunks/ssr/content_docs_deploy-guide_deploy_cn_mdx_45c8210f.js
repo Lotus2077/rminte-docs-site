@@ -44,10 +44,6 @@ let structuredData = {
             "content": "🛟 技术支持"
         },
         {
-            "heading": "设备与配件核对",
-            "content": "在交付企业前，请确保以下物品齐全："
-        },
-        {
             "heading": "模型与应用准备",
             "content": "根据企业需求，提前准备好适合的模型和应用："
         },
@@ -64,12 +60,16 @@ let structuredData = {
             "content": "企业定制模型：如企业有自己训练的模型，确保已转换为适合 RM-01 运行的格式，并存入 CFexpress 卡上的指定目录"
         },
         {
+            "heading": "模型与应用准备",
+            "content": "企业定制化应用：基于 RMinte 平台使用 Dify 或者其他开发工具开发的AI应用，以加密的 Docker Image 形式存入 CFexpress 卡上的指定目录"
+        },
+        {
             "heading": "企业环境评估",
             "content": "在部署前进行环境评估："
         },
         {
             "heading": "企业环境评估",
-            "content": "网络环境：虽然 RM-01 支持完全离线运行，但可能需要接入企业内部网络进行连接"
+            "content": "网络环境：评估 RM-01 按客户需求接入企业内部网络进行连接的可行性"
         },
         {
             "heading": "企业环境评估",
@@ -77,15 +77,23 @@ let structuredData = {
         },
         {
             "heading": "企业环境评估",
-            "content": "物理安全：评估设备放置位置的物理安全措施"
+            "content": "物理安全：评估设备放置位置的物理安全性，并制定相应安全保障方案"
         },
         {
             "heading": "企业环境评估",
             "content": "IT 基础设施：了解企业现有 IT 基础设施，确保 RM-01 能够顺利集成"
         },
         {
+            "heading": "设备与配件核对",
+            "content": "在交付企业前，请确保以下物品齐全："
+        },
+        {
             "heading": "设备安装",
             "content": "选择合适的位置放置 RM-01（桌面或专用机柜）"
+        },
+        {
+            "heading": "设备安装",
+            "content": "插入预装有所需模型和应用的 CFexpress 存储卡"
         },
         {
             "heading": "设备安装",
@@ -94,10 +102,6 @@ let structuredData = {
         {
             "heading": "设备安装",
             "content": "如需有线网络，连接 USB-C 转网线适配器"
-        },
-        {
-            "heading": "设备安装",
-            "content": "插入预装有所需模型和应用的 CFexpress 存储卡"
         },
         {
             "heading": "设备安装",
@@ -121,11 +125,19 @@ let structuredData = {
         },
         {
             "heading": "开机与初始化",
+            "content": "5分钟后，RM-01 将完成模型及应用的加载，并进入可使用状态"
+        },
+        {
+            "heading": "开机与初始化",
+            "content": "type: info"
+        },
+        {
+            "heading": "开机与初始化",
             "content": "在初始化过程中，可通过 USB-C 端口连接笔记本电脑进行设备状态监控"
         },
         {
             "heading": "网络配置",
-            "content": "通过 USB-C 网络接口连接到企业局域网"
+            "content": "通过 USB-C 端口（加转接器）连接到企业局域网"
         },
         {
             "heading": "网络配置",
@@ -153,7 +165,7 @@ let structuredData = {
         },
         {
             "heading": "3-软件配置与应用部署",
-            "content": "访问管理界面： 浏览器访问 http://10.10.99.99:xxxx（ xxxx 为设备序列号后四位 ）"
+            "content": "访问管理界面： 浏览器访问 http://分配的IP地址:xxxx（ xxxx 为设备序列号后四位 ）"
         },
         {
             "heading": "3-软件配置与应用部署",
@@ -226,16 +238,16 @@ let structuredData = {
             "content": "1. 前期准备工作"
         },
         {
-            "id": "设备与配件核对",
-            "content": "设备与配件核对"
-        },
-        {
             "id": "模型与应用准备",
             "content": "模型与应用准备"
         },
         {
             "id": "企业环境评估",
             "content": "企业环境评估"
+        },
+        {
+            "id": "设备与配件核对",
+            "content": "设备与配件核对"
         },
         {
             "id": "2-硬件部署流程",
@@ -305,13 +317,6 @@ const toc = [
     },
     {
         depth: 4,
-        url: "#设备与配件核对",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "设备与配件核对"
-        })
-    },
-    {
-        depth: 4,
         url: "#模型与应用准备",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
             children: "模型与应用准备"
@@ -322,6 +327,13 @@ const toc = [
         url: "#企业环境评估",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
             children: "企业环境评估"
+        })
+    },
+    {
+        depth: 4,
+        url: "#设备与配件核对",
+        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: "设备与配件核对"
         })
     },
     {
@@ -464,51 +476,6 @@ function _createMdxContent(props) {
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
                         children: [
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h4, {
-                                id: "设备与配件核对",
-                                children: "设备与配件核对"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "在交付企业前，请确保以下物品齐全："
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "p-4 border rounded-lg",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                        children: "RM-01 配件包"
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
-                                        className: "list-disc pl-6 mt-2",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "RM-01 主机"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "CFexpress Type B 存储卡（预装模型及应用）"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "MicroSD 卡（可选，用于加密）"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "USB-C 电源适配器（PD3.1，最高 140W）"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "USB-C 转网线适配器"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "快速入门指南"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "保修卡"
-                                            })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h4, {
                                 id: "模型与应用准备",
                                 children: "模型与应用准备"
                             }),
@@ -544,6 +511,15 @@ function _createMdxContent(props) {
                                             "：如企业有自己训练的模型，确保已转换为适合 RM-01 运行的格式，并存入 CFexpress 卡上的指定目录"
                                         ]
                                     }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
+                                                children: "企业定制化应用"
+                                            }),
+                                            "：基于 RMinte 平台使用 Dify 或者其他开发工具开发的AI应用，以加密的 Docker Image 形式存入 CFexpress 卡上的指定目录"
+                                        ]
+                                    }),
                                     "\n"
                                 ]
                             })
@@ -566,7 +542,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "网络环境"
                                             }),
-                                            "：虽然 RM-01 支持完全离线运行，但可能需要接入企业内部网络进行连接"
+                                            "：评估 RM-01 按客户需求接入企业内部网络进行连接的可行性"
                                         ]
                                     }),
                                     "\n",
@@ -584,7 +560,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "物理安全"
                                             }),
-                                            "：评估设备放置位置的物理安全措施"
+                                            "：评估设备放置位置的物理安全性，并制定相应安全保障方案"
                                         ]
                                     }),
                                     "\n",
@@ -597,6 +573,59 @@ function _createMdxContent(props) {
                                         ]
                                     }),
                                     "\n"
+                                ]
+                            })
+                        ]
+                    }),
+                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
+                        children: [
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h4, {
+                                id: "设备与配件核对",
+                                children: "设备与配件核对"
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                children: "在交付企业前，请确保以下物品齐全："
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "p-4 border rounded-lg",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
+                                        children: "RM-01 设备包"
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
+                                        className: "list-disc pl-6 mt-2",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "RM-01 主机"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "CFexpress Type B 存储卡（预装模型及应用）"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "快速入门指南"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "保修卡"
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
+                                        children: "RM-01 配件包"
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
+                                        className: "list-disc pl-6 mt-2",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "MicroSD 卡（可选，用于加密）"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "USB-C 电源适配器（PD3.1，最高 140W）"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "USB-C 转网线适配器"
+                                            })
+                                        ]
+                                    })
                                 ]
                             })
                         ]
@@ -625,15 +654,15 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "插入预装有所需模型和应用的 CFexpress 存储卡"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "连接电源适配器"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "如需有线网络，连接 USB-C 转网线适配器"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "插入预装有所需模型和应用的 CFexpress 存储卡"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -668,10 +697,16 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "在初始化过程中，可通过 USB-C 端口连接笔记本电脑进行设备状态监控"
+                                        children: "5分钟后，RM-01 将完成模型及应用的加载，并进入可使用状态"
                                     }),
                                     "\n"
                                 ]
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
+                                type: "info",
+                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                    children: "在初始化过程中，可通过 USB-C 端口连接笔记本电脑进行设备状态监控"
+                                })
                             })
                         ]
                     }),
@@ -685,7 +720,7 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "通过 USB-C 网络接口连接到企业局域网"
+                                        children: "通过 USB-C 端口（加转接器）连接到企业局域网"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
@@ -775,8 +810,8 @@ function _createMdxContent(props) {
                                                         }),
                                                         " 浏览器访问 ",
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                                                            href: "http://10.10.99.99:xxxx%EF%BC%88",
-                                                            children: "http://10.10.99.99:xxxx（"
+                                                            href: "http://%E5%88%86%E9%85%8D%E7%9A%84IP%E5%9C%B0%E5%9D%80:xxxx%EF%BC%88",
+                                                            children: "http://分配的IP地址:xxxx（"
                                                         }),
                                                         " xxxx 为设备序列号后四位 ）"
                                                     ]
