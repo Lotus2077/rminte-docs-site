@@ -11,55 +11,57 @@ import { Callout } from 'fumadocs-ui/components/callout'
 
 ## Overview
 
-- [💼 Service Provider Deployment Guide](#service-provider-deployment-guide)
+- [💼 Service Provider Deployment Process](#service-provider-deployment-process)
 - [❓ Frequently Asked Questions](#frequently-asked-questions)
 - [🛟 Technical Support](#technical-support)
 
-## Service Provider Deployment Guide
-
-As a service provider, you are the bridge connecting RM-01 technology with the actual needs of enterprises. This section will guide you on how to efficiently deploy RM-01 devices for enterprise clients and provide related technical support.
+## Service Provider Deployment Process
 
 ### 1. Preparation Work
 
 <Steps>
+  <Step>
+    #### Model and Application Preparation
+    
+    Prepare suitable models and applications according to enterprise needs:
+    
+    - **Standard Model Package**: Contains commonly used open-source models such as DeepSeek, Zhipu, Qwen, etc.
+    - **Industry-Specific Model Package**: Select appropriate vertical domain models based on the enterprise's industry
+    - **Enterprise Custom Models**: If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01 and stored in the specified directory on the CFexpress card
+    - **Enterprise Custom Applications**: AI applications developed using Dify or other development tools based on the RMinte platform, stored as encrypted Docker Images in the specified directory on the CFexpress card
+  </Step>
+
+  <Step>
+    #### Enterprise Environment Assessment
+    
+    Conduct an environment assessment before deployment:
+    
+    - **Network Environment**: Evaluate the feasibility of connecting RM-01 to the enterprise's internal network according to client requirements
+    - **Power Supply**: Ensure stable power supply at the deployment location
+    - **Physical Security**: Assess the physical security of the device placement location and develop corresponding security measures
+    - **IT Infrastructure**: Understand the enterprise's existing IT infrastructure to ensure smooth integration of RM-01
+  </Step>
+  
   <Step>
     #### Device and Accessories Verification
     
     Before delivery to the enterprise, please ensure the following items are complete:
     
     <div className="p-4 border rounded-lg">
-      <strong>RM-01 Accessory Package</strong>
+      <strong>RM-01 Device Package</strong>
       <ul className="list-disc pl-6 mt-2">
         <li>RM-01 Main Device</li>
-        <li>CFexpress Type B Storage Card (with pre-installed models & applications)</li>
-        <li>MicroSD Card (optional, for expanded storage)</li>
-        <li>USB-C Power Adapter (PD3.1, up to 140W)</li>
-        <li>USB-C to Ethernet Adapter</li>
+        <li>CFexpress Type B Storage Card (pre-installed with models and applications)</li>
         <li>Quick Start Guide</li>
         <li>Warranty Card</li>
       </ul>
+      <strong>RM-01 Accessory Package</strong>
+      <ul className="list-disc pl-6 mt-2">
+        <li>MicroSD Card (optional, for encryption)</li>
+        <li>USB-C Power Adapter (PD3.1, up to 140W)</li>
+        <li>USB-C to Ethernet Adapter</li>
+      </ul>
     </div>
-  </Step>
-  
-  <Step>
-    #### Model and Application Preparation
-    
-    Prepare suitable models and applications according to enterprise needs:
-    
-    - **Standard Model Package**: Contains commonly used open-source models such as DeepSeek, Qwen, Llama etc.
-    - **Industry-Specific Model Package**: Select appropriate vertical domain models based on the enterprise's industry
-    - **Enterprise Custom Models**: If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01
-  </Step>
-  
-  <Step>
-    #### Enterprise Environment Assessment
-    
-    Conduct an environment assessment before deployment:
-    
-    - **Network Environment**: Although RM-01 supports offline operation, initial setup and updates may require network connectivity
-    - **Power Supply**: Ensure stable power supply at the deployment location
-    - **Physical Security**: Assess the physical security measures of the device placement location
-    - **IT Infrastructure**: Understand the enterprise's existing IT infrastructure to ensure smooth integration of RM-01
   </Step>
 </Steps>
 
@@ -70,10 +72,10 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
     #### Device Installation
     
     1. Choose an appropriate location for the RM-01 (desktop or dedicated cabinet)
-    2. Connect the power adapter
-    3. If wired network is needed, connect the USB-C to Ethernet adapter
-    4. Insert the CFexpress storage card pre-loaded with required models
-    5. Insert the MicroSD card pre-loaded with applications (if applicable)
+    2. Insert the CFexpress storage card pre-loaded with required models and applications
+    3. Insert the MicroSD card for encryption (if applicable)
+    4. Connect the power adapter
+    5. If wired network is needed, connect the USB-C to Ethernet adapter
     
     <Callout type="warning">
       Ensure the device is placed in a well-ventilated environment and avoid blocking the cooling vents.
@@ -85,13 +87,17 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
     
     1. Press the power button to turn on the device
     2. The device will automatically initialize and load models and applications from the storage card (takes about 5 minutes)
-    3. During initialization, you can connect a laptop via USB-C port to monitor the device status
+    3. After 5 minutes, RM-01 will complete loading models and applications and enter the ready state
+
+    <Callout type="info">
+      During initialization, you can connect a laptop via USB-C port to monitor the device status
+    </Callout>
   </Step>
   
   <Step>
     #### Network Configuration
     
-    1. Connect to the enterprise LAN through the USB-C network interface
+    1. Connect to the enterprise LAN through the USB-C port (with adapter if needed)
     2. Configure network parameters:
        - IP address (static/DHCP)
        - Subnet mask
@@ -101,140 +107,7 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
   </Step>
 </Steps>
 
-### 3. Software Configuration and Application Deployment
-
-<div className="mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-lg border border-blue-100 dark:border-blue-800 overflow-hidden">
-  <div className="p-6">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700">
-        <div className="flex items-center mb-4">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">⚙️</span>
-          </div>
-          <h4 className="text-lg font-semibold dark:text-white">Management Interface Setup</h4>
-        </div>
-        
-        <ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
-          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">Access Management Interface:</strong> Browse to http://rm01-xxxxx.local (xxxxx is the device serial number)
-          </li>
-          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">Initial Login:</strong> Username: admin, Password: see label on device bottom
-          </li>
-          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">Basic Configuration:</strong> Change admin password, set device name and timezone
-          </li>
-          <li>
-            <strong className="dark:text-white">Security Settings:</strong> Configure access control policies
-          </li>
-        </ol>
-        
-        <div className="mt-3 p-2 bg-amber-50 dark:bg-amber-950/40 rounded-md text-amber-800 dark:text-amber-300 text-xs">
-          Please change the default password immediately after first login to ensure system security
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700">
-        <div className="flex items-center mb-4">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">🧠</span>
-          </div>
-          <h4 className="text-lg font-semibold dark:text-white">Model Management</h4>
-        </div>
-        
-        <ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
-          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">Access Model Management:</strong> Navigate to "Model Management" in the admin interface
-          </li>
-          <li className="pb-2 border-b border-gray-100 dark:border-gray-700">
-            <strong className="dark:text-white">View Model Status:</strong> Check the list of loaded models and their running status
-          </li>
-          <li>
-            <strong className="dark:text-white">Load New Models:</strong>
-            <ul className="list-disc pl-5 mt-1 space-y-1 dark:text-gray-400">
-              <li>Store model files on the CFexpress card</li>
-              <li>Insert into the RM-01 device</li>
-              <li>Click the "Scan Models" button</li>
-              <li>Wait for loading to complete and verify status</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-green-200 dark:border-green-700">
-        <div className="flex items-center mb-4">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">📱</span>
-          </div>
-          <h4 className="text-lg font-semibold dark:text-white">Application Deployment</h4>
-        </div>
-        
-        <div className="space-y-3 text-sm dark:text-gray-300">
-          <div>
-            <strong className="block mb-1 dark:text-white">Deployment Process:</strong>
-            <ol className="list-decimal pl-5 space-y-1">
-              <li>Go to "Application Management"</li>
-              <li>Click "Deploy New Application"</li>
-              <li>Select deployment method</li>
-              <li>Wait for deployment to complete</li>
-              <li>Configure application parameters</li>
-            </ol>
-          </div>
-          
-          <div>
-            <strong className="block mb-1 dark:text-white">Deployment Methods:</strong>
-            <div className="grid grid-cols-3 gap-2">
-              <div className="p-2 bg-green-50 dark:bg-green-900/30 rounded text-center border border-green-100 dark:border-green-800">
-                <div className="text-xs font-medium dark:text-green-300">Storage Card</div>
-                <div className="text-xs text-green-700 dark:text-green-400">Recommended</div>
-              </div>
-              <div className="p-2 bg-blue-50 dark:bg-blue-900/30 rounded text-center border border-blue-100 dark:border-blue-800">
-                <div className="text-xs font-medium dark:text-blue-300">Portal Download</div>
-                <div className="text-xs text-blue-700 dark:text-blue-400">Requires Internet</div>
-              </div>
-              <div className="p-2 bg-purple-50 dark:bg-purple-900/30 rounded text-center border border-purple-100 dark:border-purple-800">
-                <div className="text-xs font-medium dark:text-purple-300">Docker Image</div>
-                <div className="text-xs text-purple-700 dark:text-purple-400">Advanced Option</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-orange-200 dark:border-orange-800">
-        <div className="flex items-center mb-4">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">🔐</span>
-          </div>
-          <h4 className="text-lg font-semibold dark:text-white">Permissions and Access Control</h4>
-        </div>
-        
-        <div className="space-y-3 text-sm dark:text-gray-300">
-          <div className="flex flex-col space-y-2">
-            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
-              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 mr-2 text-xs">1</span>
-              <span><strong className="dark:text-white">Create Enterprise Admin Account</strong> (manage models and applications)</span>
-            </div>
-            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
-              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-2 text-xs">2</span>
-              <span><strong className="dark:text-white">Create Regular User Accounts</strong> (use applications)</span>
-            </div>
-            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
-              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-2 text-xs">3</span>
-              <span><strong className="dark:text-white">Set Access Permissions</strong> (model and application level)</span>
-            </div>
-            <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
-              <span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 text-xs">4</span>
-              <span><strong className="dark:text-white">Configure Authentication Policies</strong> (single sign-on/LDAP)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-### 4. Verification and Testing
+### 3. Verification and Testing
 
 <div className="mb-8 rounded-lg overflow-hidden">
   <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 p-5 border border-emerald-100 dark:border-emerald-800">
@@ -298,20 +171,20 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
         </div>
         <div className="flex-grow">
           <h5 className="font-semibold text-sm mb-1 dark:text-white">Professional Testing Recommendation</h5>
-          <p className="text-xs text-slate-600 dark:text-slate-400">Use the RM-01 diagnostic toolkit to conduct comprehensive performance benchmark tests to ensure the device achieves optimal performance in the client environment. Generate a performance report after testing as part of the delivery documentation.</p>
+          <p className="text-xs text-slate-600 dark:text-slate-400">It is recommended to use the RM-01 comprehensive testing checklist to conduct full functional benchmark tests, ensuring the device achieves optimal performance in the client environment. Generate a test report after testing as part of the delivery documentation.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-### 5. Training and Delivery
+### 4. Training and Delivery
 
 <div className="mb-8 rounded-lg overflow-hidden">
   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 p-6 border border-blue-100 dark:border-blue-800/60">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div className="col-span-1 md:col-span-2 bg-white dark:bg-gray-800/90 rounded-xl shadow-sm p-4 border border-indigo-100 dark:border-indigo-700/50">
-        <h4 className="text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300">Training and Delivery Process Flow</h4>
+        <h4 className="text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300">Training and Delivery Flowchart</h4>
         <div className="flex flex-wrap justify-center items-center text-center">
           <div className="w-full md:w-1/4 p-2">
             <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-100 dark:border-blue-700/40 h-full">
@@ -339,7 +212,7 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
                 <span className="text-purple-600 dark:text-purple-300 text-lg">3</span>
               </div>
               <div className="font-medium text-sm dark:text-white">Documentation Delivery</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">User manuals and technical docs</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">User manuals and technical documentation</div>
             </div>
           </div>
         </div>
@@ -396,7 +269,7 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
         </div>
         
         <div className="mt-3 p-2 bg-amber-50 dark:bg-amber-900/20 rounded-md text-xs text-amber-800 dark:text-amber-300">
-          Recording training videos is recommended for administrators' future reference
+          It is recommended to record training videos for future reference by administrators.
         </div>
       </div>
       
@@ -411,11 +284,11 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
         <ul className="pl-6 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300 flex-grow">
           <li>
             <strong className="text-indigo-700 dark:text-indigo-300">Application Access Methods</strong>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">How to log in and find needed applications</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">How to log in and find the required applications</div>
           </li>
           <li>
             <strong className="text-indigo-700 dark:text-indigo-300">Basic Operation Guidance</strong>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Common features and operation process demonstration</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Demonstration of common features and operation processes</div>
           </li>
           <li>
             <strong className="text-indigo-700 dark:text-indigo-300">Usage Tips & Best Practices</strong>
@@ -428,7 +301,7 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
         </ul>
         
         <div className="mt-3 p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-md text-xs text-indigo-800 dark:text-indigo-300">
-          Customizing training content for different departments is recommended to enhance training effectiveness
+          It is recommended to customize training content for different departments to improve training effectiveness.
         </div>
       </div>
     </div>
@@ -445,7 +318,7 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
         <div className="grid grid-cols-2 gap-3 text-sm">
           <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40">
             <div className="font-medium mb-1 text-purple-800 dark:text-purple-300">Device User Manual</div>
-            <div className="text-xs text-slate-600 dark:text-slate-400">Hardware specs and basic operation guidance</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400">Hardware specifications and basic operation guidance</div>
           </div>
           
           <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40">
@@ -464,8 +337,8 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
           </div>
         </div>
         
-        <div className="mt-3 text-xs text-slate-600 dark:text-slate-400">
-          All documentation is provided in both electronic and printed formats, with the latest versions always accessible through the management interface
+        <div className="mt-3 p-2 bg-blue-100 dark:bg-blue-800/60 rounded-md text-xs text-blue-600 dark:text-blue-300">
+          All documentation is provided in both electronic and printed formats, and the latest versions are always accessible through the management interface.
         </div>
       </div>
       
@@ -508,14 +381,14 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
         </div>
         
         <div className="mt-3 p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-md text-xs text-emerald-800 dark:text-emerald-300">
-          Using a standardized delivery checklist is recommended to ensure no delivery items are missed
+          It is recommended to use a standardized delivery checklist to ensure that no delivery items are missed.
         </div>
       </div>
     </div>
   </div>
 </div>
 
-### 6. After-Sales Support
+### 5. After-Sales Support
 
 <div className="mb-8 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-950/30 dark:to-indigo-950/30 rounded-lg border border-purple-100 dark:border-purple-700 overflow-hidden">
   <div className="p-6">
@@ -907,7 +780,7 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
-          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mb-3">
+          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mb-3">
             <span className="text-2xl">📚</span>
           </div>
           <div className="font-medium text-sm mb-1 dark:text-white">Product Documentation</div>
@@ -952,4 +825,12 @@ As a service provider, you are the bridge connecting RM-01 technology with the a
       </div>
     </div>
   </div>
+</div>
+
+<div className="my-8 text-center">
+  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+</div>
+
+<div className="text-sm text-gray-500 mt-8">
+  © 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved.
 </div>

@@ -33,7 +33,7 @@ let structuredData = {
         },
         {
             "heading": "overview",
-            "content": "💼 Service Provider Deployment Guide"
+            "content": "💼 Service Provider Deployment Process"
         },
         {
             "heading": "overview",
@@ -44,20 +44,12 @@ let structuredData = {
             "content": "🛟 Technical Support"
         },
         {
-            "heading": "service-provider-deployment-guide",
-            "content": "As a service provider, you are the bridge connecting RM-01 technology with the actual needs of enterprises. This section will guide you on how to efficiently deploy RM-01 devices for enterprise clients and provide related technical support."
-        },
-        {
-            "heading": "device-and-accessories-verification",
-            "content": "Before delivery to the enterprise, please ensure the following items are complete:"
-        },
-        {
             "heading": "model-and-application-preparation",
             "content": "Prepare suitable models and applications according to enterprise needs:"
         },
         {
             "heading": "model-and-application-preparation",
-            "content": "Standard Model Package: Contains commonly used open-source models such as DeepSeek, Qwen, Llama etc."
+            "content": "Standard Model Package: Contains commonly used open-source models such as DeepSeek, Zhipu, Qwen, etc."
         },
         {
             "heading": "model-and-application-preparation",
@@ -65,7 +57,11 @@ let structuredData = {
         },
         {
             "heading": "model-and-application-preparation",
-            "content": "Enterprise Custom Models: If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01"
+            "content": "Enterprise Custom Models: If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01 and stored in the specified directory on the CFexpress card"
+        },
+        {
+            "heading": "model-and-application-preparation",
+            "content": "Enterprise Custom Applications: AI applications developed using Dify or other development tools based on the RMinte platform, stored as encrypted Docker Images in the specified directory on the CFexpress card"
         },
         {
             "heading": "enterprise-environment-assessment",
@@ -73,7 +69,7 @@ let structuredData = {
         },
         {
             "heading": "enterprise-environment-assessment",
-            "content": "Network Environment: Although RM-01 supports offline operation, initial setup and updates may require network connectivity"
+            "content": "Network Environment: Evaluate the feasibility of connecting RM-01 to the enterprise's internal network according to client requirements"
         },
         {
             "heading": "enterprise-environment-assessment",
@@ -81,15 +77,27 @@ let structuredData = {
         },
         {
             "heading": "enterprise-environment-assessment",
-            "content": "Physical Security: Assess the physical security measures of the device placement location"
+            "content": "Physical Security: Assess the physical security of the device placement location and develop corresponding security measures"
         },
         {
             "heading": "enterprise-environment-assessment",
             "content": "IT Infrastructure: Understand the enterprise's existing IT infrastructure to ensure smooth integration of RM-01"
         },
         {
+            "heading": "device-and-accessories-verification",
+            "content": "Before delivery to the enterprise, please ensure the following items are complete:"
+        },
+        {
             "heading": "device-installation",
             "content": "Choose an appropriate location for the RM-01 (desktop or dedicated cabinet)"
+        },
+        {
+            "heading": "device-installation",
+            "content": "Insert the CFexpress storage card pre-loaded with required models and applications"
+        },
+        {
+            "heading": "device-installation",
+            "content": "Insert the MicroSD card for encryption (if applicable)"
         },
         {
             "heading": "device-installation",
@@ -98,14 +106,6 @@ let structuredData = {
         {
             "heading": "device-installation",
             "content": "If wired network is needed, connect the USB-C to Ethernet adapter"
-        },
-        {
-            "heading": "device-installation",
-            "content": "Insert the CFexpress storage card pre-loaded with required models"
-        },
-        {
-            "heading": "device-installation",
-            "content": "Insert the MicroSD card pre-loaded with applications (if applicable)"
         },
         {
             "heading": "device-installation",
@@ -125,11 +125,19 @@ let structuredData = {
         },
         {
             "heading": "startup-and-initialization",
+            "content": "After 5 minutes, RM-01 will complete loading models and applications and enter the ready state"
+        },
+        {
+            "heading": "startup-and-initialization",
+            "content": "type: info"
+        },
+        {
+            "heading": "startup-and-initialization",
             "content": "During initialization, you can connect a laptop via USB-C port to monitor the device status"
         },
         {
             "heading": "network-configuration",
-            "content": "Connect to the enterprise LAN through the USB-C network interface"
+            "content": "Connect to the enterprise LAN through the USB-C port (with adapter if needed)"
         },
         {
             "heading": "network-configuration",
@@ -156,64 +164,40 @@ let structuredData = {
             "content": "Verify network connectivity"
         },
         {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "Access Management Interface: Browse to http://rm01-xxxxx.local (xxxxx is the device serial number)"
+            "heading": "4-training-and-delivery",
+            "content": "It is recommended to record training videos for future reference by administrators."
         },
         {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "Initial Login: Username: admin, Password: see label on device bottom"
+            "heading": "4-training-and-delivery",
+            "content": "It is recommended to customize training content for different departments to improve training effectiveness."
         },
         {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "Basic Configuration: Change admin password, set device name and timezone"
+            "heading": "4-training-and-delivery",
+            "content": "All documentation is provided in both electronic and printed formats, and the latest versions are always accessible through the management interface."
         },
         {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "Security Settings: Configure access control policies"
+            "heading": "4-training-and-delivery",
+            "content": "It is recommended to use a standardized delivery checklist to ensure that no delivery items are missed."
         },
         {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "Please change the default password immediately after first login to ensure system security"
-        },
-        {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "Access Model Management: Navigate to \"Model Management\" in the admin interface"
-        },
-        {
-            "heading": "3-software-configuration-and-application-deployment",
-            "content": "View Model Status: Check the list of loaded models and their running status"
-        },
-        {
-            "heading": "5-training-and-delivery",
-            "content": "Recording training videos is recommended for administrators' future reference"
-        },
-        {
-            "heading": "5-training-and-delivery",
-            "content": "Customizing training content for different departments is recommended to enhance training effectiveness"
-        },
-        {
-            "heading": "5-training-and-delivery",
-            "content": "All documentation is provided in both electronic and printed formats, with the latest versions always accessible through the management interface"
-        },
-        {
-            "heading": "5-training-and-delivery",
-            "content": "Using a standardized delivery checklist is recommended to ensure no delivery items are missed"
-        },
-        {
-            "heading": "6-after-sales-support",
+            "heading": "5-after-sales-support",
             "content": "Standard service includes 12 months of remote support"
         },
         {
-            "heading": "6-after-sales-support",
+            "heading": "5-after-sales-support",
             "content": "Quarterly comprehensive system checks recommended"
         },
         {
-            "heading": "6-after-sales-support",
+            "heading": "5-after-sales-support",
             "content": "Additional value-added services available for purchase as needed"
         },
         {
-            "heading": "6-after-sales-support",
+            "heading": "5-after-sales-support",
             "content": "Flexible service level agreement options are available, with specific response times and service content customizable based on enterprise needs. All SLA commitments come with service quality guarantees, with service compensation provided if standards are not met."
+        },
+        {
+            "heading": "technical-support",
+            "content": "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved."
         }
     ],
     "headings": [
@@ -222,16 +206,12 @@ let structuredData = {
             "content": "Overview"
         },
         {
-            "id": "service-provider-deployment-guide",
-            "content": "Service Provider Deployment Guide"
+            "id": "service-provider-deployment-process",
+            "content": "Service Provider Deployment Process"
         },
         {
             "id": "1-preparation-work",
             "content": "1. Preparation Work"
-        },
-        {
-            "id": "device-and-accessories-verification",
-            "content": "Device and Accessories Verification"
         },
         {
             "id": "model-and-application-preparation",
@@ -240,6 +220,10 @@ let structuredData = {
         {
             "id": "enterprise-environment-assessment",
             "content": "Enterprise Environment Assessment"
+        },
+        {
+            "id": "device-and-accessories-verification",
+            "content": "Device and Accessories Verification"
         },
         {
             "id": "2-hardware-deployment-process",
@@ -258,20 +242,16 @@ let structuredData = {
             "content": "Network Configuration"
         },
         {
-            "id": "3-software-configuration-and-application-deployment",
-            "content": "3. Software Configuration and Application Deployment"
+            "id": "3-verification-and-testing",
+            "content": "3. Verification and Testing"
         },
         {
-            "id": "4-verification-and-testing",
-            "content": "4. Verification and Testing"
+            "id": "4-training-and-delivery",
+            "content": "4. Training and Delivery"
         },
         {
-            "id": "5-training-and-delivery",
-            "content": "5. Training and Delivery"
-        },
-        {
-            "id": "6-after-sales-support",
-            "content": "6. After-Sales Support"
+            "id": "5-after-sales-support",
+            "content": "5. After-Sales Support"
         },
         {
             "id": "frequently-asked-questions",
@@ -295,9 +275,9 @@ const toc = [
     },
     {
         depth: 2,
-        url: "#service-provider-deployment-guide",
+        url: "#service-provider-deployment-process",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "Service Provider Deployment Guide"
+            children: "Service Provider Deployment Process"
         })
     },
     {
@@ -305,13 +285,6 @@ const toc = [
         url: "#1-preparation-work",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
             children: "1. Preparation Work"
-        })
-    },
-    {
-        depth: 4,
-        url: "#device-and-accessories-verification",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "Device and Accessories Verification"
         })
     },
     {
@@ -326,6 +299,13 @@ const toc = [
         url: "#enterprise-environment-assessment",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
             children: "Enterprise Environment Assessment"
+        })
+    },
+    {
+        depth: 4,
+        url: "#device-and-accessories-verification",
+        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: "Device and Accessories Verification"
         })
     },
     {
@@ -358,30 +338,23 @@ const toc = [
     },
     {
         depth: 3,
-        url: "#3-software-configuration-and-application-deployment",
+        url: "#3-verification-and-testing",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "3. Software Configuration and Application Deployment"
+            children: "3. Verification and Testing"
         })
     },
     {
         depth: 3,
-        url: "#4-verification-and-testing",
+        url: "#4-training-and-delivery",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "4. Verification and Testing"
+            children: "4. Training and Delivery"
         })
     },
     {
         depth: 3,
-        url: "#5-training-and-delivery",
+        url: "#5-after-sales-support",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "5. Training and Delivery"
-        })
-    },
-    {
-        depth: 3,
-        url: "#6-after-sales-support",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "6. After-Sales Support"
+            children: "5. After-Sales Support"
         })
     },
     {
@@ -431,8 +404,8 @@ function _createMdxContent(props) {
                     "\n",
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                            href: "#service-provider-deployment-guide",
-                            children: "💼 Service Provider Deployment Guide"
+                            href: "#service-provider-deployment-process",
+                            children: "💼 Service Provider Deployment Process"
                         })
                     }),
                     "\n",
@@ -454,12 +427,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h2, {
-                id: "service-provider-deployment-guide",
-                children: "Service Provider Deployment Guide"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                children: "As a service provider, you are the bridge connecting RM-01 technology with the actual needs of enterprises. This section will guide you on how to efficiently deploy RM-01 devices for enterprise clients and provide related technical support."
+                id: "service-provider-deployment-process",
+                children: "Service Provider Deployment Process"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
@@ -469,51 +438,6 @@ function _createMdxContent(props) {
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Steps"], {
                 children: [
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h4, {
-                                id: "device-and-accessories-verification",
-                                children: "Device and Accessories Verification"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "Before delivery to the enterprise, please ensure the following items are complete:"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "p-4 border rounded-lg",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                        children: "RM-01 Accessory Package"
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
-                                        className: "list-disc pl-6 mt-2",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "RM-01 Main Device"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "CFexpress Type B Storage Card (with pre-installed models & applications)"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "MicroSD Card (optional, for expanded storage)"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "USB-C Power Adapter (PD3.1, up to 140W)"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "USB-C to Ethernet Adapter"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "Quick Start Guide"
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "Warranty Card"
-                                            })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
                         children: [
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h4, {
@@ -531,7 +455,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Standard Model Package"
                                             }),
-                                            ": Contains commonly used open-source models such as DeepSeek, Qwen, Llama etc."
+                                            ": Contains commonly used open-source models such as DeepSeek, Zhipu, Qwen, etc."
                                         ]
                                     }),
                                     "\n",
@@ -549,7 +473,16 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Enterprise Custom Models"
                                             }),
-                                            ": If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01"
+                                            ": If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01 and stored in the specified directory on the CFexpress card"
+                                        ]
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
+                                                children: "Enterprise Custom Applications"
+                                            }),
+                                            ": AI applications developed using Dify or other development tools based on the RMinte platform, stored as encrypted Docker Images in the specified directory on the CFexpress card"
                                         ]
                                     }),
                                     "\n"
@@ -574,7 +507,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Network Environment"
                                             }),
-                                            ": Although RM-01 supports offline operation, initial setup and updates may require network connectivity"
+                                            ": Evaluate the feasibility of connecting RM-01 to the enterprise's internal network according to client requirements"
                                         ]
                                     }),
                                     "\n",
@@ -592,7 +525,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Physical Security"
                                             }),
-                                            ": Assess the physical security measures of the device placement location"
+                                            ": Assess the physical security of the device placement location and develop corresponding security measures"
                                         ]
                                     }),
                                     "\n",
@@ -605,6 +538,59 @@ function _createMdxContent(props) {
                                         ]
                                     }),
                                     "\n"
+                                ]
+                            })
+                        ]
+                    }),
+                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
+                        children: [
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h4, {
+                                id: "device-and-accessories-verification",
+                                children: "Device and Accessories Verification"
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                children: "Before delivery to the enterprise, please ensure the following items are complete:"
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "p-4 border rounded-lg",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
+                                        children: "RM-01 Device Package"
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
+                                        className: "list-disc pl-6 mt-2",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "RM-01 Main Device"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "CFexpress Type B Storage Card (pre-installed with models and applications)"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "Quick Start Guide"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "Warranty Card"
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
+                                        children: "RM-01 Accessory Package"
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
+                                        className: "list-disc pl-6 mt-2",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "MicroSD Card (optional, for encryption)"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "USB-C Power Adapter (PD3.1, up to 140W)"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "USB-C to Ethernet Adapter"
+                                            })
+                                        ]
+                                    })
                                 ]
                             })
                         ]
@@ -633,19 +619,19 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "Insert the CFexpress storage card pre-loaded with required models and applications"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "Insert the MicroSD card for encryption (if applicable)"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "Connect the power adapter"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "If wired network is needed, connect the USB-C to Ethernet adapter"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Insert the CFexpress storage card pre-loaded with required models"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Insert the MicroSD card pre-loaded with applications (if applicable)"
                                     }),
                                     "\n"
                                 ]
@@ -676,10 +662,16 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "During initialization, you can connect a laptop via USB-C port to monitor the device status"
+                                        children: "After 5 minutes, RM-01 will complete loading models and applications and enter the ready state"
                                     }),
                                     "\n"
                                 ]
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
+                                type: "info",
+                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                    children: "During initialization, you can connect a laptop via USB-C port to monitor the device status"
+                                })
                             })
                         ]
                     }),
@@ -693,7 +685,7 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Connect to the enterprise LAN through the USB-C network interface"
+                                        children: "Connect to the enterprise LAN through the USB-C port (with adapter if needed)"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
@@ -737,403 +729,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "3-software-configuration-and-application-deployment",
-                children: "3. Software Configuration and Application Deployment"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                className: "mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-lg border border-blue-100 dark:border-blue-800 overflow-hidden",
-                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                    className: "p-6",
-                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                        className: "grid grid-cols-1 md:grid-cols-2 gap-6",
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "⚙️"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "Management Interface Setup"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
-                                        className: "pl-4 space-y-2 text-sm dark:text-gray-300",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "Access Management Interface:"
-                                                        }),
-                                                        " Browse to ",
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                                                            href: "http://rm01-xxxxx.local",
-                                                            children: "http://rm01-xxxxx.local"
-                                                        }),
-                                                        " (xxxxx is the device serial number)"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "Initial Login:"
-                                                        }),
-                                                        " Username: admin, Password: see label on device bottom"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "Basic Configuration:"
-                                                        }),
-                                                        " Change admin password, set device name and timezone"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "Security Settings:"
-                                                        }),
-                                                        " Configure access control policies"
-                                                    ]
-                                                })
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                        className: "mt-3 p-2 bg-amber-50 dark:bg-amber-950/40 rounded-md text-amber-800 dark:text-amber-300 text-xs",
-                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                            children: "Please change the default password immediately after first login to ensure system security"
-                                        })
-                                    })
-                                ]
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "🧠"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "Model Management"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
-                                        className: "pl-4 space-y-2 text-sm dark:text-gray-300",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "Access Model Management:"
-                                                        }),
-                                                        " Navigate to \"Model Management\" in the admin interface"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "View Model Status:"
-                                                        }),
-                                                        " Check the list of loaded models and their running status"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
-                                                children: [
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                        className: "dark:text-white",
-                                                        children: "Load New Models:"
-                                                    }),
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
-                                                        className: "list-disc pl-5 mt-1 space-y-1 dark:text-gray-400",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Store model files on the CFexpress card"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Insert into the RM-01 device"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Click the \"Scan Models\" button"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Wait for loading to complete and verify status"
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                ]
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-green-200 dark:border-green-700",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "📱"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "Application Deployment"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "space-y-3 text-sm dark:text-gray-300",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                children: [
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                        className: "block mb-1 dark:text-white",
-                                                        children: "Deployment Process:"
-                                                    }),
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
-                                                        className: "list-decimal pl-5 space-y-1",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Go to \"Application Management\""
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Click \"Deploy New Application\""
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Select deployment method"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Wait for deployment to complete"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "Configure application parameters"
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                children: [
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                        className: "block mb-1 dark:text-white",
-                                                        children: "Deployment Methods:"
-                                                    }),
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                        className: "grid grid-cols-3 gap-2",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                                className: "p-2 bg-green-50 dark:bg-green-900/30 rounded text-center border border-green-100 dark:border-green-800",
-                                                                children: [
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs font-medium dark:text-green-300",
-                                                                        children: "Storage Card"
-                                                                    }),
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs text-green-700 dark:text-green-400",
-                                                                        children: "Recommended"
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                                className: "p-2 bg-blue-50 dark:bg-blue-900/30 rounded text-center border border-blue-100 dark:border-blue-800",
-                                                                children: [
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs font-medium dark:text-blue-300",
-                                                                        children: "Portal Download"
-                                                                    }),
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs text-blue-700 dark:text-blue-400",
-                                                                        children: "Requires Internet"
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                                className: "p-2 bg-purple-50 dark:bg-purple-900/30 rounded text-center border border-purple-100 dark:border-purple-800",
-                                                                children: [
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs font-medium dark:text-purple-300",
-                                                                        children: "Docker Image"
-                                                                    }),
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs text-purple-700 dark:text-purple-400",
-                                                                        children: "Advanced Option"
-                                                                    })
-                                                                ]
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                ]
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-orange-200 dark:border-orange-800",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "🔐"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "Permissions and Access Control"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                        className: "space-y-3 text-sm dark:text-gray-300",
-                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex flex-col space-y-2",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 mr-2 text-xs",
-                                                            children: "1"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "Create Enterprise Admin Account"
-                                                                }),
-                                                                " (manage models and applications)"
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-2 text-xs",
-                                                            children: "2"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "Create Regular User Accounts"
-                                                                }),
-                                                                " (use applications)"
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-2 text-xs",
-                                                            children: "3"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "Set Access Permissions"
-                                                                }),
-                                                                " (model and application level)"
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 text-xs",
-                                                            children: "4"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "Configure Authentication Policies"
-                                                                }),
-                                                                " (single sign-on/LDAP)"
-                                                            ]
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "4-verification-and-testing",
-                children: "4. Verification and Testing"
+                id: "3-verification-and-testing",
+                children: "3. Verification and Testing"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -1294,7 +891,7 @@ function _createMdxContent(props) {
                                             }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                 className: "text-xs text-slate-600 dark:text-slate-400",
-                                                children: "Use the RM-01 diagnostic toolkit to conduct comprehensive performance benchmark tests to ensure the device achieves optimal performance in the client environment. Generate a performance report after testing as part of the delivery documentation."
+                                                children: "It is recommended to use the RM-01 comprehensive testing checklist to conduct full functional benchmark tests, ensuring the device achieves optimal performance in the client environment. Generate a test report after testing as part of the delivery documentation."
                                             })
                                         ]
                                     })
@@ -1306,8 +903,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "5-training-and-delivery",
-                children: "5. Training and Delivery"
+                id: "4-training-and-delivery",
+                children: "4. Training and Delivery"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -1323,7 +920,7 @@ function _createMdxContent(props) {
                                     children: [
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
                                             className: "text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300",
-                                            children: "Training and Delivery Process Flow"
+                                            children: "Training and Delivery Flowchart"
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                                             className: "flex flex-wrap justify-center items-center text-center",
@@ -1400,7 +997,7 @@ function _createMdxContent(props) {
                                                             }),
                                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                 className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                children: "User manuals and technical docs"
+                                                                children: "User manuals and technical documentation"
                                                             })
                                                         ]
                                                     })
@@ -1532,7 +1129,7 @@ function _createMdxContent(props) {
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                             className: "mt-3 p-2 bg-amber-50 dark:bg-amber-900/20 rounded-md text-xs text-amber-800 dark:text-amber-300",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Recording training videos is recommended for administrators' future reference"
+                                                children: "It is recommended to record training videos for future reference by administrators."
                                             })
                                         })
                                     ]
@@ -1567,7 +1164,7 @@ function _createMdxContent(props) {
                                                         }),
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                             className: "text-xs text-slate-600 dark:text-slate-400 mt-0.5",
-                                                            children: "How to log in and find needed applications"
+                                                            children: "How to log in and find the required applications"
                                                         })
                                                     ]
                                                 }),
@@ -1579,7 +1176,7 @@ function _createMdxContent(props) {
                                                         }),
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                             className: "text-xs text-slate-600 dark:text-slate-400 mt-0.5",
-                                                            children: "Common features and operation process demonstration"
+                                                            children: "Demonstration of common features and operation processes"
                                                         })
                                                     ]
                                                 }),
@@ -1612,7 +1209,7 @@ function _createMdxContent(props) {
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                             className: "mt-3 p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-md text-xs text-indigo-800 dark:text-indigo-300",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Customizing training content for different departments is recommended to enhance training effectiveness"
+                                                children: "It is recommended to customize training content for different departments to improve training effectiveness."
                                             })
                                         })
                                     ]
@@ -1653,7 +1250,7 @@ function _createMdxContent(props) {
                                                         }),
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                             className: "text-xs text-slate-600 dark:text-slate-400",
-                                                            children: "Hardware specs and basic operation guidance"
+                                                            children: "Hardware specifications and basic operation guidance"
                                                         })
                                                     ]
                                                 }),
@@ -1699,9 +1296,9 @@ function _createMdxContent(props) {
                                             ]
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                            className: "mt-3 text-xs text-slate-600 dark:text-slate-400",
+                                            className: "mt-3 p-2 bg-blue-100 dark:bg-blue-800/60 rounded-md text-xs text-blue-600 dark:text-blue-300",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "All documentation is provided in both electronic and printed formats, with the latest versions always accessible through the management interface"
+                                                children: "All documentation is provided in both electronic and printed formats, and the latest versions are always accessible through the management interface."
                                             })
                                         })
                                     ]
@@ -1797,7 +1394,7 @@ function _createMdxContent(props) {
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                             className: "mt-3 p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-md text-xs text-emerald-800 dark:text-emerald-300",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Using a standardized delivery checklist is recommended to ensure no delivery items are missed"
+                                                children: "It is recommended to use a standardized delivery checklist to ensure that no delivery items are missed."
                                             })
                                         })
                                     ]
@@ -1809,8 +1406,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "6-after-sales-support",
-                children: "6. After-Sales Support"
+                id: "5-after-sales-support",
+                children: "5. After-Sales Support"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -2780,7 +2377,7 @@ function _createMdxContent(props) {
                                             className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mb-3",
+                                                    className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mb-3",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
                                                         className: "text-2xl",
                                                         children: "📚"
@@ -2893,6 +2490,20 @@ function _createMdxContent(props) {
                             ]
                         })
                     ]
+                })
+            }),
+            "\n",
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                className: "my-8 text-center",
+                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                    className: "h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"
+                })
+            }),
+            "\n",
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                className: "text-sm text-gray-500 mt-8",
+                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                    children: "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved."
                 })
             })
         ]

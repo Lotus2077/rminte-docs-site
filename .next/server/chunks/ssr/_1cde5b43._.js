@@ -97,6 +97,42 @@ const docs = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fum
 ], [
     {
         "info": {
+            "path": "deploy-guide/meta.cn.json",
+            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/deploy-guide/meta.cn.json"
+        },
+        "data": {
+            "title": "企业服务与部署",
+            "pages": [
+                "---快速上手---",
+                "find-source",
+                "---部署指南---",
+                "deploy"
+            ],
+            "description": "RM-01 企业部署流程",
+            "root": true,
+            "icon": "Building"
+        }
+    },
+    {
+        "info": {
+            "path": "deploy-guide/meta.json",
+            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/deploy-guide/meta.json"
+        },
+        "data": {
+            "title": "Enterprise Deployment",
+            "pages": [
+                "---Quick Start---",
+                "find-source",
+                "---Deployment Guide---",
+                "deploy"
+            ],
+            "description": "RM-01 Deployment Guide",
+            "root": true,
+            "icon": "Building"
+        }
+    },
+    {
+        "info": {
             "path": "develop-guide/meta.cn.json",
             "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/develop-guide/meta.cn.json"
         },
@@ -117,44 +153,6 @@ const docs = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fum
             "description": "RM-01 Development Guide",
             "root": true,
             "icon": "Code"
-        }
-    },
-    {
-        "info": {
-            "path": "deploy-guide/meta.cn.json",
-            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/deploy-guide/meta.cn.json"
-        },
-        "data": {
-            "title": "企业服务与部署",
-            "pages": [
-                "---快速上手---",
-                "find-source",
-                "---部署指南---",
-                "deploy",
-                "security-guide"
-            ],
-            "description": "RM-01 企业部署流程",
-            "root": true,
-            "icon": "Building"
-        }
-    },
-    {
-        "info": {
-            "path": "deploy-guide/meta.json",
-            "absolutePath": "/Users/lotusxu/Desktop/rminte-docs-site/content/docs/deploy-guide/meta.json"
-        },
-        "data": {
-            "title": "Enterprise Deployment",
-            "pages": [
-                "---Quick Start---",
-                "find-source",
-                "---Deployment Guide---",
-                "deploy",
-                "security-guide"
-            ],
-            "description": "RM-01 Deployment Guide",
-            "root": true,
-            "icon": "Building"
         }
     }
 ]);

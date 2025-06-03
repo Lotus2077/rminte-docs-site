@@ -5,7 +5,138 @@ module.exports = {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-__turbopack_context__.s({
+/*### 3. 软件配置与应用部署
+
+<div className="mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-lg border border-blue-100 dark:border-blue-800 overflow-hidden">
+<div className="p-6">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700">
+<div className="flex items-center mb-4">
+<div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3" style={{ minWidth: '2.5rem' }}>
+<span className="text-xl">⚙️</span>
+</div>
+<h4 className="text-lg font-semibold dark:text-white">管理界面设置</h4>
+</div>
+
+<ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
+<li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+<strong className="dark:text-white">访问管理界面：</strong> 浏览器访问 http://分配的IP地址:xxxx（ xxxx 为设备序列号后四位 ）
+</li>
+<li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+<strong className="dark:text-white">初始登录：</strong> 用户名：admin，密码：见设备底部标签
+</li>
+<li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+<strong className="dark:text-white">基础配置：</strong> 修改管理员密码、设置设备名称与时区
+</li>
+<li>
+<strong className="dark:text-white">安全设置：</strong> 配置访问控制策略
+</li>
+</ol>
+
+<div className="mt-3 p-2 bg-amber-50 dark:bg-amber-950/40 rounded-md text-amber-800 dark:text-amber-300 text-xs">
+请务必在首次登录后立即修改默认密码，确保系统安全
+</div>
+</div>
+
+<div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700">
+<div className="flex items-center mb-4">
+<div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 mr-3" style={{ minWidth: '2.5rem' }}>
+<span className="text-xl">🧠</span>
+</div>
+<h4 className="text-lg font-semibold dark:text-white">模型管理</h4>
+</div>
+
+<ol className="pl-4 space-y-2 text-sm dark:text-gray-300">
+<li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+<strong className="dark:text-white">访问模型管理：</strong> 导航至管理界面中的"模型管理"
+</li>
+<li className="pb-2 border-b border-gray-100 dark:border-gray-700">
+<strong className="dark:text-white">查看模型状态：</strong> 检查已加载模型列表与运行状态
+</li>
+<li>
+<strong className="dark:text-white">加载新模型：</strong>
+<ul className="list-disc pl-5 mt-1 space-y-1 dark:text-gray-400">
+<li>将模型文件存入 CFexpress 卡上的指定目录</li>
+<li>插入 RM-01 设备</li>
+<li>等待设备自动扫描模型</li>
+<li>加载完成并验证状态</li>
+</ul>
+</li>
+</ol>
+</div>
+
+<div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-green-200 dark:border-green-700">
+<div className="flex items-center mb-4">
+<div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3" style={{ minWidth: '2.5rem' }}>
+<span className="text-xl">📱</span>
+</div>
+<h4 className="text-lg font-semibold dark:text-white">应用部署</h4>
+</div>
+
+<div className="space-y-3 text-sm dark:text-gray-300">
+<div>
+<strong className="block mb-1 dark:text-white">部署流程：</strong>
+<ol className="list-decimal pl-5 space-y-1">
+<li>进入"应用管理"</li>
+<li>点击"部署新应用"</li>
+<li>选择部署方式</li>
+<li>等待部署完成</li>
+<li>配置应用参数</li>
+</ol>
+</div>
+
+<div>
+<strong className="block mb-1 dark:text-white">应用加载方式：</strong>
+<div className="grid grid-cols-3 gap-2">
+<div className="p-2 bg-green-50 dark:bg-green-900/30 rounded text-center border border-green-100 dark:border-green-800">
+<div className="text-xs font-medium dark:text-green-300">存储卡加载</div>
+<div className="text-xs text-green-700 dark:text-green-400">推荐</div>
+</div>
+<div className="p-2 bg-blue-50 dark:bg-blue-900/30 rounded text-center border border-blue-100 dark:border-blue-800">
+<div className="text-xs font-medium dark:text-blue-300">Docker镜像</div>
+<div className="text-xs text-blue-700 dark:text-blue-400">中级选项</div>
+</div>
+<div className="p-2 bg-purple-50 dark:bg-purple-900/30 rounded text-center border border-purple-100 dark:border-purple-800">
+<div className="text-xs font-medium dark:text-purple-300">自研开发</div>
+<div className="text-xs text-purple-700 dark:text-purple-400">高级选项</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-orange-200 dark:border-orange-800">
+<div className="flex items-center mb-4">
+<div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-3" style={{ minWidth: '2.5rem' }}>
+<span className="text-xl">🔐</span>
+</div>
+<h4 className="text-lg font-semibold dark:text-white">权限与访问控制</h4>
+</div>
+
+<div className="space-y-3 text-sm dark:text-gray-300">
+<div className="flex flex-col space-y-2">
+<div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+<span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 mr-2 text-xs">1</span>
+<span><strong className="dark:text-white">创建企业管理员账户</strong>（管理模型和应用）</span>
+</div>
+<div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+<span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-2 text-xs">2</span>
+<span><strong className="dark:text-white">创建普通用户账户</strong>（使用应用）</span>
+</div>
+<div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+<span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-2 text-xs">3</span>
+<span><strong className="dark:text-white">设置访问权限</strong>（模型、应用级别）</span>
+</div>
+<div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded">
+<span className="w-5 h-5 inline-flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 text-xs">4</span>
+<span><strong className="dark:text-white">配置身份验证策略</strong>（单点登录/LDAP）</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>*/ __turbopack_context__.s({
     "default": (()=>MDXContent),
     "frontmatter": (()=>frontmatter),
     "lastModified": (()=>lastModified),
@@ -97,15 +228,15 @@ let structuredData = {
         },
         {
             "heading": "设备安装",
+            "content": "插入用于加密的 MicroSD 卡（如适用）"
+        },
+        {
+            "heading": "设备安装",
             "content": "连接电源适配器"
         },
         {
             "heading": "设备安装",
             "content": "如需有线网络，连接 USB-C 转网线适配器"
-        },
-        {
-            "heading": "设备安装",
-            "content": "插入预装有应用的 MicroSD 卡（如适用）"
         },
         {
             "heading": "设备安装",
@@ -137,7 +268,7 @@ let structuredData = {
         },
         {
             "heading": "网络配置",
-            "content": "通过 USB-C 端口（加转接器）连接到企业局域网"
+            "content": "通过 USB-C 端口（可加转接器）连接到企业局域网"
         },
         {
             "heading": "网络配置",
@@ -164,64 +295,40 @@ let structuredData = {
             "content": "验证网络连接"
         },
         {
-            "heading": "3-软件配置与应用部署",
-            "content": "访问管理界面： 浏览器访问 http://分配的IP地址:xxxx（ xxxx 为设备序列号后四位 ）"
-        },
-        {
-            "heading": "3-软件配置与应用部署",
-            "content": "初始登录： 用户名：admin，密码：见设备底部标签"
-        },
-        {
-            "heading": "3-软件配置与应用部署",
-            "content": "基础配置： 修改管理员密码、设置设备名称与时区"
-        },
-        {
-            "heading": "3-软件配置与应用部署",
-            "content": "安全设置： 配置访问控制策略"
-        },
-        {
-            "heading": "3-软件配置与应用部署",
-            "content": "请务必在首次登录后立即修改默认密码，确保系统安全"
-        },
-        {
-            "heading": "3-软件配置与应用部署",
-            "content": "访问模型管理： 导航至管理界面中的\"模型管理\""
-        },
-        {
-            "heading": "3-软件配置与应用部署",
-            "content": "查看模型状态： 检查已加载模型列表与运行状态"
-        },
-        {
-            "heading": "5-培训与交付",
+            "heading": "4-培训与交付",
             "content": "建议录制培训视频，以便管理员后续参考"
         },
         {
-            "heading": "5-培训与交付",
+            "heading": "4-培训与交付",
             "content": "推荐针对不同部门用户定制培训内容，提高培训效果"
         },
         {
-            "heading": "5-培训与交付",
+            "heading": "4-培训与交付",
             "content": "所有文档均提供电子版与打印版，可通过管理界面随时获取最新版本"
         },
         {
-            "heading": "5-培训与交付",
+            "heading": "4-培训与交付",
             "content": "推荐使用标准化交付清单确保所有交付项目无遗漏"
         },
         {
-            "heading": "6-售后支持",
+            "heading": "5-售后支持",
             "content": "标准服务包含 12 个月远程支持"
         },
         {
-            "heading": "6-售后支持",
+            "heading": "5-售后支持",
             "content": "推荐每季度进行一次系统全面检查"
         },
         {
-            "heading": "6-售后支持",
+            "heading": "5-售后支持",
             "content": "可按需购买额外增值服务"
         },
         {
-            "heading": "6-售后支持",
+            "heading": "5-售后支持",
             "content": "提供灵活的服务级别协议选项，可根据企业需求定制具体响应时间和服务内容。所有 SLA 承诺均有服务质量保证，不达标准将提供服务补偿。"
+        },
+        {
+            "heading": "技术支持",
+            "content": "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. 保留所有权利。"
         }
     ],
     "headings": [
@@ -266,20 +373,16 @@ let structuredData = {
             "content": "网络配置"
         },
         {
-            "id": "3-软件配置与应用部署",
-            "content": "3. 软件配置与应用部署"
+            "id": "3-验证与测试",
+            "content": "3. 验证与测试"
         },
         {
-            "id": "4-验证与测试",
-            "content": "4. 验证与测试"
+            "id": "4-培训与交付",
+            "content": "4. 培训与交付"
         },
         {
-            "id": "5-培训与交付",
-            "content": "5. 培训与交付"
-        },
-        {
-            "id": "6-售后支持",
-            "content": "6. 售后支持"
+            "id": "5-售后支持",
+            "content": "5. 售后支持"
         },
         {
             "id": "常见问题解答",
@@ -366,30 +469,23 @@ const toc = [
     },
     {
         depth: 3,
-        url: "#3-软件配置与应用部署",
+        url: "#3-验证与测试",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "3. 软件配置与应用部署"
+            children: "3. 验证与测试"
         })
     },
     {
         depth: 3,
-        url: "#4-验证与测试",
+        url: "#4-培训与交付",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "4. 验证与测试"
+            children: "4. 培训与交付"
         })
     },
     {
         depth: 3,
-        url: "#5-培训与交付",
+        url: "#5-售后支持",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "5. 培训与交付"
-        })
-    },
-    {
-        depth: 3,
-        url: "#6-售后支持",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "6. 售后支持"
+            children: "5. 售后支持"
         })
     },
     {
@@ -658,15 +754,15 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "插入用于加密的 MicroSD 卡（如适用）"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "连接电源适配器"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "如需有线网络，连接 USB-C 转网线适配器"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "插入预装有应用的 MicroSD 卡（如适用）"
                                     }),
                                     "\n"
                                 ]
@@ -720,7 +816,7 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "通过 USB-C 端口（加转接器）连接到企业局域网"
+                                        children: "通过 USB-C 端口（可加转接器）连接到企业局域网"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
@@ -763,404 +859,10 @@ function _createMdxContent(props) {
                 ]
             }),
             "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "3-软件配置与应用部署",
-                children: "3. 软件配置与应用部署"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                className: "mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-lg border border-blue-100 dark:border-blue-800 overflow-hidden",
-                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                    className: "p-6",
-                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                        className: "grid grid-cols-1 md:grid-cols-2 gap-6",
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "⚙️"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "管理界面设置"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
-                                        className: "pl-4 space-y-2 text-sm dark:text-gray-300",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "访问管理界面："
-                                                        }),
-                                                        " 浏览器访问 ",
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                                                            href: "http://%E5%88%86%E9%85%8D%E7%9A%84IP%E5%9C%B0%E5%9D%80:xxxx%EF%BC%88",
-                                                            children: "http://分配的IP地址:xxxx（"
-                                                        }),
-                                                        " xxxx 为设备序列号后四位 ）"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "初始登录："
-                                                        }),
-                                                        " 用户名：admin，密码：见设备底部标签"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "基础配置："
-                                                        }),
-                                                        " 修改管理员密码、设置设备名称与时区"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "安全设置："
-                                                        }),
-                                                        " 配置访问控制策略"
-                                                    ]
-                                                })
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                        className: "mt-3 p-2 bg-amber-50 dark:bg-amber-950/40 rounded-md text-amber-800 dark:text-amber-300 text-xs",
-                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                            children: "请务必在首次登录后立即修改默认密码，确保系统安全"
-                                        })
-                                    })
-                                ]
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "🧠"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "模型管理"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
-                                        className: "pl-4 space-y-2 text-sm dark:text-gray-300",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "访问模型管理："
-                                                        }),
-                                                        " 导航至管理界面中的\"模型管理\""
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                className: "pb-2 border-b border-gray-100 dark:border-gray-700",
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.p, {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "dark:text-white",
-                                                            children: "查看模型状态："
-                                                        }),
-                                                        " 检查已加载模型列表与运行状态"
-                                                    ]
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
-                                                children: [
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                        className: "dark:text-white",
-                                                        children: "加载新模型："
-                                                    }),
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
-                                                        className: "list-disc pl-5 mt-1 space-y-1 dark:text-gray-400",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "将模型文件存入 CFexpress 卡上的指定目录"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "插入 RM-01 设备"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "等待设备自动扫描模型"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "加载完成并验证状态"
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                ]
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-green-200 dark:border-green-700",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "📱"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "应用部署"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "space-y-3 text-sm dark:text-gray-300",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                children: [
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                        className: "block mb-1 dark:text-white",
-                                                        children: "部署流程："
-                                                    }),
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
-                                                        className: "list-decimal pl-5 space-y-1",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "进入\"应用管理\""
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "点击\"部署新应用\""
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "选择部署方式"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "等待部署完成"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                                children: "配置应用参数"
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                children: [
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                        className: "block mb-1 dark:text-white",
-                                                        children: "应用加载方式："
-                                                    }),
-                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                        className: "grid grid-cols-3 gap-2",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                                className: "p-2 bg-green-50 dark:bg-green-900/30 rounded text-center border border-green-100 dark:border-green-800",
-                                                                children: [
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs font-medium dark:text-green-300",
-                                                                        children: "存储卡加载"
-                                                                    }),
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs text-green-700 dark:text-green-400",
-                                                                        children: "推荐"
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                                className: "p-2 bg-blue-50 dark:bg-blue-900/30 rounded text-center border border-blue-100 dark:border-blue-800",
-                                                                children: [
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs font-medium dark:text-blue-300",
-                                                                        children: "Docker镜像"
-                                                                    }),
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs text-blue-700 dark:text-blue-400",
-                                                                        children: "中级选项"
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                                className: "p-2 bg-purple-50 dark:bg-purple-900/30 rounded text-center border border-purple-100 dark:border-purple-800",
-                                                                children: [
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs font-medium dark:text-purple-300",
-                                                                        children: "自研开发"
-                                                                    }),
-                                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                        className: "text-xs text-purple-700 dark:text-purple-400",
-                                                                        children: "高级选项"
-                                                                    })
-                                                                ]
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                ]
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                className: "bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-orange-200 dark:border-orange-800",
-                                children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                        className: "flex items-center mb-4",
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-3",
-                                                style: {
-                                                    minWidth: '2.5rem'
-                                                },
-                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                    className: "text-xl",
-                                                    children: "🔐"
-                                                })
-                                            }),
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                                className: "text-lg font-semibold dark:text-white",
-                                                children: "权限与访问控制"
-                                            })
-                                        ]
-                                    }),
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                        className: "space-y-3 text-sm dark:text-gray-300",
-                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex flex-col space-y-2",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 mr-2 text-xs",
-                                                            children: "1"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "创建企业管理员账户"
-                                                                }),
-                                                                "（管理模型和应用）"
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 mr-2 text-xs",
-                                                            children: "2"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "创建普通用户账户"
-                                                                }),
-                                                                "（使用应用）"
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-2 text-xs",
-                                                            children: "3"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "设置访问权限"
-                                                                }),
-                                                                "（模型、应用级别）"
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-5 h-5 inline-flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 text-xs",
-                                                            children: "4"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("span", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                                    className: "dark:text-white",
-                                                                    children: "配置身份验证策略"
-                                                                }),
-                                                                "（单点登录/LDAP）"
-                                                            ]
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "4-验证与测试",
-                children: "4. 验证与测试"
+                id: "3-验证与测试",
+                children: "3. 验证与测试"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -1333,8 +1035,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "5-培训与交付",
-                children: "5. 培训与交付"
+                id: "4-培训与交付",
+                children: "4. 培训与交付"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -1836,8 +1538,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "6-售后支持",
-                children: "6. 售后支持"
+                id: "5-售后支持",
+                children: "5. 售后支持"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -2426,7 +2128,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "开发者可以基于 RMinte 平台开发应用，通过提供解决方案或订阅获得收入。"
+                                                                    children: "开发者/商可以基于任何平台开发应用，并在 RMinte 平台进行部署，最后通过向终端客户提供解决方案获得收入。"
                                                                 })
                                                             ]
                                                         })
@@ -2500,7 +2202,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "是的，RMinte 提供设备租赁和 DaaS（Device as a Service）订阅模式，降低企业初始投入。"
+                                                                    children: "是的，开发商或者服务商可以提供设备租赁和 DaaS（Device as a Service）订阅模式，降低企业初始投入。"
                                                                 })
                                                             ]
                                                         })
@@ -2826,7 +2528,7 @@ function _createMdxContent(props) {
                                             ]
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
+                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 justify-center text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 mb-3",
@@ -2842,14 +2544,6 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
                                                     children: "技术交流与最佳实践"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "mt-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://developer.rminte.com",
-                                                        className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
-                                                        children: "developer.rminte.com"
-                                                    })
                                                 })
                                             ]
                                         }),
@@ -2870,19 +2564,11 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
                                                     children: "发现与建联专业应用（团队）"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "mt-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://apps.rminte.com",
-                                                        className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
-                                                        children: "apps.rminte.com"
-                                                    })
                                                 })
                                             ]
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
+                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 justify-center text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 mb-3",
@@ -2898,14 +2584,6 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
                                                     children: "学习与培训资源"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "mt-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://academy.rminte.com",
-                                                        className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
-                                                        children: "academy.rminte.com"
-                                                    })
                                                 })
                                             ]
                                         })
@@ -2921,6 +2599,13 @@ function _createMdxContent(props) {
                 className: "my-8 text-center",
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                     className: "h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"
+                })
+            }),
+            "\n",
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                className: "text-sm text-gray-500 mt-8",
+                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                    children: "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. 保留所有权利。"
                 })
             })
         ]

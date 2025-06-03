@@ -5,7 +5,105 @@ module.exports = {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-__turbopack_context__.s({
+/*### 数据备份（可选）
+
+<Callout type="tip" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+虽然 RM-01 具有高可靠性，但重要数据建议定期备份
+</Callout>
+
+<Steps>
+<Step>
+### 进入备份界面
+在管理界面选择"系统维护"，点击"创建备份"
+</Step>
+
+<Step>
+### 选择备份内容
+可选择应用数据、用户设置等
+</Step>
+
+<Step>
+### 选择备份位置
+可选择本地网络、外部存储等
+</Step>
+
+<Step>
+### 启动备份
+点击"开始备份"并等待完成
+</Step>
+</Steps>*/ /*### 性能优化
+
+<Callout type="warning" className="border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm">
+如果发现设备性能下降，可尝试以下步骤
+</Callout>
+
+<Steps>
+<Step>
+### 关闭未使用的应用
+进入"应用管理"，停止不需要的应用
+</Step>
+
+<Step>
+### 清理缓存
+进入"系统维护"，选择"清理缓存"选项
+</Step>
+
+<Step>
+### 重启设备
+在管理界面选择"重启"，或短按电源按钮选择"重启"
+</Step>
+</Steps>*/ /*### 企业专属支持渠道
+
+<Callout type="info" className="border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm">
+作为企业用户，您享有专属支持服务
+</Callout>
+
+<Steps>
+<Step>
+### 登录管理界面
+使用管理员账户登录系统
+</Step>
+
+<Step>
+### 进入支持中心
+点击"支持中心"选项
+</Step>
+
+<Step>
+### 提交工单
+点击"提交工单"按钮
+</Step>
+
+<Step>
+### 描述问题
+详细描述您遇到的问题
+</Step>
+
+<Step>
+### 添加附件
+附加相关日志或截图（如有）
+</Step>
+
+<Step>
+### 提交工单
+提交后，专属技术支持将在 2 小时内响应
+</Step>
+</Steps>
+
+### 学习资源
+
+<Cards>
+<Card title="知识库" href="https://kb.rminte.com" icon="📚" />
+<Card title="视频教程" href="https://academy.rminte.com" icon="🎬" />
+<Card title="开发者社区" href="https://developer.rminte.com" icon="👨‍💻" />
+<Card title="用户论坛" href="https://forum.rminte.com" icon="💬" />
+</Cards>*/ /*## 下一步
+
+<Cards>
+<Card title="了解更多 RM-01 产品特性" href="/docs/product-features" icon="✨" />
+<Card title="探索 RM-01 应用场景" href="/docs/use-cases" icon="🚀" />
+<Card title="开发者资源" href="/docs/developer" icon="💻" />
+</Cards>*/ __turbopack_context__.s({
     "default": (()=>MDXContent),
     "frontmatter": (()=>frontmatter),
     "lastModified": (()=>lastModified),
@@ -51,11 +149,11 @@ let structuredData = {
         },
         {
             "heading": "开箱检查",
-            "content": "USB-C 电源适配器"
+            "content": "USB-C 电源适配器（PD3.1，最高 140W）"
         },
         {
             "heading": "开箱检查",
-            "content": "USB-C 转网络适配器"
+            "content": "USB-C 转网络适配器（可选）"
         },
         {
             "heading": "开箱检查",
@@ -63,7 +161,15 @@ let structuredData = {
         },
         {
             "heading": "开箱检查",
+            "content": "MicroSD 卡"
+        },
+        {
+            "heading": "开箱检查",
             "content": "快速入门指南"
+        },
+        {
+            "heading": "开箱检查",
+            "content": "保修卡"
         },
         {
             "heading": "连接电源",
@@ -83,11 +189,15 @@ let structuredData = {
         },
         {
             "heading": "启动设备",
+            "content": "等待模型及应用拉起（约 2-3 分钟）"
+        },
+        {
+            "heading": "启动设备",
             "content": "白色指示灯常亮表示设备正常运行"
         },
         {
             "heading": "设备连接",
-            "content": "使用 USB-C 转网络适配器连接到局域网或接入个人设备（如手机、平板等）"
+            "content": "使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板等）"
         },
         {
             "heading": "访问管理界面",
@@ -242,34 +352,6 @@ let structuredData = {
             "content": "精细化的用户权限管理系统"
         },
         {
-            "heading": "数据备份可选",
-            "content": "type: tip"
-        },
-        {
-            "heading": "数据备份可选",
-            "content": "className: border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm"
-        },
-        {
-            "heading": "数据备份可选",
-            "content": "虽然 RM-01 具有高可靠性，但重要数据建议定期备份"
-        },
-        {
-            "heading": "进入备份界面",
-            "content": "在管理界面选择\"系统维护\"，点击\"创建备份\""
-        },
-        {
-            "heading": "选择备份内容",
-            "content": "可选择应用数据、用户设置等"
-        },
-        {
-            "heading": "选择备份位置",
-            "content": "可选择本地网络、外部存储等"
-        },
-        {
-            "heading": "启动备份",
-            "content": "点击\"开始备份\"并等待完成"
-        },
-        {
             "heading": "登录管理员账户",
             "content": "使用管理员账户访问管理界面"
         },
@@ -355,11 +437,11 @@ let structuredData = {
         },
         {
             "heading": "状态监控",
-            "content": "登录管理界面后，查看仪表盘上的系统状态信息："
+            "content": "登录管理界面后，查看数据看板上的系统状态信息："
         },
         {
             "heading": "状态监控",
-            "content": "CPU 使用率"
+            "content": "GPU 使用率"
         },
         {
             "heading": "状态监控",
@@ -383,79 +465,31 @@ let structuredData = {
         },
         {
             "heading": "更新管理",
-            "content": "登录管理界面"
+            "content": "在能连接互联网的设备上下载最新模型"
         },
         {
             "heading": "更新管理",
-            "content": "进入\"模型管理\""
+            "content": "将模型文件导入 CFexpress 卡上的模型目录（默认路径：/cfe/models）"
         },
         {
             "heading": "更新管理",
-            "content": "检查可用更新"
+            "content": "将 CFexpress 卡插入 RM-01"
         },
         {
             "heading": "更新管理",
-            "content": "选择需要更新的模型"
+            "content": "重启 RM-01"
         },
         {
             "heading": "更新管理",
-            "content": "点击\"更新\"按钮"
+            "content": "完成模型更新"
         },
         {
             "heading": "更新管理",
-            "content": "进入\"应用库\""
+            "content": "由服务商或者应用开发商进行应用更新"
         },
         {
             "heading": "更新管理",
-            "content": "检查标记为\"可更新\"的应用"
-        },
-        {
-            "heading": "更新管理",
-            "content": "点击\"更新\"按钮"
-        },
-        {
-            "heading": "更新管理",
-            "content": "等待更新完成"
-        },
-        {
-            "heading": "更新管理",
-            "content": "进入\"系统维护\""
-        },
-        {
-            "heading": "更新管理",
-            "content": "选择\"检查更新\""
-        },
-        {
-            "heading": "更新管理",
-            "content": "如有可用更新，点击\"安装更新\""
-        },
-        {
-            "heading": "更新管理",
-            "content": "设备将自动完成更新并重启"
-        },
-        {
-            "heading": "性能优化",
-            "content": "type: warning"
-        },
-        {
-            "heading": "性能优化",
-            "content": "className: border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm"
-        },
-        {
-            "heading": "性能优化",
-            "content": "如果发现设备性能下降，可尝试以下步骤"
-        },
-        {
-            "heading": "关闭未使用的应用",
-            "content": "进入\"应用管理\"，停止不需要的应用"
-        },
-        {
-            "heading": "清理缓存",
-            "content": "进入\"系统维护\"，选择\"清理缓存\"选项"
-        },
-        {
-            "heading": "重启设备",
-            "content": "在管理界面选择\"重启\"，或短按电源按钮选择\"重启\""
+            "content": "由服务商或者应用开发商进行系统更新"
         },
         {
             "heading": "常见问题解答",
@@ -586,12 +620,8 @@ let structuredData = {
             "content": "温度过高：确保设备通风良好，避免堆放"
         },
         {
-            "heading": "常见问题解答",
-            "content": "存储空间不足：清理不必要的数据"
-        },
-        {
             "heading": "服务提供商联系方式",
-            "content": "400-XXX-XXXX（工作日 9:00-18:00）"
+            "content": "请联系您的服务商或应用开发商寻求帮助"
         },
         {
             "heading": "服务提供商联系方式",
@@ -599,63 +629,27 @@ let structuredData = {
         },
         {
             "heading": "服务提供商联系方式",
-            "content": "https://support.rminte.com"
+            "content": "www.rminte.com"
         },
         {
-            "heading": "企业专属支持渠道",
-            "content": "type: info"
-        },
-        {
-            "heading": "企业专属支持渠道",
-            "content": "className: border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm"
-        },
-        {
-            "heading": "企业专属支持渠道",
-            "content": "作为企业用户，您享有专属支持服务"
-        },
-        {
-            "heading": "登录管理界面",
-            "content": "使用管理员账户登录系统"
-        },
-        {
-            "heading": "进入支持中心",
-            "content": "点击\"支持中心\"选项"
-        },
-        {
-            "heading": "提交工单",
-            "content": "点击\"提交工单\"按钮"
-        },
-        {
-            "heading": "描述问题",
-            "content": "详细描述您遇到的问题"
-        },
-        {
-            "heading": "添加附件",
-            "content": "附加相关日志或截图（如有）"
-        },
-        {
-            "heading": "提交工单-1",
-            "content": "提交后，专属技术支持将在 2 小时内响应"
-        },
-        {
-            "heading": "学习资源",
+            "heading": "服务提供商联系方式",
             "content": "type: success"
         },
         {
-            "heading": "学习资源",
+            "heading": "服务提供商联系方式",
             "content": "emoji: 🎉"
         },
         {
-            "heading": "学习资源",
+            "heading": "服务提供商联系方式",
             "content": "className: border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm"
         },
         {
-            "heading": "学习资源",
-            "content": "恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的支持中心获取帮助。"
+            "heading": "服务提供商联系方式",
+            "content": "恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的在线支持中心获取帮助。"
         },
         {
-            "heading": "学习资源",
-            "content": "© 2025 RMinte Inc. 保留所有权利。"
+            "heading": "服务提供商联系方式",
+            "content": "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. 保留所有权利。"
         }
     ],
     "headings": [
@@ -732,26 +726,6 @@ let structuredData = {
             "content": "数据安全保障"
         },
         {
-            "id": "数据备份可选",
-            "content": "数据备份（可选）"
-        },
-        {
-            "id": "进入备份界面",
-            "content": "进入备份界面"
-        },
-        {
-            "id": "选择备份内容",
-            "content": "选择备份内容"
-        },
-        {
-            "id": "选择备份位置",
-            "content": "选择备份位置"
-        },
-        {
-            "id": "启动备份",
-            "content": "启动备份"
-        },
-        {
             "id": "用户管理",
             "content": "用户管理"
         },
@@ -796,22 +770,6 @@ let structuredData = {
             "content": "更新管理"
         },
         {
-            "id": "性能优化",
-            "content": "性能优化"
-        },
-        {
-            "id": "关闭未使用的应用",
-            "content": "关闭未使用的应用"
-        },
-        {
-            "id": "清理缓存",
-            "content": "清理缓存"
-        },
-        {
-            "id": "重启设备",
-            "content": "重启设备"
-        },
-        {
             "id": "常见问题解答",
             "content": "常见问题解答"
         },
@@ -822,42 +780,6 @@ let structuredData = {
         {
             "id": "服务提供商联系方式",
             "content": "服务提供商联系方式"
-        },
-        {
-            "id": "企业专属支持渠道",
-            "content": "企业专属支持渠道"
-        },
-        {
-            "id": "登录管理界面",
-            "content": "登录管理界面"
-        },
-        {
-            "id": "进入支持中心",
-            "content": "进入支持中心"
-        },
-        {
-            "id": "提交工单",
-            "content": "提交工单"
-        },
-        {
-            "id": "描述问题",
-            "content": "描述问题"
-        },
-        {
-            "id": "添加附件",
-            "content": "添加附件"
-        },
-        {
-            "id": "提交工单-1",
-            "content": "提交工单"
-        },
-        {
-            "id": "学习资源",
-            "content": "学习资源"
-        },
-        {
-            "id": "下一步",
-            "content": "下一步"
         }
     ]
 };
@@ -993,41 +915,6 @@ const toc = [
         })
     },
     {
-        depth: 3,
-        url: "#数据备份可选",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "数据备份（可选）"
-        })
-    },
-    {
-        depth: 3,
-        url: "#进入备份界面",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "进入备份界面"
-        })
-    },
-    {
-        depth: 3,
-        url: "#选择备份内容",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "选择备份内容"
-        })
-    },
-    {
-        depth: 3,
-        url: "#选择备份位置",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "选择备份位置"
-        })
-    },
-    {
-        depth: 3,
-        url: "#启动备份",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "启动备份"
-        })
-    },
-    {
         depth: 2,
         url: "#用户管理",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1105,34 +992,6 @@ const toc = [
         })
     },
     {
-        depth: 3,
-        url: "#性能优化",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "性能优化"
-        })
-    },
-    {
-        depth: 3,
-        url: "#关闭未使用的应用",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "关闭未使用的应用"
-        })
-    },
-    {
-        depth: 3,
-        url: "#清理缓存",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "清理缓存"
-        })
-    },
-    {
-        depth: 3,
-        url: "#重启设备",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "重启设备"
-        })
-    },
-    {
         depth: 2,
         url: "#常见问题解答",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1151,69 +1010,6 @@ const toc = [
         url: "#服务提供商联系方式",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
             children: "服务提供商联系方式"
-        })
-    },
-    {
-        depth: 3,
-        url: "#企业专属支持渠道",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "企业专属支持渠道"
-        })
-    },
-    {
-        depth: 3,
-        url: "#登录管理界面",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "登录管理界面"
-        })
-    },
-    {
-        depth: 3,
-        url: "#进入支持中心",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "进入支持中心"
-        })
-    },
-    {
-        depth: 3,
-        url: "#提交工单",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "提交工单"
-        })
-    },
-    {
-        depth: 3,
-        url: "#描述问题",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "描述问题"
-        })
-    },
-    {
-        depth: 3,
-        url: "#添加附件",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "添加附件"
-        })
-    },
-    {
-        depth: 3,
-        url: "#提交工单-1",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "提交工单"
-        })
-    },
-    {
-        depth: 3,
-        url: "#学习资源",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "学习资源"
-        })
-    },
-    {
-        depth: 2,
-        url: "#下一步",
-        title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "下一步"
         })
     }
 ];
@@ -1487,7 +1283,7 @@ function _createMdxContent(props) {
                         children: [
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
                                 className: "font-semibold mb-4 text-center text-slate-800 dark:text-slate-200",
-                                children: "正面与侧面接口"
+                                children: "正面接口"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                                 className: "space-y-4",
@@ -1513,7 +1309,7 @@ function _createMdxContent(props) {
                                                     }),
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                         className: "text-sm text-slate-600 dark:text-slate-300",
-                                                        children: "短按开/关机，长按5秒强制关机"
+                                                        children: "短按3秒开/关机，长按10秒强制关机"
                                                     })
                                                 ]
                                             })
@@ -1581,7 +1377,7 @@ function _createMdxContent(props) {
                                                     }),
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                         className: "text-sm text-slate-600 dark:text-slate-300",
-                                                        children: "用于模型存储，支持热插拔"
+                                                        children: "用于模型和应用存储"
                                                     })
                                                 ]
                                             })
@@ -1608,7 +1404,7 @@ function _createMdxContent(props) {
                                                     }),
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                         className: "text-sm text-slate-600 dark:text-slate-300",
-                                                        children: "用于应用和数据存储"
+                                                        children: "用于加密和内部模组服务"
                                                     })
                                                 ]
                                             })
@@ -1635,7 +1431,7 @@ function _createMdxContent(props) {
                                                     }),
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                         className: "text-sm text-slate-600 dark:text-slate-300",
-                                                        children: "用于连接外部扩展设备"
+                                                        children: "用于支持多模态以及连接外部扩展设备"
                                                     })
                                                 ]
                                             })
@@ -1650,7 +1446,7 @@ function _createMdxContent(props) {
                         children: [
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
                                 className: "font-semibold mb-4 text-center text-slate-800 dark:text-slate-200",
-                                children: "背面与扩展接口"
+                                children: "侧面与扩展接口"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                                 className: "space-y-4",
@@ -1772,11 +1568,11 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "USB-C 电源适配器"
+                                        children: "USB-C 电源适配器（PD3.1，最高 140W）"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "USB-C 转网络适配器"
+                                        children: "USB-C 转网络适配器（可选）"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -1784,7 +1580,15 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "MicroSD 卡"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "快速入门指南"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "保修卡"
                                     }),
                                     "\n"
                                 ]
@@ -1830,6 +1634,10 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "等待模型及应用拉起（约 2-3 分钟）"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "白色指示灯常亮表示设备正常运行"
                                     }),
                                     "\n"
@@ -1847,7 +1655,7 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "使用 USB-C 转网络适配器连接到局域网或接入个人设备（如手机、平板等）"
+                                        children: "使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板等）"
                                     }),
                                     "\n"
                                 ]
@@ -2424,67 +2232,6 @@ function _createMdxContent(props) {
                 ]
             }),
             "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "数据备份可选",
-                children: "数据备份（可选）"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
-                type: "tip",
-                className: "border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm",
-                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                    children: "虽然 RM-01 具有高可靠性，但重要数据建议定期备份"
-                })
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Steps"], {
-                children: [
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "进入备份界面",
-                                children: "进入备份界面"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "在管理界面选择\"系统维护\"，点击\"创建备份\""
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "选择备份内容",
-                                children: "选择备份内容"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "可选择应用数据、用户设置等"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "选择备份位置",
-                                children: "选择备份位置"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "可选择本地网络、外部存储等"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "启动备份",
-                                children: "启动备份"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "点击\"开始备份\"并等待完成"
-                            })
-                        ]
-                    })
-                ]
-            }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h2, {
                 id: "用户管理",
@@ -2651,7 +2398,7 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                children: "登录管理界面后，查看仪表盘上的系统状态信息："
+                children: "登录管理界面后，查看数据看板上的系统状态信息："
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
@@ -2663,7 +2410,7 @@ function _createMdxContent(props) {
                             children: [
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "CPU 使用率"
+                                    children: "GPU 使用率"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -2725,23 +2472,23 @@ function _createMdxContent(props) {
                             children: [
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "登录管理界面"
+                                    children: "在能连接互联网的设备上下载最新模型"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "进入\"模型管理\""
+                                    children: "将模型文件导入 CFexpress 卡上的模型目录（默认路径：/cfe/models）"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "检查可用更新"
+                                    children: "将 CFexpress 卡插入 RM-01"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "选择需要更新的模型"
+                                    children: "重启 RM-01"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "点击\"更新\"按钮"
+                                    children: "完成模型更新"
                                 }),
                                 "\n"
                             ]
@@ -2752,19 +2499,7 @@ function _createMdxContent(props) {
                             children: [
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "进入\"应用库\""
-                                }),
-                                "\n",
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "检查标记为\"可更新\"的应用"
-                                }),
-                                "\n",
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "点击\"更新\"按钮"
-                                }),
-                                "\n",
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "等待更新完成"
+                                    children: "由服务商或者应用开发商进行应用更新"
                                 }),
                                 "\n"
                             ]
@@ -2775,19 +2510,7 @@ function _createMdxContent(props) {
                             children: [
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "进入\"系统维护\""
-                                }),
-                                "\n",
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "选择\"检查更新\""
-                                }),
-                                "\n",
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "如有可用更新，点击\"安装更新\""
-                                }),
-                                "\n",
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "设备将自动完成更新并重启"
+                                    children: "由服务商或者应用开发商进行系统更新"
                                 }),
                                 "\n"
                             ]
@@ -2796,56 +2519,6 @@ function _createMdxContent(props) {
                 ]
             }),
             "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "性能优化",
-                children: "性能优化"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
-                type: "warning",
-                className: "border-l-4 border-amber-500 dark:border-amber-400 bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm",
-                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                    children: "如果发现设备性能下降，可尝试以下步骤"
-                })
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Steps"], {
-                children: [
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "关闭未使用的应用",
-                                children: "关闭未使用的应用"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "进入\"应用管理\"，停止不需要的应用"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "清理缓存",
-                                children: "清理缓存"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "进入\"系统维护\"，选择\"清理缓存\"选项"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "重启设备",
-                                children: "重启设备"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "在管理界面选择\"重启\"，或短按电源按钮选择\"重启\""
-                            })
-                        ]
-                    })
-                ]
-            }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h2, {
                 id: "常见问题解答",
@@ -3071,15 +2744,6 @@ function _createMdxContent(props) {
                                             "：确保设备通风良好，避免堆放"
                                         ]
                                     }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
-                                        children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
-                                                children: "存储空间不足"
-                                            }),
-                                            "：清理不必要的数据"
-                                        ]
-                                    }),
                                     "\n"
                                 ]
                             })
@@ -3105,7 +2769,7 @@ function _createMdxContent(props) {
                         title: "技术支持热线",
                         icon: "📞",
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                            children: "400-XXX-XXXX（工作日 9:00-18:00）"
+                            children: "请联系您的服务商或应用开发商寻求帮助"
                         })
                     }),
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -3123,127 +2787,14 @@ function _createMdxContent(props) {
                         icon: "💬",
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                                href: "https://support.rminte.com",
-                                children: "https://support.rminte.com"
+                                href: "http://www.rminte.com",
+                                children: "www.rminte.com"
                             })
                         })
                     })
                 ]
             }),
             "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "企业专属支持渠道",
-                children: "企业专属支持渠道"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
-                type: "info",
-                className: "border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/80 dark:bg-blue-900/20 backdrop-blur-sm",
-                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                    children: "作为企业用户，您享有专属支持服务"
-                })
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Steps"], {
-                children: [
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "登录管理界面",
-                                children: "登录管理界面"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "使用管理员账户登录系统"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "进入支持中心",
-                                children: "进入支持中心"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "点击\"支持中心\"选项"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "提交工单",
-                                children: "提交工单"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "点击\"提交工单\"按钮"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "描述问题",
-                                children: "描述问题"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "详细描述您遇到的问题"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "添加附件",
-                                children: "添加附件"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "附加相关日志或截图（如有）"
-                            })
-                        ]
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Step"], {
-                        children: [
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                                id: "提交工单-1",
-                                children: "提交工单"
-                            }),
-                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "提交后，专属技术支持将在 2 小时内响应"
-                            })
-                        ]
-                    })
-                ]
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "学习资源",
-                children: "学习资源"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Cards"], {
-                children: [
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "知识库",
-                        href: "https://kb.rminte.com",
-                        icon: "📚"
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "视频教程",
-                        href: "https://academy.rminte.com",
-                        icon: "🎬"
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "开发者社区",
-                        href: "https://developer.rminte.com",
-                        icon: "👨‍💻"
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "用户论坛",
-                        href: "https://forum.rminte.com",
-                        icon: "💬"
-                    })
-                ]
-            }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.hr, {}),
             "\n",
@@ -3252,41 +2803,17 @@ function _createMdxContent(props) {
                 emoji: "🎉",
                 className: "border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm",
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                    children: "恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的支持中心获取帮助。"
+                    children: "恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的在线支持中心获取帮助。"
                 })
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                 className: "text-sm text-gray-500 mt-8",
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                    children: "© 2025 RMinte Inc. 保留所有权利。"
+                    children: "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. 保留所有权利。"
                 })
             }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h2, {
-                id: "下一步",
-                children: "下一步"
-            }),
-            "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Cards"], {
-                children: [
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "了解更多 RM-01 产品特性",
-                        href: "/docs/product-features",
-                        icon: "✨"
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "探索 RM-01 应用场景",
-                        href: "/docs/use-cases",
-                        icon: "🚀"
-                    }),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                        title: "开发者资源",
-                        href: "/docs/developer",
-                        icon: "💻"
-                    })
-                ]
-            })
+            "\n"
         ]
     });
 }
