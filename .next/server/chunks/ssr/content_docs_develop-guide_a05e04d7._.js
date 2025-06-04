@@ -20,7 +20,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$
 ;
 let lastModified = undefined;
 let frontmatter = {
-    "title": "System Architecture Documentation",
+    "title": "System Architecture",
     "icon": "LaptopMinimal"
 };
 let structuredData = {
@@ -1057,7 +1057,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$
 ;
 let lastModified = undefined;
 let frontmatter = {
-    "title": "系统架构说明文档",
+    "title": "系统架构说明",
     "icon": "LaptopMinimal"
 };
 let structuredData = {
