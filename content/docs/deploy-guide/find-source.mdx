@@ -213,10 +213,12 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
     ### Unboxing Inspection
     Confirm the package contains the following items:
     - RM-01 Main Unit
-    - USB-C Power Adapter
-    - USB-C to Network Adapter
     - CFexpress Card with pre-installed models and applications
+    - MicroSD Card
+    - Warranty Card
     - Quick Start Guide
+    - USB-C Power Adapter
+    - USB-C to Ethernet Adapter
   </Step>
 
   <Step>
@@ -234,7 +236,7 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
 
   <Step>
     ### Device Connection
-    - Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, etc.)
+    - Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, computer, etc.)
   </Step>
 </Steps>
 
@@ -243,13 +245,13 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
 <Tabs items={['Web Interface', 'Mobile App']}>
   <Tab>
     1. Open a browser on a computer in the same local network
-    2. Enter the device IP address or hostname (format: `http://rm01-xxxxx.local`, where xxxxx is the device serial number)
+    2. Enter the device IP address or hostname (format: `http://Assigned-IP-Address:xxxx`, where xxxx is the last four digits of the device serial number)
     3. Log in using the default credentials:
        - Username: `admin`
-       - Password: see label on device bottom
+       - Password: scan the corresponding QR code on the Warranty Card
   </Tab>
   <Tab>
-    1. Download and install the "RM-01 Companion" app
+    1. Download and install the "RM-01 ALTAI Companion" app
     2. Open the app and scan the QR code on the device
     3. Follow the in-app prompts to complete the connection
   </Tab>

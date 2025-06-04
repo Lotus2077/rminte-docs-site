@@ -29,7 +29,7 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "Welcome to the RMinte RM-01 portable AI supercomputer deployment guide. This document is designed to help service providers understand how to quickly deploy models and AI applications for enterprise clients using RM-01, achieving a true \"plug-and-play\" AI experience."
+            "content": "Welcome to the RMinte RM-01 Portable AI Supercomputer Deployment Guide. This document aims to help service providers understand how to quickly deploy models and AI applications for enterprise customers using RM-01, achieving a true \"plug-and-play\" AI experience."
         },
         {
             "heading": "overview",
@@ -45,19 +45,19 @@ let structuredData = {
         },
         {
             "heading": "model-and-application-preparation",
-            "content": "Prepare suitable models and applications according to enterprise needs:"
+            "content": "Prepare suitable models and applications based on enterprise requirements:"
         },
         {
             "heading": "model-and-application-preparation",
-            "content": "Standard Model Package: Contains commonly used open-source models such as DeepSeek, Zhipu, Qwen, etc."
+            "content": "Standard Model Package: Includes common open-source models such as DeepSeek, Zhipu, Qwen, etc."
         },
         {
             "heading": "model-and-application-preparation",
-            "content": "Industry-Specific Model Package: Select appropriate vertical domain models based on the enterprise's industry"
+            "content": "Industry-specific Model Package: Select vertical domain models suitable for the enterprise's industry"
         },
         {
             "heading": "model-and-application-preparation",
-            "content": "Enterprise Custom Models: If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01 and stored in the specified directory on the CFexpress card"
+            "content": "Enterprise Custom Models: If the enterprise has its own trained models, ensure they are converted to formats suitable for RM-01 and stored in the specified directory on the CFexpress card"
         },
         {
             "heading": "model-and-application-preparation",
@@ -65,11 +65,11 @@ let structuredData = {
         },
         {
             "heading": "enterprise-environment-assessment",
-            "content": "Conduct an environment assessment before deployment:"
+            "content": "Conduct environment assessment before deployment:"
         },
         {
             "heading": "enterprise-environment-assessment",
-            "content": "Network Environment: Evaluate the feasibility of connecting RM-01 to the enterprise's internal network according to client requirements"
+            "content": "Network Environment: Evaluate the feasibility of connecting RM-01 to the enterprise internal network according to customer requirements"
         },
         {
             "heading": "enterprise-environment-assessment",
@@ -85,19 +85,19 @@ let structuredData = {
         },
         {
             "heading": "device-and-accessories-verification",
-            "content": "Before delivery to the enterprise, please ensure the following items are complete:"
+            "content": "Before delivery to the enterprise, ensure the following items are complete:"
         },
         {
             "heading": "device-installation",
-            "content": "Choose an appropriate location for the RM-01 (desktop or dedicated cabinet)"
+            "content": "Choose a suitable location for RM-01 (desktop or dedicated cabinet)"
         },
         {
             "heading": "device-installation",
-            "content": "Insert the CFexpress storage card pre-loaded with required models and applications"
+            "content": "Insert the CFexpress storage card pre-installed with required models and applications"
         },
         {
             "heading": "device-installation",
-            "content": "Insert the MicroSD card for encryption (if applicable)"
+            "content": "Insert the MicroSD card"
         },
         {
             "heading": "device-installation",
@@ -113,19 +113,19 @@ let structuredData = {
         },
         {
             "heading": "device-installation",
-            "content": "Ensure the device is placed in a well-ventilated environment and avoid blocking the cooling vents."
+            "content": "Ensure the device is placed in a well-ventilated environment, avoiding obstruction of heat dissipation vents."
         },
         {
             "heading": "startup-and-initialization",
-            "content": "Press the power button to turn on the device"
+            "content": "Press the power button to start"
         },
         {
             "heading": "startup-and-initialization",
-            "content": "The device will automatically initialize and load models and applications from the storage card (takes about 5 minutes)"
+            "content": "The device will automatically initialize and load models and applications from the storage card (approximately 5 minutes)"
         },
         {
             "heading": "startup-and-initialization",
-            "content": "After 5 minutes, RM-01 will complete loading models and applications and enter the ready state"
+            "content": "After 5 minutes, RM-01 will complete loading models and applications and enter a ready-to-use state"
         },
         {
             "heading": "startup-and-initialization",
@@ -133,7 +133,7 @@ let structuredData = {
         },
         {
             "heading": "startup-and-initialization",
-            "content": "During initialization, you can connect a laptop via USB-C port to monitor the device status"
+            "content": "During initialization, you can connect a laptop via USB-C port to monitor device status"
         },
         {
             "heading": "network-configuration",
@@ -145,11 +145,11 @@ let structuredData = {
         },
         {
             "heading": "network-configuration",
-            "content": "IP address (static/DHCP)"
+            "content": "IP Address (Static/DHCP)"
         },
         {
             "heading": "network-configuration",
-            "content": "Subnet mask"
+            "content": "Subnet Mask"
         },
         {
             "heading": "network-configuration",
@@ -157,27 +157,27 @@ let structuredData = {
         },
         {
             "heading": "network-configuration",
-            "content": "DNS servers"
+            "content": "DNS Servers"
         },
         {
             "heading": "network-configuration",
-            "content": "Verify network connectivity"
+            "content": "Verify network connection"
         },
         {
             "heading": "4-training-and-delivery",
-            "content": "It is recommended to record training videos for future reference by administrators."
+            "content": "It is recommended to record training videos for administrator reference"
         },
         {
             "heading": "4-training-and-delivery",
-            "content": "It is recommended to customize training content for different departments to improve training effectiveness."
+            "content": "It is recommended to customize training content for different department users to improve training effectiveness"
         },
         {
             "heading": "4-training-and-delivery",
-            "content": "All documentation is provided in both electronic and printed formats, and the latest versions are always accessible through the management interface."
+            "content": "All documentation is provided in both electronic and printed formats, with the latest versions available through the management interface"
         },
         {
             "heading": "4-training-and-delivery",
-            "content": "It is recommended to use a standardized delivery checklist to ensure that no delivery items are missed."
+            "content": "It is recommended to use a standardized delivery checklist to ensure no items are missed"
         },
         {
             "heading": "5-after-sales-support",
@@ -185,15 +185,15 @@ let structuredData = {
         },
         {
             "heading": "5-after-sales-support",
-            "content": "Quarterly comprehensive system checks recommended"
+            "content": "Recommended quarterly comprehensive system check"
         },
         {
             "heading": "5-after-sales-support",
-            "content": "Additional value-added services available for purchase as needed"
+            "content": "Additional value-added services available on demand"
         },
         {
             "heading": "5-after-sales-support",
-            "content": "Flexible service level agreement options are available, with specific response times and service content customizable based on enterprise needs. All SLA commitments come with service quality guarantees, with service compensation provided if standards are not met."
+            "content": "Flexible SLA options available, customizable based on enterprise requirements. All SLA commitments are backed by service quality guarantees with compensation for unmet standards."
         },
         {
             "heading": "technical-support",
@@ -210,8 +210,8 @@ let structuredData = {
             "content": "Service Provider Deployment Process"
         },
         {
-            "id": "1-preparation-work",
-            "content": "1. Preparation Work"
+            "id": "1-pre-deployment-preparation",
+            "content": "1. Pre-deployment Preparation"
         },
         {
             "id": "model-and-application-preparation",
@@ -251,7 +251,7 @@ let structuredData = {
         },
         {
             "id": "5-after-sales-support",
-            "content": "5. After-Sales Support"
+            "content": "5. After-sales Support"
         },
         {
             "id": "frequently-asked-questions",
@@ -282,9 +282,9 @@ const toc = [
     },
     {
         depth: 3,
-        url: "#1-preparation-work",
+        url: "#1-pre-deployment-preparation",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "1. Preparation Work"
+            children: "1. Pre-deployment Preparation"
         })
     },
     {
@@ -354,7 +354,7 @@ const toc = [
         depth: 3,
         url: "#5-after-sales-support",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "5. After-Sales Support"
+            children: "5. After-sales Support"
         })
     },
     {
@@ -390,7 +390,7 @@ function _createMdxContent(props) {
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
                 type: "info",
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                    children: "Welcome to the RMinte RM-01 portable AI supercomputer deployment guide. This document is designed to help service providers understand how to quickly deploy models and AI applications for enterprise clients using RM-01, achieving a true \"plug-and-play\" AI experience."
+                    children: "Welcome to the RMinte RM-01 Portable AI Supercomputer Deployment Guide. This document aims to help service providers understand how to quickly deploy models and AI applications for enterprise customers using RM-01, achieving a true \"plug-and-play\" AI experience."
                 })
             }),
             "\n",
@@ -432,8 +432,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
-                id: "1-preparation-work",
-                children: "1. Preparation Work"
+                id: "1-pre-deployment-preparation",
+                children: "1. Pre-deployment Preparation"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$steps$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Steps"], {
@@ -445,7 +445,7 @@ function _createMdxContent(props) {
                                 children: "Model and Application Preparation"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "Prepare suitable models and applications according to enterprise needs:"
+                                children: "Prepare suitable models and applications based on enterprise requirements:"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.ul, {
                                 children: [
@@ -455,16 +455,16 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Standard Model Package"
                                             }),
-                                            ": Contains commonly used open-source models such as DeepSeek, Zhipu, Qwen, etc."
+                                            ": Includes common open-source models such as DeepSeek, Zhipu, Qwen, etc."
                                         ]
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.li, {
                                         children: [
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
-                                                children: "Industry-Specific Model Package"
+                                                children: "Industry-specific Model Package"
                                             }),
-                                            ": Select appropriate vertical domain models based on the enterprise's industry"
+                                            ": Select vertical domain models suitable for the enterprise's industry"
                                         ]
                                     }),
                                     "\n",
@@ -473,7 +473,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Enterprise Custom Models"
                                             }),
-                                            ": If the enterprise has their own trained models, ensure they are converted to formats suitable for running on RM-01 and stored in the specified directory on the CFexpress card"
+                                            ": If the enterprise has its own trained models, ensure they are converted to formats suitable for RM-01 and stored in the specified directory on the CFexpress card"
                                         ]
                                     }),
                                     "\n",
@@ -497,7 +497,7 @@ function _createMdxContent(props) {
                                 children: "Enterprise Environment Assessment"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "Conduct an environment assessment before deployment:"
+                                children: "Conduct environment assessment before deployment:"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])(_components.ul, {
                                 children: [
@@ -507,7 +507,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.strong, {
                                                 children: "Network Environment"
                                             }),
-                                            ": Evaluate the feasibility of connecting RM-01 to the enterprise's internal network according to client requirements"
+                                            ": Evaluate the feasibility of connecting RM-01 to the enterprise internal network according to customer requirements"
                                         ]
                                     }),
                                     "\n",
@@ -549,7 +549,7 @@ function _createMdxContent(props) {
                                 children: "Device and Accessories Verification"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                children: "Before delivery to the enterprise, please ensure the following items are complete:"
+                                children: "Before delivery to the enterprise, ensure the following items are complete:"
                             }),
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                                 className: "p-4 border rounded-lg",
@@ -561,10 +561,13 @@ function _createMdxContent(props) {
                                         className: "list-disc pl-6 mt-2",
                                         children: [
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "RM-01 Main Device"
+                                                children: "RM-01 Host"
                                             }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                 children: "CFexpress Type B Storage Card (pre-installed with models and applications)"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "MicroSD Card"
                                             }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                 children: "Quick Start Guide"
@@ -575,14 +578,11 @@ function _createMdxContent(props) {
                                         ]
                                     }),
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                        children: "RM-01 Accessory Package"
+                                        children: "RM-01 Accessories Package"
                                     }),
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
                                         className: "list-disc pl-6 mt-2",
                                         children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "MicroSD Card (optional, for encryption)"
-                                            }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                 children: "USB-C Power Adapter (PD3.1, up to 140W)"
                                             }),
@@ -615,15 +615,15 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Choose an appropriate location for the RM-01 (desktop or dedicated cabinet)"
+                                        children: "Choose a suitable location for RM-01 (desktop or dedicated cabinet)"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Insert the CFexpress storage card pre-loaded with required models and applications"
+                                        children: "Insert the CFexpress storage card pre-installed with required models and applications"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Insert the MicroSD card for encryption (if applicable)"
+                                        children: "Insert the MicroSD card"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -639,7 +639,7 @@ function _createMdxContent(props) {
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
                                 type: "warning",
                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                    children: "Ensure the device is placed in a well-ventilated environment and avoid blocking the cooling vents."
+                                    children: "Ensure the device is placed in a well-ventilated environment, avoiding obstruction of heat dissipation vents."
                                 })
                             })
                         ]
@@ -654,15 +654,15 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Press the power button to turn on the device"
+                                        children: "Press the power button to start"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "The device will automatically initialize and load models and applications from the storage card (takes about 5 minutes)"
+                                        children: "The device will automatically initialize and load models and applications from the storage card (approximately 5 minutes)"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "After 5 minutes, RM-01 will complete loading models and applications and enter the ready state"
+                                        children: "After 5 minutes, RM-01 will complete loading models and applications and enter a ready-to-use state"
                                     }),
                                     "\n"
                                 ]
@@ -670,7 +670,7 @@ function _createMdxContent(props) {
                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
                                 type: "info",
                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                    children: "During initialization, you can connect a laptop via USB-C port to monitor the device status"
+                                    children: "During initialization, you can connect a laptop via USB-C port to monitor device status"
                                 })
                             })
                         ]
@@ -696,11 +696,11 @@ function _createMdxContent(props) {
                                                 children: [
                                                     "\n",
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                                        children: "IP address (static/DHCP)"
+                                                        children: "IP Address (Static/DHCP)"
                                                     }),
                                                     "\n",
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                                        children: "Subnet mask"
+                                                        children: "Subnet Mask"
                                                     }),
                                                     "\n",
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -708,7 +708,7 @@ function _createMdxContent(props) {
                                                     }),
                                                     "\n",
                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                                        children: "DNS servers"
+                                                        children: "DNS Servers"
                                                     }),
                                                     "\n"
                                                 ]
@@ -718,7 +718,7 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Verify network connectivity"
+                                        children: "Verify network connection"
                                     }),
                                     "\n"
                                 ]
@@ -771,10 +771,10 @@ function _createMdxContent(props) {
                                             className: "pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Model loading and execution tests"
+                                                    children: "Model loading and execution testing"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Basic application functionality tests"
+                                                    children: "Basic application functionality testing"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                     children: "User authorization and access control"
@@ -891,7 +891,7 @@ function _createMdxContent(props) {
                                             }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                 className: "text-xs text-slate-600 dark:text-slate-400",
-                                                children: "It is recommended to use the RM-01 comprehensive testing checklist to conduct full functional benchmark tests, ensuring the device achieves optimal performance in the client environment. Generate a test report after testing as part of the delivery documentation."
+                                                children: "It is recommended to conduct comprehensive functional benchmark testing based on the RM-01 testing checklist to ensure optimal device performance in the customer environment. Generate a test report upon completion as part of the delivery documentation."
                                             })
                                         ]
                                     })
@@ -909,505 +909,486 @@ function _createMdxContent(props) {
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                 className: "mb-8 rounded-lg overflow-hidden",
-                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                     className: "bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 p-6 border border-blue-100 dark:border-blue-800/60",
-                    children: [
-                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                            className: "grid grid-cols-1 md:grid-cols-2 gap-6",
-                            children: [
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                    className: "col-span-1 md:col-span-2 bg-white dark:bg-gray-800/90 rounded-xl shadow-sm p-4 border border-indigo-100 dark:border-indigo-700/50",
-                                    children: [
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
-                                            className: "text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300",
-                                            children: "Training and Delivery Flowchart"
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex flex-wrap justify-center items-center text-center",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-full md:w-1/4 p-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                        className: "bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-100 dark:border-blue-700/40 h-full",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 mx-auto mb-2",
-                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                    className: "text-blue-600 dark:text-blue-300 text-lg",
-                                                                    children: "1"
-                                                                })
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "font-medium text-sm dark:text-white",
-                                                                children: "Administrator Training"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                children: "Basic configuration and daily management"
-                                                            })
-                                                        ]
-                                                    })
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "hidden md:block w-10 text-gray-300 dark:text-gray-600",
-                                                    children: "→"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-full md:w-1/4 p-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                        className: "bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-3 border border-indigo-100 dark:border-indigo-700/40 h-full",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 mx-auto mb-2",
-                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                    className: "text-indigo-600 dark:text-indigo-300 text-lg",
-                                                                    children: "2"
-                                                                })
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "font-medium text-sm dark:text-white",
-                                                                children: "User Training"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                children: "Application operation and usage tips"
-                                                            })
-                                                        ]
-                                                    })
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "hidden md:block w-10 text-gray-300 dark:text-gray-600",
-                                                    children: "→"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-full md:w-1/4 p-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                        className: "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3 border border-purple-100 dark:border-purple-700/40 h-full",
-                                                        children: [
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 mx-auto mb-2",
-                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                    className: "text-purple-600 dark:text-purple-300 text-lg",
-                                                                    children: "3"
-                                                                })
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "font-medium text-sm dark:text-white",
-                                                                children: "Documentation Delivery"
-                                                            }),
-                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                children: "User manuals and technical documentation"
-                                                            })
-                                                        ]
-                                                    })
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                    className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700/50 flex flex-col h-full",
-                                    children: [
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex items-center mb-3",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-3",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                        className: "text-xl",
-                                                        children: "👨‍💼"
-                                                    })
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
-                                                    className: "text-lg font-semibold dark:text-white",
-                                                    children: "Enterprise Administrator Training"
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "grid grid-cols-1 sm:grid-cols-2 gap-2 flex-grow",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start",
+                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                        className: "grid grid-cols-1 md:grid-cols-2 gap-6",
+                        children: [
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "col-span-1 md:col-span-2 bg-white dark:bg-gray-800/90 rounded-xl shadow-sm p-4 border border-indigo-100 dark:border-indigo-700/50",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
+                                        className: "text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300",
+                                        children: "Training and Delivery Flowchart"
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                        className: "flex flex-wrap justify-center items-center text-center",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-full md:w-1/4 p-2",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                    className: "bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-100 dark:border-blue-700/40 h-full",
                                                     children: [
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5",
+                                                            className: "w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 mx-auto mb-2",
                                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
+                                                                className: "text-blue-600 dark:text-blue-300 text-lg",
                                                                 children: "1"
                                                             })
                                                         }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "font-medium text-sm dark:text-white",
-                                                                    children: "Device Operation & Maintenance"
-                                                                }),
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Basic startup/shutdown, hardware maintenance"
-                                                                })
-                                                            ]
+                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                            className: "font-medium text-sm dark:text-white",
+                                                            children: "Administrator Training"
+                                                        }),
+                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                            children: "Basic configuration and daily management"
                                                         })
                                                     ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start",
+                                                })
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "hidden md:block w-10 text-gray-300 dark:text-gray-600",
+                                                children: "→"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-full md:w-1/4 p-2",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                    className: "bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-3 border border-indigo-100 dark:border-indigo-700/40 h-full",
                                                     children: [
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5",
+                                                            className: "w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 mx-auto mb-2",
                                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
+                                                                className: "text-indigo-600 dark:text-indigo-300 text-lg",
                                                                 children: "2"
                                                             })
                                                         }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "font-medium text-sm dark:text-white",
-                                                                    children: "Management Interface Usage"
-                                                                }),
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "System settings and monitoring"
-                                                                })
-                                                            ]
+                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                            className: "font-medium text-sm dark:text-white",
+                                                            children: "User Training"
+                                                        }),
+                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                            children: "Application operation and usage tips"
                                                         })
                                                     ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start",
+                                                })
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "hidden md:block w-10 text-gray-300 dark:text-gray-600",
+                                                children: "→"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-full md:w-1/4 p-2",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                    className: "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3 border border-purple-100 dark:border-purple-700/40 h-full",
                                                     children: [
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5",
+                                                            className: "w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 mx-auto mb-2",
                                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
+                                                                className: "text-purple-600 dark:text-purple-300 text-lg",
                                                                 children: "3"
                                                             })
                                                         }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "font-medium text-sm dark:text-white",
-                                                                    children: "Model & Application Management"
-                                                                }),
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Updates and configuration"
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "bg-blue-50 dark:bg-blue-900/20 rounded p-3 flex items-start",
-                                                    children: [
                                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-2 mt-0.5",
-                                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
-                                                                children: "4"
-                                                            })
+                                                            className: "font-medium text-sm dark:text-white",
+                                                            children: "Documentation Delivery"
                                                         }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                            children: [
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "font-medium text-sm dark:text-white",
-                                                                    children: "Troubleshooting"
-                                                                }),
-                                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                                    className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Common issue diagnosis and resolution"
-                                                                })
-                                                            ]
+                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                            children: "User manuals and technical documentation"
                                                         })
                                                     ]
                                                 })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                            className: "mt-3 p-2 bg-amber-50 dark:bg-amber-900/20 rounded-md text-xs text-amber-800 dark:text-amber-300",
-                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "It is recommended to record training videos for future reference by administrators."
                                             })
-                                        })
-                                    ]
-                                }),
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                    className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700/50 flex flex-col h-full",
-                                    children: [
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex items-center mb-3",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 text-indigo-600 dark:text-indigo-300 mr-3",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                        className: "text-xl",
-                                                        children: "👥"
+                                        ]
+                                    })
+                                ]
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700/50",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                        className: "flex items-center mb-6",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-3",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                    className: "text-xl",
+                                                    children: "👨‍💼"
+                                                })
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
+                                                className: "text-lg font-semibold dark:text-white",
+                                                children: "Enterprise Administrator Training"
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ol", {
+                                        className: "space-y-4",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg",
+                                                        children: "1"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                        children: [
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "font-medium text-base dark:text-white",
+                                                                children: "Device Operation and Maintenance"
+                                                            }),
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                                children: "Basic startup/shutdown and hardware maintenance"
+                                                            })
+                                                        ]
                                                     })
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
-                                                    className: "text-lg font-semibold dark:text-white",
-                                                    children: "End User Training"
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
-                                            className: "pl-6 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300 flex-grow",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "text-indigo-700 dark:text-indigo-300",
-                                                            children: "Application Access Methods"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-0.5",
-                                                            children: "How to log in and find the required applications"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "text-indigo-700 dark:text-indigo-300",
-                                                            children: "Basic Operation Guidance"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-0.5",
-                                                            children: "Demonstration of common features and operation processes"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "text-indigo-700 dark:text-indigo-300",
-                                                            children: "Usage Tips & Best Practices"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-0.5",
-                                                            children: "Professional advice to improve efficiency"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("strong", {
-                                                            className: "text-indigo-700 dark:text-indigo-300",
-                                                            children: "Common Issue Resolution"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400 mt-0.5",
-                                                            children: "Handling operation errors and exceptions"
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                            className: "mt-3 p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-md text-xs text-indigo-800 dark:text-indigo-300",
-                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "It is recommended to customize training content for different departments to improve training effectiveness."
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
-                        }),
-                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                            className: "grid grid-cols-1 md:grid-cols-2 gap-6 mt-6",
-                            children: [
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                    className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-purple-200 dark:border-purple-700/50",
-                                    children: [
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex items-center mb-3",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 text-purple-600 dark:text-purple-300 mr-3",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                        className: "text-xl",
-                                                        children: "📄"
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg",
+                                                        children: "2"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                        children: [
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "font-medium text-base dark:text-white",
+                                                                children: "Management Interface Usage"
+                                                            }),
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                                children: "System settings and monitoring"
+                                                            })
+                                                        ]
                                                     })
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
-                                                    className: "text-lg font-semibold dark:text-white",
-                                                    children: "Documentation Delivery"
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "grid grid-cols-2 gap-3 text-sm",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "font-medium mb-1 text-purple-800 dark:text-purple-300",
-                                                            children: "Device User Manual"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400",
-                                                            children: "Hardware specifications and basic operation guidance"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "font-medium mb-1 text-purple-800 dark:text-purple-300",
-                                                            children: "Administrator Guide"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400",
-                                                            children: "System management and troubleshooting"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "font-medium mb-1 text-purple-800 dark:text-purple-300",
-                                                            children: "User Operation Guide"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400",
-                                                            children: "Application usage steps and instructions"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-700/40",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "font-medium mb-1 text-purple-800 dark:text-purple-300",
-                                                            children: "Troubleshooting Guide"
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                            className: "text-xs text-slate-600 dark:text-slate-400",
-                                                            children: "Common issues and solutions"
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                            className: "mt-3 p-2 bg-blue-100 dark:bg-blue-800/60 rounded-md text-xs text-blue-600 dark:text-blue-300",
-                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "All documentation is provided in both electronic and printed formats, and the latest versions are always accessible through the management interface."
-                                            })
-                                        })
-                                    ]
-                                }),
-                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                    className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-emerald-200 dark:border-emerald-700/50",
-                                    children: [
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "flex items-center mb-3",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-10 h-10 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-3",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                        className: "text-xl",
-                                                        children: "✅"
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg",
+                                                        children: "3"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                        children: [
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "font-medium text-base dark:text-white",
+                                                                children: "Model and Application Management"
+                                                            }),
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                                children: "Updates and configuration"
+                                                            })
+                                                        ]
                                                     })
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
-                                                    className: "text-lg font-semibold dark:text-white",
-                                                    children: "Device Delivery Confirmation"
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "space-y-2",
-                                            children: [
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
-                                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
-                                                                children: "✓"
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg",
+                                                        children: "4"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                        children: [
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "font-medium text-base dark:text-white",
+                                                                children: "Troubleshooting"
+                                                            }),
+                                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                                className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                                children: "Common issues diagnosis and resolution"
                                                             })
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "text-sm dark:text-gray-300",
-                                                            children: "Obtain the enterprise-signed acceptance document"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
-                                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
-                                                                children: "✓"
-                                                            })
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "text-sm dark:text-gray-300",
-                                                            children: "Confirm all configurations and training are completed"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
-                                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
-                                                                children: "✓"
-                                                            })
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "text-sm dark:text-gray-300",
-                                                            children: "Provide warranty information and support contacts"
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                                    className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
-                                                    children: [
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
-                                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                                className: "text-xs",
-                                                                children: "✓"
-                                                            })
-                                                        }),
-                                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
-                                                            className: "text-sm dark:text-gray-300",
-                                                            children: "Schedule the first remote check and follow-up time"
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                            className: "mt-3 p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-md text-xs text-emerald-800 dark:text-emerald-300",
-                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "It is recommended to use a standardized delivery checklist to ensure that no delivery items are missed."
+                                                        ]
+                                                    })
+                                                ]
                                             })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                        className: "mt-6 p-3 bg-amber-50 dark:bg-amber-900/20 rounded-md text-sm text-amber-800 dark:text-amber-300",
+                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                            children: "It is recommended to record training videos for administrator reference"
                                         })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
+                                    })
+                                ]
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700/50",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                        className: "flex items-center mb-6",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 text-indigo-600 dark:text-indigo-300 mr-3",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                    className: "text-xl",
+                                                    children: "👥"
+                                                })
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
+                                                className: "text-lg font-semibold dark:text-white",
+                                                children: "End User Training"
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
+                                        className: "list-disc pl-6 space-y-3 text-sm text-slate-700 dark:text-slate-300",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "font-medium text-indigo-700 dark:text-indigo-300",
+                                                        children: "Application Access Methods:"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "block text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "How to log in and find needed applications"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "font-medium text-indigo-700 dark:text-indigo-300",
+                                                        children: "Basic Operation Guide:"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "block text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "Common functions and operation flow demonstration"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "font-medium text-indigo-700 dark:text-indigo-300",
+                                                        children: "Usage Tips and Best Practices:"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "block text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "Professional suggestions for improving efficiency"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "font-medium text-indigo-700 dark:text-indigo-300",
+                                                        children: "Common Issues Resolution:"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "block text-xs text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "Handling operational errors and exceptions"
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                        className: "mt-6 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-md text-sm text-indigo-800 dark:text-indigo-300",
+                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                            children: "It is recommended to customize training content for different department users to improve training effectiveness"
+                                        })
+                                    })
+                                ]
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-purple-200 dark:border-purple-700/50",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                        className: "flex items-center mb-6",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 text-purple-600 dark:text-purple-300 mr-3",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                    className: "text-xl",
+                                                    children: "📄"
+                                                })
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
+                                                className: "text-lg font-semibold dark:text-white",
+                                                children: "Documentation Delivery"
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
+                                        className: "space-y-4",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "font-medium text-base text-purple-800 dark:text-purple-300",
+                                                        children: "Device User Manual"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "Hardware specifications and basic operation guide"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "font-medium text-base text-purple-800 dark:text-purple-300",
+                                                        children: "Administrator Guide"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "System management and troubleshooting"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "font-medium text-base text-purple-800 dark:text-purple-300",
+                                                        children: "User Operation Guide"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "Application usage steps and instructions"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("li", {
+                                                className: "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "font-medium text-base text-purple-800 dark:text-purple-300",
+                                                        children: "Troubleshooting Guide"
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                        className: "text-sm text-slate-600 dark:text-slate-400 mt-1",
+                                                        children: "Common issues and solutions"
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                        className: "mt-6 p-3 bg-blue-100 dark:bg-blue-800/60 rounded-md text-sm text-blue-600 dark:text-blue-300",
+                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                            children: "All documentation is provided in both electronic and printed formats, with the latest versions available through the management interface"
+                                        })
+                                    })
+                                ]
+                            }),
+                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                className: "bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-emerald-200 dark:border-emerald-700/50",
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                        className: "flex items-center mb-6",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                                className: "w-10 h-10 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-3",
+                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                    className: "text-xl",
+                                                    children: "✅"
+                                                })
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
+                                                className: "text-lg font-semibold dark:text-white",
+                                                children: "Device Delivery Confirmation"
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                        className: "space-y-2",
+                                        children: [
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
+                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                            className: "text-xs",
+                                                            children: "✓"
+                                                        })
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "text-sm dark:text-gray-300",
+                                                        children: "Obtain enterprise-signed acceptance form"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
+                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                            className: "text-xs",
+                                                            children: "✓"
+                                                        })
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "text-sm dark:text-gray-300",
+                                                        children: "Confirm all configurations and training completed"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
+                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                            className: "text-xs",
+                                                            children: "✓"
+                                                        })
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "text-sm dark:text-gray-300",
+                                                        children: "Provide warranty information and support contact details"
+                                                    })
+                                                ]
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
+                                                className: "flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded",
+                                                children: [
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2",
+                                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                            className: "text-xs",
+                                                            children: "✓"
+                                                        })
+                                                    }),
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
+                                                        className: "text-sm dark:text-gray-300",
+                                                        children: "Schedule first remote check and follow-up visit"
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                                        className: "mt-3 p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-md text-xs text-emerald-800 dark:text-emerald-300",
+                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
+                                            children: "It is recommended to use a standardized delivery checklist to ensure no items are missed"
+                                        })
+                                    })
+                                ]
+                            })
+                        ]
+                    })
                 })
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
                 id: "5-after-sales-support",
-                children: "5. After-Sales Support"
+                children: "5. After-sales Support"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
@@ -1417,7 +1398,7 @@ function _createMdxContent(props) {
                     children: [
                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
                             className: "text-lg font-bold mb-5 text-center dark:text-white",
-                            children: "Comprehensive After-Sales Service System"
+                            children: "Comprehensive After-sales Support System"
                         }),
                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                             className: "grid grid-cols-1 md:grid-cols-3 gap-5",
@@ -1448,13 +1429,10 @@ function _createMdxContent(props) {
                                             className: "list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Provide remote monitoring and management support"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                     children: "Regular device health status checks"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Remote diagnosis and resolution of issues"
+                                                    children: "Remote troubleshooting and resolution"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                     children: "24/7 emergency technical support"
@@ -1487,7 +1465,7 @@ function _createMdxContent(props) {
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h5", {
                                                     className: "text-lg font-semibold",
-                                                    children: "Updates & Maintenance"
+                                                    children: "Updates and Maintenance"
                                                 })
                                             ]
                                         }),
@@ -1495,13 +1473,13 @@ function _createMdxContent(props) {
                                             className: "list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Regular model and application updates"
+                                                    children: "Regular model updates and adaptations"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Assistance with firmware updates"
+                                                    children: "Firmware update assistance"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "System performance optimization services"
+                                                    children: "System performance optimization"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                     children: "Resource usage efficiency recommendations"
@@ -1511,7 +1489,7 @@ function _createMdxContent(props) {
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                             className: "mt-3 pt-3 border-t border-gray-100 text-xs text-center text-purple-600",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Quarterly comprehensive system checks recommended"
+                                                children: "Recommended quarterly comprehensive system check"
                                             })
                                         })
                                     ]
@@ -1542,7 +1520,7 @@ function _createMdxContent(props) {
                                             className: "list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "Model customization and optimization services"
+                                                    children: "Model customization and optimization"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                     children: "Enterprise-specific application development"
@@ -1551,14 +1529,14 @@ function _createMdxContent(props) {
                                                     children: "Data integration and analysis services"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                    children: "On-site technical support services"
+                                                    children: "On-site technical support"
                                                 })
                                             ]
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                             className: "mt-3 pt-3 border-t border-gray-100 text-xs text-center text-green-600",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Additional value-added services available for purchase as needed"
+                                                children: "Additional value-added services available on demand"
                                             })
                                         })
                                     ]
@@ -1598,7 +1576,7 @@ function _createMdxContent(props) {
                                                             }),
                                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                 className: "mt-1 dark:text-gray-300",
-                                                                children: "Response within 4 hours during business hours"
+                                                                children: "4-hour response during business hours"
                                                             })
                                                         ]
                                                     }),
@@ -1611,7 +1589,7 @@ function _createMdxContent(props) {
                                                             }),
                                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                 className: "mt-1 dark:text-gray-300",
-                                                                children: "Response within 2 hours during business hours"
+                                                                children: "2-hour response during business hours"
                                                             })
                                                         ]
                                                     }),
@@ -1624,7 +1602,7 @@ function _createMdxContent(props) {
                                                             }),
                                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                 className: "mt-1 dark:text-gray-300",
-                                                                children: "Response within 30 minutes 24/7"
+                                                                children: "30-minute response 24/7"
                                                             })
                                                         ]
                                                     })
@@ -1633,7 +1611,7 @@ function _createMdxContent(props) {
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                 className: "text-xs text-slate-600 mt-3",
                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                    children: "Flexible service level agreement options are available, with specific response times and service content customizable based on enterprise needs. All SLA commitments come with service quality guarantees, with service compensation provided if standards are not met."
+                                                    children: "Flexible SLA options available, customizable based on enterprise requirements. All SLA commitments are backed by service quality guarantees with compensation for unmet standards."
                                                 })
                                             })
                                         ]
@@ -1660,11 +1638,11 @@ function _createMdxContent(props) {
                             children: [
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h3", {
                                     className: "text-xl font-bold mb-2 dark:text-white",
-                                    children: "Answering Client Questions"
+                                    children: "Answering Customer Questions"
                                 }),
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                     className: "text-sm text-slate-600 dark:text-slate-400",
-                                    children: "Below are the most frequently asked questions from customers and their answers to help you move the sales process forward efficiently"
+                                    children: "Below are the most frequently asked questions and their answers to help you efficiently advance the sales process"
                                 })
                             ]
                         }),
@@ -1733,7 +1711,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "What is the power consumption of RM-01?"
+                                                                    children: "What is RM-01's power consumption?"
                                                                 })
                                                             ]
                                                         }),
@@ -1749,7 +1727,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "RM-01's maximum power consumption is 100W, with a TDP of 60W, which is 98.6% more energy-efficient than traditional AI servers. The annual electricity cost for 24/7 operation is approximately $750."
+                                                                    children: "RM-01 has a maximum power consumption of 100W, with a TDP of 60W, saving 98.6% energy compared to traditional AI (single A100) servers. Annual electricity cost for 24/7 operation is approximately $480."
                                                                 })
                                                             ]
                                                         })
@@ -1786,7 +1764,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "RM-01 supports models ranging from 0.5B to 235B parameters (GPTQ Int4), covering the majority of mainstream open-source models."
+                                                                    children: "RM-01 supports models ranging from 0.5B to 235B (GPTQ Int4) parameters, covering mainstream open-source models."
                                                                 })
                                                             ]
                                                         })
@@ -1823,7 +1801,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "No. RM-01 employs a zero-maintenance design, making it easy for ordinary users to operate and manage."
+                                                                    children: "No. RM-01 features zero-maintenance design, allowing regular users to easily use and manage it after basic training."
                                                                 })
                                                             ]
                                                         })
@@ -1838,7 +1816,7 @@ function _createMdxContent(props) {
                                     children: [
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
                                             className: "text-lg font-bold mb-3 text-purple-800 dark:text-purple-300",
-                                            children: "About Software & Applications"
+                                            children: "About Software and Applications"
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                                             className: "space-y-4",
@@ -1858,7 +1836,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "How can new models be added to RM-01?"
+                                                                    children: "How to add new models to RM-01?"
                                                                 })
                                                             ]
                                                         }),
@@ -1874,7 +1852,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "Store model files on a CFexpress storage card, insert it into the device, and the system will automatically recognize and load the models."
+                                                                    children: "Store model files on the CFexpress storage card at specified directory, insert it into the device, and the system will automatically recognize and load the models."
                                                                 })
                                                             ]
                                                         })
@@ -1895,7 +1873,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "How is enterprise proprietary data kept confidential?"
+                                                                    children: "How is enterprise data kept confidential?"
                                                                 })
                                                             ]
                                                         }),
@@ -1911,7 +1889,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "RM-01 uses hardware-level asymmetric encryption with all data processed locally. No data is uploaded to the cloud, ensuring absolute security for enterprise data."
+                                                                    children: "RM-01 uses hardware-level asymmetric encryption, with all data processed locally and never uploaded to the cloud, ensuring absolute enterprise data security."
                                                                 })
                                                             ]
                                                         })
@@ -1932,7 +1910,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "Are special skills required for application development?"
+                                                                    children: "Do application development require special skills?"
                                                                 })
                                                             ]
                                                         }),
@@ -1948,7 +1926,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "Developers familiar with Docker and common web development technologies can quickly develop applications for RM-01. RMinte provides comprehensive developer documentation and SDKs."
+                                                                    children: "Developers familiar with Docker and Dify development technologies can quickly develop applications for RM-01. RMinte provides complete developer documentation and SDK."
                                                                 })
                                                             ]
                                                         })
@@ -1983,7 +1961,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "How can application developers monetize with RM-01?"
+                                                                    children: "How can application developers profit from RM-01?"
                                                                 })
                                                             ]
                                                         }),
@@ -1999,7 +1977,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "Developers can publish paid applications on the RMinte developer platform and earn revenue through application sales or subscriptions."
+                                                                    children: "Developers can build applications on any platform and deploy them on the RMinte platform, ultimately generating revenue by providing 'Software + Hardware' solutions to end customers."
                                                                 })
                                                             ]
                                                         })
@@ -2020,7 +1998,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "How can enterprises evaluate RM-01's return on investment?"
+                                                                    children: "How do enterprises evaluate RM-01's ROI?"
                                                                 })
                                                             ]
                                                         }),
@@ -2036,7 +2014,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "Compared to traditional AI deployments, RM-01 reduces initial investment by 80%, lowers operational costs by 98%, and saves 99% in total cost of ownership over 3 years."
+                                                                    children: "Compared to traditional AI deployment, RM-01 saves 80% in initial investment, reduces operational costs by 98%, and achieves 99% total cost of ownership savings over 3 years."
                                                                 })
                                                             ]
                                                         })
@@ -2057,7 +2035,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "Are rental or subscription models available?"
+                                                                    children: "Are there rental or subscription models available?"
                                                                 })
                                                             ]
                                                         }),
@@ -2073,7 +2051,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "Yes, RMinte offers device rental and DaaS (Device as a Service) subscription models to reduce initial investment for enterprises."
+                                                                    children: "Yes, developers or service providers can offer device rental and DaaS (Device as a Service) subscription models to reduce enterprise initial investment."
                                                                 })
                                                             ]
                                                         })
@@ -2094,7 +2072,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-bold text-sm dark:text-white",
-                                                                    children: "Are trial services available?"
+                                                                    children: "Is there a trial service available?"
                                                                 })
                                                             ]
                                                         }),
@@ -2110,7 +2088,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "Yes, we offer a 7-day free trial service for enterprise clients with professional technical staff available for on-site support."
+                                                                    children: "Yes, we offer a 7-day free trial service for enterprise customers, with professional technical staff providing on-site support."
                                                                 })
                                                             ]
                                                         })
@@ -2138,7 +2116,7 @@ function _createMdxContent(props) {
                     children: [
                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h3", {
                             className: "text-xl font-bold mb-5 text-center dark:text-white",
-                            children: "Multi-Channel Professional Support"
+                            children: "Multi-channel Professional Support"
                         }),
                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                             className: "grid grid-cols-1 md:grid-cols-2 gap-6 mb-6",
@@ -2171,11 +2149,11 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm text-blue-700 dark:text-blue-300",
-                                                                    children: "400-XXX-XXXX"
+                                                                    children: "158-8200-8185"
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-500 dark:text-slate-400",
-                                                                    children: "Business hours: Monday to Friday 9:00-18:00"
+                                                                    children: "Business Hours: Monday to Friday 9:00-21:00"
                                                                 })
                                                             ]
                                                         })
@@ -2206,7 +2184,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-500 dark:text-slate-400",
-                                                                    children: "Response within 24 hours"
+                                                                    children: "24-hour response"
                                                                 })
                                                             ]
                                                         })
@@ -2230,14 +2208,11 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm text-blue-700 dark:text-blue-300",
-                                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                                                                        href: "https://support.rminte.com",
-                                                                        children: "https://support.rminte.com"
-                                                                    })
+                                                                    children: "rminte.com"
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-500 dark:text-slate-400",
-                                                                    children: "Real-time online customer service, immediate response during business hours"
+                                                                    children: "Real-time online customer service, second-level response during business hours"
                                                                 })
                                                             ]
                                                         })
@@ -2276,7 +2251,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Submit a support request via phone, email, or online customer service"
+                                                                    children: "Submit support request via phone, email, or online customer service"
                                                                 })
                                                             ]
                                                         })
@@ -2297,11 +2272,11 @@ function _createMdxContent(props) {
                                                             children: [
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-medium text-sm dark:text-white",
-                                                                    children: "Confirmation & Prioritization"
+                                                                    children: "Confirmation and Classification"
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Technical support team confirms the issue and assigns priority level"
+                                                                    children: "Technical support team confirms the issue and prioritizes it"
                                                                 })
                                                             ]
                                                         })
@@ -2326,7 +2301,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Remote diagnosis or on-site support based on the nature of the issue"
+                                                                    children: "Provide remote diagnosis or arrange on-site support based on issue nature"
                                                                 })
                                                             ]
                                                         })
@@ -2347,11 +2322,11 @@ function _createMdxContent(props) {
                                                             children: [
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "font-medium text-sm dark:text-white",
-                                                                    children: "Issue Resolution & Confirmation"
+                                                                    children: "Issue Resolution and Confirmation"
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-xs text-slate-600 dark:text-slate-400 mt-1",
-                                                                    children: "Confirm resolution with client and document the solution"
+                                                                    children: "Confirm with customer after resolution and document the solution"
                                                                 })
                                                             ]
                                                         })
@@ -2368,7 +2343,7 @@ function _createMdxContent(props) {
                             children: [
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("h4", {
                                     className: "text-lg font-semibold mb-4 text-center dark:text-white",
-                                    children: "Resources & Documentation"
+                                    children: "Resources and Documentation"
                                 }),
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
                                     className: "grid grid-cols-2 md:grid-cols-4 gap-4",
@@ -2377,7 +2352,7 @@ function _createMdxContent(props) {
                                             className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mb-3",
+                                                    className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mb-3",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("span", {
                                                         className: "text-2xl",
                                                         children: "📚"
@@ -2389,7 +2364,7 @@ function _createMdxContent(props) {
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
-                                                    children: "Detailed technical docs and guides"
+                                                    children: "Detailed technical documentation and guides"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "mt-2",
@@ -2402,7 +2377,7 @@ function _createMdxContent(props) {
                                             ]
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
+                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 justify-center text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 mb-3",
@@ -2418,14 +2393,6 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
                                                     children: "Technical exchange and best practices"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "mt-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://developer.rminte.com",
-                                                        className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
-                                                        children: "developer.rminte.com"
-                                                    })
                                                 })
                                             ]
                                         }),
@@ -2441,24 +2408,16 @@ function _createMdxContent(props) {
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "font-medium text-sm mb-1 dark:text-white",
-                                                    children: "App Store"
+                                                    children: "Application Marketplace"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
-                                                    children: "Discover and download professional apps"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "mt-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://apps.rminte.com",
-                                                        className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
-                                                        children: "apps.rminte.com"
-                                                    })
+                                                    children: "Discover and connect with professional applications (teams)"
                                                 })
                                             ]
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("div", {
-                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
+                                            className: "bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 justify-center text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm",
                                             children: [
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 mb-3",
@@ -2469,19 +2428,11 @@ function _createMdxContent(props) {
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "font-medium text-sm mb-1 dark:text-white",
-                                                    children: "Tutorials & Videos"
+                                                    children: "Tutorials and Videos"
                                                 }),
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "text-xs text-slate-500 dark:text-slate-400",
                                                     children: "Learning and training resources"
-                                                }),
-                                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
-                                                    className: "mt-2",
-                                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://academy.rminte.com",
-                                                        className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
-                                                        children: "academy.rminte.com"
-                                                    })
                                                 })
                                             ]
                                         })

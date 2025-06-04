@@ -51,19 +51,27 @@ let structuredData = {
         },
         {
             "heading": "unboxing-inspection",
-            "content": "USB-C Power Adapter"
-        },
-        {
-            "heading": "unboxing-inspection",
-            "content": "USB-C to Network Adapter"
-        },
-        {
-            "heading": "unboxing-inspection",
             "content": "CFexpress Card with pre-installed models and applications"
         },
         {
             "heading": "unboxing-inspection",
+            "content": "MicroSD Card"
+        },
+        {
+            "heading": "unboxing-inspection",
+            "content": "Warranty Card"
+        },
+        {
+            "heading": "unboxing-inspection",
             "content": "Quick Start Guide"
+        },
+        {
+            "heading": "unboxing-inspection",
+            "content": "USB-C Power Adapter"
+        },
+        {
+            "heading": "unboxing-inspection",
+            "content": "USB-C to Ethernet Adapter"
         },
         {
             "heading": "connect-power",
@@ -87,7 +95,7 @@ let structuredData = {
         },
         {
             "heading": "device-connection",
-            "content": "Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, etc.)"
+            "content": "Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, computer, etc.)"
         },
         {
             "heading": "accessing-the-management-interface",
@@ -95,7 +103,7 @@ let structuredData = {
         },
         {
             "heading": "accessing-the-management-interface",
-            "content": "Enter the device IP address or hostname (format: http://rm01-xxxxx.local, where xxxxx is the device serial number)"
+            "content": "Enter the device IP address or hostname (format: http://Assigned-IP-Address:xxxx, where xxxx is the last four digits of the device serial number)"
         },
         {
             "heading": "accessing-the-management-interface",
@@ -107,11 +115,11 @@ let structuredData = {
         },
         {
             "heading": "accessing-the-management-interface",
-            "content": "Password: see label on device bottom"
+            "content": "Password: scan the corresponding QR code on the Warranty Card"
         },
         {
             "heading": "accessing-the-management-interface",
-            "content": "Download and install the \"RM-01 Companion\" app"
+            "content": "Download and install the \"RM-01 ALTAI Companion\" app"
         },
         {
             "heading": "accessing-the-management-interface",
@@ -1772,19 +1780,27 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "USB-C Power Adapter"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "USB-C to Network Adapter"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "CFexpress Card with pre-installed models and applications"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "MicroSD Card"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "Warranty Card"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "Quick Start Guide"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "USB-C Power Adapter"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "USB-C to Ethernet Adapter"
                                     }),
                                     "\n"
                                 ]
@@ -1847,7 +1863,7 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, etc.)"
+                                        children: "Use the USB-C to network adapter to connect to a local network or personal device (such as a phone, tablet, computer, etc.)"
                                     }),
                                     "\n"
                                 ]
@@ -1880,9 +1896,9 @@ function _createMdxContent(props) {
                                     children: [
                                         "Enter the device IP address or hostname (format: ",
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.code, {
-                                            children: "http://rm01-xxxxx.local"
+                                            children: "http://Assigned-IP-Address:xxxx"
                                         }),
-                                        ", where xxxxx is the device serial number)"
+                                        ", where xxxx is the last four digits of the device serial number)"
                                     ]
                                 }),
                                 "\n",
@@ -1903,7 +1919,7 @@ function _createMdxContent(props) {
                                                 }),
                                                 "\n",
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                                    children: "Password: see label on device bottom"
+                                                    children: "Password: scan the corresponding QR code on the Warranty Card"
                                                 }),
                                                 "\n"
                                             ]
@@ -1920,7 +1936,7 @@ function _createMdxContent(props) {
                             children: [
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "Download and install the \"RM-01 Companion\" app"
+                                    children: "Download and install the \"RM-01 ALTAI Companion\" app"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {

@@ -213,12 +213,12 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
     ### 开箱检查
     确认包装内包含以下物品：
     - RM-01 主机
-    - USB-C 电源适配器（PD3.1，最高 140W）
-    - USB-C 转网络适配器（可选）
     - 预装模型及应用的 CFexpress 卡
     - MicroSD 卡
     - 快速入门指南
     - 保修卡
+    - USB-C 电源适配器（PD3.1，最高 140W）
+    - USB-C 转网络适配器（可选）
   </Step>
 
   <Step>
@@ -237,7 +237,7 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
 
   <Step>
     ### 设备连接
-    - 使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板等）
+    - 使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板及电脑等）
   </Step>
 </Steps>
 
@@ -246,13 +246,13 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
 <Tabs items={['网页界面', '移动应用']}>
   <Tab>
     1. 在同一局域网的电脑上打开浏览器
-    2. 输入设备 IP 地址或主机名（格式：`http://rm01-xxxxx.local`，xxxxx 为设备序列号）
+    2. 输入设备 IP 地址或主机名（格式：`http://分配的IP地址:xxxx`，xxxx 为设备序列号后四位）
     3. 使用默认凭据登录：
        - 用户名：`admin`
-       - 密码：见设备底部标签
+       - 密码：扫描保修卡上的对应二维码
   </Tab>
   <Tab>
-    1. 下载并安装"RM-01 Companion"应用
+    1. 下载并安装"RM-01 ALTAI Companion"应用
     2. 打开应用并扫描设备上的 QR 码
     3. 按照应用内提示完成连接
   </Tab>
@@ -688,11 +688,13 @@ RM-01 支持精细化的权限控制：
   <Card title="用户论坛" href="https://forum.rminte.com" icon="💬" />
 </Cards> */}
 
----
-
-<Callout type="success" emoji="🎉" className="border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
+<Callout type="success" emoji="🎉" className="mt-8 border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm">
   恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的在线支持中心获取帮助。
 </Callout>
+
+<div className="my-8 text-center">
+  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+</div>
 
 <div className="text-sm text-gray-500 mt-8">
   © 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. 保留所有权利。

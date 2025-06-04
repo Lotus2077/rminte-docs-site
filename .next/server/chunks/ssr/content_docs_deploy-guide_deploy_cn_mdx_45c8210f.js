@@ -228,7 +228,7 @@ let structuredData = {
         },
         {
             "heading": "设备安装",
-            "content": "插入用于加密的 MicroSD 卡（如适用）"
+            "content": "插入 MicroSD 卡"
         },
         {
             "heading": "设备安装",
@@ -698,6 +698,9 @@ function _createMdxContent(props) {
                                                 children: "CFexpress Type B 存储卡（预装模型及应用）"
                                             }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
+                                                children: "MicroSD 卡"
+                                            }),
+                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                 children: "快速入门指南"
                                             }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
@@ -711,9 +714,6 @@ function _createMdxContent(props) {
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxs"])("ul", {
                                         className: "list-disc pl-6 mt-2",
                                         children: [
-                                            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
-                                                children: "MicroSD 卡（可选，用于加密）"
-                                            }),
                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("li", {
                                                 children: "USB-C 电源适配器（PD3.1，最高 140W）"
                                             }),
@@ -754,7 +754,7 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "插入用于加密的 MicroSD 卡（如适用）"
+                                        children: "插入 MicroSD 卡"
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -2003,7 +2003,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "将模型文件存入 CFexpress 存储卡，插入设备，系统会自动识别并加载模型。"
+                                                                    children: "将模型文件存入 CFexpress 存储卡上指定的目录，插入设备，系统会自动识别并加载模型。"
                                                                 })
                                                             ]
                                                         })
@@ -2128,7 +2128,7 @@ function _createMdxContent(props) {
                                                                 }),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                                     className: "text-sm dark:text-gray-300",
-                                                                    children: "开发者/商可以基于任何平台开发应用，并在 RMinte 平台进行部署，最后通过向终端客户提供解决方案获得收入。"
+                                                                    children: "开发者/商可以基于任何平台开发应用，并在 RMinte 平台进行部署，最后通过向终端客户提供‘软硬件一体’的解决方案获得收入。"
                                                                 })
                                                             ]
                                                         })

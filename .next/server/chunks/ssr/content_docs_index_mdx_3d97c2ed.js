@@ -38,19 +38,15 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "Get started with your RM-01 device, including hardware setup, management interface access, using AI applications, and more."
+            "content": "Get started with your RM-01 device, including hardware setup, management interface access, and using AI applications."
         },
         {
             "heading": "",
-            "content": "Technical guide for developers building applications on RM-01, covering hardware architecture, environment setup, model integration, and more."
+            "content": "Technical guide for developers building applications on RM-01, covering system architecture, environment setup, and model integration."
         },
         {
             "heading": "",
-            "content": "Step-by-step instructions for deploying RM-01 in your enterprise environment, including network configuration and system integration."
-        },
-        {
-            "heading": "",
-            "content": "Comprehensive security guidelines to protect your models, applications, and data with RM-01's multi-layered security architecture."
+            "content": "Step-by-step instructions for deploying RM-01 in enterprise environments, including model preparation and system integration."
         },
         {
             "heading": "",
@@ -78,19 +74,15 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "开始使用您的 RM-01 设备，包括硬件设置、管理界面访问、使用 AI 应用程序等。"
+            "content": "开始使用您的 RM-01 设备，包括硬件设置、管理界面访问和使用 AI 应用程序。"
         },
         {
             "heading": "",
-            "content": "面向在 RM-01 上构建应用程序的开发者的技术指南，涵盖硬件架构、环境搭建、模型集成等。"
+            "content": "面向在 RM-01 上构建应用程序的开发者的技术指南，涵盖系统架构、环境搭建和模型集成。"
         },
         {
             "heading": "",
-            "content": "在企业环境中部署 RM-01 的分步说明，包括网络配置和系统集成。"
-        },
-        {
-            "heading": "",
-            "content": "全面的安全指南，利用 RM-01 的多层安全架构保护您的模型、应用程序和数据。"
+            "content": "在企业环境中部署 RM-01 的分步说明，包括模型准备和系统集成。"
         },
         {
             "heading": "",
@@ -106,7 +98,7 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "© 2025 RMinte Inc. All rights reserved."
+            "content": "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved."
         }
     ],
     "headings": []
@@ -164,7 +156,7 @@ function _createMdxContent(props) {
                                             href: "/docs/deploy-guide/find-source",
                                             icon: "🚀",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Get started with your RM-01 device, including hardware setup, management interface access, using AI applications, and more."
+                                                children: "Get started with your RM-01 device, including hardware setup, management interface access, and using AI applications."
                                             })
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -172,23 +164,15 @@ function _createMdxContent(props) {
                                             href: "/docs/develop-guide/develop",
                                             icon: "💻",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Technical guide for developers building applications on RM-01, covering hardware architecture, environment setup, model integration, and more."
+                                                children: "Technical guide for developers building applications on RM-01, covering system architecture, environment setup, and model integration."
                                             })
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                                            title: "Deployment Guide",
+                                            title: "Service Provider Deployment Guide",
                                             href: "/docs/deploy-guide/deploy",
                                             icon: "🌐",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Step-by-step instructions for deploying RM-01 in your enterprise environment, including network configuration and system integration."
-                                            })
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                                            title: "Security Best Practices",
-                                            href: "/docs/deploy-guide/security-guide",
-                                            icon: "🔒",
-                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "Comprehensive security guidelines to protect your models, applications, and data with RM-01's multi-layered security architecture."
+                                                children: "Step-by-step instructions for deploying RM-01 in enterprise environments, including model preparation and system integration."
                                             })
                                         })
                                     ]
@@ -286,7 +270,7 @@ function _createMdxContent(props) {
                                             href: "/docs/deploy-guide/find-source.cn",
                                             icon: "🚀",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "开始使用您的 RM-01 设备，包括硬件设置、管理界面访问、使用 AI 应用程序等。"
+                                                children: "开始使用您的 RM-01 设备，包括硬件设置、管理界面访问和使用 AI 应用程序。"
                                             })
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -294,23 +278,15 @@ function _createMdxContent(props) {
                                             href: "/docs/develop-guide/develop.cn",
                                             icon: "💻",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "面向在 RM-01 上构建应用程序的开发者的技术指南，涵盖硬件架构、环境搭建、模型集成等。"
+                                                children: "面向在 RM-01 上构建应用程序的开发者的技术指南，涵盖系统架构、环境搭建和模型集成。"
                                             })
                                         }),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                                            title: "部署指南",
+                                            title: "服务商部署指南",
                                             href: "/docs/deploy-guide/deploy.cn",
                                             icon: "🌐",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "在企业环境中部署 RM-01 的分步说明，包括网络配置和系统集成。"
-                                            })
-                                        }),
-                                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$card$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
-                                            title: "安全最佳实践",
-                                            href: "/docs/deploy-guide/security-guide.cn",
-                                            icon: "🔒",
-                                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                children: "全面的安全指南，利用 RM-01 的多层安全架构保护您的模型、应用程序和数据。"
+                                                children: "在企业环境中部署 RM-01 的分步说明，包括模型准备和系统集成。"
                                             })
                                         })
                                     ]
@@ -380,7 +356,7 @@ function _createMdxContent(props) {
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                     className: "text-sm text-gray-500 dark:text-gray-400 text-center",
                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                        children: "© 2025 RMinte Inc. All rights reserved."
+                        children: "© 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved."
                     })
                 })
             })

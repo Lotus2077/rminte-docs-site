@@ -149,14 +149,6 @@ let structuredData = {
         },
         {
             "heading": "开箱检查",
-            "content": "USB-C 电源适配器（PD3.1，最高 140W）"
-        },
-        {
-            "heading": "开箱检查",
-            "content": "USB-C 转网络适配器（可选）"
-        },
-        {
-            "heading": "开箱检查",
             "content": "预装模型及应用的 CFexpress 卡"
         },
         {
@@ -170,6 +162,14 @@ let structuredData = {
         {
             "heading": "开箱检查",
             "content": "保修卡"
+        },
+        {
+            "heading": "开箱检查",
+            "content": "USB-C 电源适配器（PD3.1，最高 140W）"
+        },
+        {
+            "heading": "开箱检查",
+            "content": "USB-C 转网络适配器（可选）"
         },
         {
             "heading": "连接电源",
@@ -197,7 +197,7 @@ let structuredData = {
         },
         {
             "heading": "设备连接",
-            "content": "使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板等）"
+            "content": "使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板及电脑等）"
         },
         {
             "heading": "访问管理界面",
@@ -205,7 +205,7 @@ let structuredData = {
         },
         {
             "heading": "访问管理界面",
-            "content": "输入设备 IP 地址或主机名（格式：http://rm01-xxxxx.local，xxxxx 为设备序列号）"
+            "content": "输入设备 IP 地址或主机名（格式：http://分配的IP地址:xxxx，xxxx 为设备序列号后四位）"
         },
         {
             "heading": "访问管理界面",
@@ -217,11 +217,11 @@ let structuredData = {
         },
         {
             "heading": "访问管理界面",
-            "content": "密码：见设备底部标签"
+            "content": "密码：扫描保修卡上的对应二维码"
         },
         {
             "heading": "访问管理界面",
-            "content": "下载并安装\"RM-01 Companion\"应用"
+            "content": "下载并安装\"RM-01 ALTAI Companion\"应用"
         },
         {
             "heading": "访问管理界面",
@@ -641,7 +641,7 @@ let structuredData = {
         },
         {
             "heading": "服务提供商联系方式",
-            "content": "className: border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm"
+            "content": "className: mt-8 border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm"
         },
         {
             "heading": "服务提供商联系方式",
@@ -1019,7 +1019,6 @@ function _createMdxContent(props) {
         code: "code",
         h2: "h2",
         h3: "h3",
-        hr: "hr",
         li: "li",
         ol: "ol",
         p: "p",
@@ -1568,14 +1567,6 @@ function _createMdxContent(props) {
                                     }),
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "USB-C 电源适配器（PD3.1，最高 140W）"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "USB-C 转网络适配器（可选）"
-                                    }),
-                                    "\n",
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "预装模型及应用的 CFexpress 卡"
                                     }),
                                     "\n",
@@ -1589,6 +1580,14 @@ function _createMdxContent(props) {
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                                         children: "保修卡"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "USB-C 电源适配器（PD3.1，最高 140W）"
+                                    }),
+                                    "\n",
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
+                                        children: "USB-C 转网络适配器（可选）"
                                     }),
                                     "\n"
                                 ]
@@ -1655,7 +1654,7 @@ function _createMdxContent(props) {
                                 children: [
                                     "\n",
                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                        children: "使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板等）"
+                                        children: "使用 USB-C 转网络适配器连接到局域网或直接使用 USB-C 接入个人设备（如手机、平板及电脑等）"
                                     }),
                                     "\n"
                                 ]
@@ -1688,9 +1687,9 @@ function _createMdxContent(props) {
                                     children: [
                                         "输入设备 IP 地址或主机名（格式：",
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.code, {
-                                            children: "http://rm01-xxxxx.local"
+                                            children: "http://分配的IP地址:xxxx"
                                         }),
-                                        "，xxxxx 为设备序列号）"
+                                        "，xxxx 为设备序列号后四位）"
                                     ]
                                 }),
                                 "\n",
@@ -1711,7 +1710,7 @@ function _createMdxContent(props) {
                                                 }),
                                                 "\n",
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                                    children: "密码：见设备底部标签"
+                                                    children: "密码：扫描保修卡上的对应二维码"
                                                 }),
                                                 "\n"
                                             ]
@@ -1728,7 +1727,7 @@ function _createMdxContent(props) {
                             children: [
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
-                                    children: "下载并安装\"RM-01 Companion\"应用"
+                                    children: "下载并安装\"RM-01 ALTAI Companion\"应用"
                                 }),
                                 "\n",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
@@ -2796,14 +2795,19 @@ function _createMdxContent(props) {
             }),
             "\n",
             "\n",
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.hr, {}),
-            "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$ui$2f$dist$2f$components$2f$callout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Callout"], {
                 type: "success",
                 emoji: "🎉",
-                className: "border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm",
+                className: "mt-8 border-l-4 border-green-500 dark:border-green-400 bg-green-50/80 dark:bg-green-900/20 backdrop-blur-sm",
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
                     children: "恭喜您已完成 RM-01 的基本设置和使用了解！现在，您可以开始探索 AI 技术为企业带来的无限可能。如有任何疑问，请随时联系您的服务提供商或访问我们的在线支持中心获取帮助。"
+                })
+            }),
+            "\n",
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                className: "my-8 text-center",
+                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
+                    className: "h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"
                 })
             }),
             "\n",
