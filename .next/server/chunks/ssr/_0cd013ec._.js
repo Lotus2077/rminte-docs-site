@@ -16,17 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 function HomePage() {
-    const [gradients, setGradients] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
-        gradient1: {
-            background: "linear-gradient(-45deg, #e5f4fe, #e3effd, #f0ecfe, #f6eeff, #fcf0ff, #fdf0f7)",
-            opacity: 1
-        },
-        gradient2: {
-            background: "linear-gradient(45deg, #e3effd, #e5eeff, #f7f5ff, #fcf0ff, #fce7f2, #fdf0f7)",
-            opacity: 0
-        }
-    });
-    const generateGradient = ()=>{
+    const generateGradient = (previousColors = [])=>{
         // Only blues, purples, and pinks with slightly reduced saturation
         const colors = [
             // Blues (less saturated)
@@ -57,15 +47,45 @@ function HomePage() {
             "#c45585",
             "#af4e7b"
         ];
-        // Shuffle and select colors
+        // Keep 2-3 colors from the previous gradient if available
+        const keepFromPrevious = previousColors.length > 0 ? previousColors.slice(0, Math.floor(Math.random() * 2) + 2) : [];
+        // Get remaining colors from the palette
+        const remainingColors = colors.filter((color)=>!keepFromPrevious.includes(color));
         const shuffled = [
-            ...colors
+            ...remainingColors
         ].sort(()=>0.5 - Math.random());
-        const selectedColors = shuffled.slice(0, Math.floor(Math.random() * 3) + 6);
-        // Random angle
-        const angle = Math.floor(Math.random() * 360);
-        return `linear-gradient(${angle}deg, ${selectedColors.join(', ')})`;
+        const newColors = shuffled.slice(0, Math.floor(Math.random() * 2) + 4);
+        // Combine previous and new colors
+        const selectedColors = [
+            ...keepFromPrevious,
+            ...newColors
+        ];
+        // Random angle, but keep it within 45 degrees of the previous angle if available
+        const previousAngle = previousColors.length > 0 ? parseInt(previousColors[0]) : null;
+        const angle = previousAngle ? previousAngle + (Math.random() * 90 - 45) : Math.floor(Math.random() * 360);
+        return {
+            gradient: `linear-gradient(${angle}deg, ${selectedColors.join(', ')})`,
+            colors: selectedColors,
+            angle
+        };
     };
+    const [gradients, setGradients] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>{
+        const initialGradient = generateGradient();
+        return {
+            gradient1: {
+                background: initialGradient.gradient,
+                opacity: 1,
+                colors: initialGradient.colors,
+                angle: initialGradient.angle
+            },
+            gradient2: {
+                background: generateGradient(initialGradient.colors).gradient,
+                opacity: 0,
+                colors: [],
+                angle: 0
+            }
+        };
+    });
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const transitionGradients = ()=>{
             // First transition: fade out gradient1, fade in gradient2
@@ -81,10 +101,13 @@ function HomePage() {
                 }));
             // After fade completes, prepare the next gradient for gradient1
             setTimeout(()=>{
+                const newGradient = generateGradient(gradients.gradient2.colors);
                 setGradients((prev)=>({
                         gradient1: {
-                            background: generateGradient(),
-                            opacity: 0
+                            background: newGradient.gradient,
+                            opacity: 0,
+                            colors: newGradient.colors,
+                            angle: newGradient.angle
                         },
                         gradient2: {
                             ...prev.gradient2
@@ -104,24 +127,30 @@ function HomePage() {
                         }));
                     // After fade completes, prepare the next gradient for gradient2
                     setTimeout(()=>{
+                        const newGradient = generateGradient(gradients.gradient1.colors);
                         setGradients((prev)=>({
                                 gradient1: {
                                     ...prev.gradient1
                                 },
                                 gradient2: {
-                                    background: generateGradient(),
-                                    opacity: 0
+                                    background: newGradient.gradient,
+                                    opacity: 0,
+                                    colors: newGradient.colors,
+                                    angle: newGradient.angle
                                 }
                             }));
-                    }, 3000);
+                    }, 2000);
                 }, 200);
-            }, 3000);
+            }, 2000);
         };
-        // Initial gradient transition (slowed down)
-        const intervalId = setInterval(transitionGradients, 12000);
+        // Initial gradient transition
+        const intervalId = setInterval(transitionGradients, 8000);
         // Clean up
         return ()=>clearInterval(intervalId);
-    }, []);
+    }, [
+        gradients.gradient1.colors,
+        gradients.gradient2.colors
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -129,11 +158,11 @@ function HomePage() {
                 style: {
                     background: gradients.gradient1.background,
                     opacity: gradients.gradient1.opacity,
-                    transition: "opacity 3s cubic-bezier(0.4, 0, 0.2, 1)"
+                    transition: "opacity 2s cubic-bezier(0.4, 0, 0.2, 1)"
                 }
             }, void 0, false, {
                 fileName: "[project]/app/[lang]/(home)/page.tsx",
-                lineNumber: 81,
+                lineNumber: 128,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -141,11 +170,11 @@ function HomePage() {
                 style: {
                     background: gradients.gradient2.background,
                     opacity: gradients.gradient2.opacity,
-                    transition: "opacity 3s cubic-bezier(0.4, 0, 0.2, 1)"
+                    transition: "opacity 2s cubic-bezier(0.4, 0, 0.2, 1)"
                 }
             }, void 0, false, {
                 fileName: "[project]/app/[lang]/(home)/page.tsx",
-                lineNumber: 89,
+                lineNumber: 136,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -158,7 +187,7 @@ function HomePage() {
                             children: "Welcome to RMinte Docs"
                         }, void 0, false, {
                             fileName: "[project]/app/[lang]/(home)/page.tsx",
-                            lineNumber: 99,
+                            lineNumber: 146,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -172,7 +201,7 @@ function HomePage() {
                                     children: "/docs"
                                 }, void 0, false, {
                                     fileName: "[project]/app/[lang]/(home)/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, this),
                                 ' ',
@@ -180,18 +209,18 @@ function HomePage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/[lang]/(home)/page.tsx",
-                            lineNumber: 100,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/[lang]/(home)/page.tsx",
-                    lineNumber: 98,
+                    lineNumber: 145,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/[lang]/(home)/page.tsx",
-                lineNumber: 97,
+                lineNumber: 144,
                 columnNumber: 7
             }, this)
         ]

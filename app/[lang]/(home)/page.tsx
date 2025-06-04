@@ -3,19 +3,20 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-export default function HomePage() {
-  const [gradients, setGradients] = useState({
-    gradient1: {
-      background: "linear-gradient(-45deg, #e5f4fe, #e3effd, #f0ecfe, #f6eeff, #fcf0ff, #fdf0f7)",
-      opacity: 1
-    },
-    gradient2: {
-      background: "linear-gradient(45deg, #e3effd, #e5eeff, #f7f5ff, #fcf0ff, #fce7f2, #fdf0f7)",
-      opacity: 0
-    }
-  });
+type GradientState = {
+  background: string;
+  opacity: number;
+  colors: string[];
+  angle: number;
+};
 
-  const generateGradient = () => {
+type GradientsState = {
+  gradient1: GradientState;
+  gradient2: GradientState;
+};
+
+export default function HomePage() {
+  const generateGradient = (previousColors: string[] = []) => {
     // Only blues, purples, and pinks with slightly reduced saturation
     const colors = [
       // Blues (less saturated)
@@ -26,15 +27,49 @@ export default function HomePage() {
       "#fdf0f7", "#fce7f2", "#fac5e3", "#f5a5c8", "#ea8ab6", "#d66d9d", "#c45585", "#af4e7b"
     ];
 
-    // Shuffle and select colors
-    const shuffled = [...colors].sort(() => 0.5 - Math.random());
-    const selectedColors = shuffled.slice(0, Math.floor(Math.random() * 3) + 6);
+    // Keep 2-3 colors from the previous gradient if available
+    const keepFromPrevious = previousColors.length > 0 
+      ? previousColors.slice(0, Math.floor(Math.random() * 2) + 2)
+      : [];
+
+    // Get remaining colors from the palette
+    const remainingColors = colors.filter(color => !keepFromPrevious.includes(color));
+    const shuffled = [...remainingColors].sort(() => 0.5 - Math.random());
+    const newColors = shuffled.slice(0, Math.floor(Math.random() * 2) + 4);
     
-    // Random angle
-    const angle = Math.floor(Math.random() * 360);
+    // Combine previous and new colors
+    const selectedColors = [...keepFromPrevious, ...newColors];
     
-    return `linear-gradient(${angle}deg, ${selectedColors.join(', ')})`;
+    // Random angle, but keep it within 45 degrees of the previous angle if available
+    const previousAngle = previousColors.length > 0 ? parseInt(previousColors[0]) : null;
+    const angle = previousAngle 
+      ? previousAngle + (Math.random() * 90 - 45)
+      : Math.floor(Math.random() * 360);
+    
+    return {
+      gradient: `linear-gradient(${angle}deg, ${selectedColors.join(', ')})`,
+      colors: selectedColors,
+      angle
+    };
   };
+
+  const [gradients, setGradients] = useState<GradientsState>(() => {
+    const initialGradient = generateGradient();
+    return {
+      gradient1: {
+        background: initialGradient.gradient,
+        opacity: 1,
+        colors: initialGradient.colors,
+        angle: initialGradient.angle
+      },
+      gradient2: {
+        background: generateGradient(initialGradient.colors).gradient,
+        opacity: 0,
+        colors: [],
+        angle: 0
+      }
+    };
+  });
 
   useEffect(() => {
     const transitionGradients = () => {
@@ -46,8 +81,14 @@ export default function HomePage() {
 
       // After fade completes, prepare the next gradient for gradient1
       setTimeout(() => {
+        const newGradient = generateGradient(gradients.gradient2.colors);
         setGradients(prev => ({
-          gradient1: { background: generateGradient(), opacity: 0 },
+          gradient1: { 
+            background: newGradient.gradient,
+            opacity: 0,
+            colors: newGradient.colors,
+            angle: newGradient.angle
+          },
           gradient2: { ...prev.gradient2 }
         }));
         
@@ -60,21 +101,27 @@ export default function HomePage() {
           
           // After fade completes, prepare the next gradient for gradient2
           setTimeout(() => {
+            const newGradient = generateGradient(gradients.gradient1.colors);
             setGradients(prev => ({
               gradient1: { ...prev.gradient1 },
-              gradient2: { background: generateGradient(), opacity: 0 }
+              gradient2: { 
+                background: newGradient.gradient,
+                opacity: 0,
+                colors: newGradient.colors,
+                angle: newGradient.angle
+              }
             }));
-          }, 3000);
+          }, 2000);
         }, 200);
-      }, 3000);
+      }, 2000);
     };
 
-    // Initial gradient transition (slowed down)
-    const intervalId = setInterval(transitionGradients, 12000);
+    // Initial gradient transition
+    const intervalId = setInterval(transitionGradients, 8000);
     
     // Clean up
     return () => clearInterval(intervalId);
-  }, []);
+  }, [gradients.gradient1.colors, gradients.gradient2.colors]);
 
   return (
     <>
@@ -83,7 +130,7 @@ export default function HomePage() {
         style={{
           background: gradients.gradient1.background,
           opacity: gradients.gradient1.opacity,
-          transition: "opacity 3s cubic-bezier(0.4, 0, 0.2, 1)"
+          transition: "opacity 2s cubic-bezier(0.4, 0, 0.2, 1)"
         }} 
       />
       <div 
@@ -91,7 +138,7 @@ export default function HomePage() {
         style={{
           background: gradients.gradient2.background,
           opacity: gradients.gradient2.opacity,
-          transition: "opacity 3s cubic-bezier(0.4, 0, 0.2, 1)"
+          transition: "opacity 2s cubic-bezier(0.4, 0, 0.2, 1)"
         }} 
       />
       <main className="flex flex-1 flex-col items-center justify-center min-h-screen">
