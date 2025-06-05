@@ -20,7 +20,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$
 let lastModified = undefined;
 let frontmatter = {
     "title": "Welcome to RM-01 Documentation",
-    "description": "Comprehensive documentation for the RM-01 AI HPC"
+    "description": "Comprehensive documentation for the RM-01 AI Supercomputer"
 };
 let structuredData = {
     "contents": [
@@ -50,7 +50,7 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "Up to 800 TOPS computing power with 32/64GB LPDDR5 memory for efficient local AI inference."
+            "content": "Up to 1000 TOPS (FP8) computing power with 32/64/128GB GPU memory for efficient local AI inference."
         },
         {
             "heading": "",
@@ -58,7 +58,7 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "Fully private, on-premises operation with no data leaving your infrastructure."
+            "content": "Fully private, on-premises operation with no data leaving your device."
         },
         {
             "heading": "",
@@ -86,7 +86,7 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "高达 800 TOPS 算力，配备 32/64GB LPDDR5 内存，实现高效本地 AI 推理。"
+            "content": "高达 1000 TOPS (FP8) 算力，配备 32/64/128GB 显存，实现高效本地 AI 推理。"
         },
         {
             "heading": "",
@@ -94,7 +94,7 @@ let structuredData = {
         },
         {
             "heading": "",
-            "content": "完全私有、本地运行，数据不会离开您的基础设施。"
+            "content": "完全私有、本地运行，数据不会离开您的设备。"
         },
         {
             "heading": "",
@@ -194,7 +194,7 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                     className: "text-sm text-gray-600 dark:text-gray-300",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                        children: "Up to 800 TOPS computing power with 32/64GB LPDDR5 memory for efficient local AI inference."
+                                                        children: "Up to 1000 TOPS (FP8) computing power with 32/64/128GB GPU memory for efficient local AI inference."
                                                     })
                                                 })
                                             ]
@@ -224,7 +224,7 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                     className: "text-sm text-gray-600 dark:text-gray-300",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                        children: "Fully private, on-premises operation with no data leaving your infrastructure."
+                                                        children: "Fully private, on-premises operation with no data leaving your device."
                                                     })
                                                 })
                                             ]
@@ -308,7 +308,7 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                     className: "text-sm text-gray-600 dark:text-gray-300",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                        children: "高达 800 TOPS 算力，配备 32/64GB LPDDR5 内存，实现高效本地 AI 推理。"
+                                                        children: "高达 1000 TOPS (FP8) 算力，配备 32/64/128GB 显存，实现高效本地 AI 推理。"
                                                     })
                                                 })
                                             ]
@@ -338,7 +338,7 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("p", {
                                                     className: "text-sm text-gray-600 dark:text-gray-300",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.p, {
-                                                        children: "完全私有、本地运行，数据不会离开您的基础设施。"
+                                                        children: "完全私有、本地运行，数据不会离开您的设备。"
                                                     })
                                                 })
                                             ]
