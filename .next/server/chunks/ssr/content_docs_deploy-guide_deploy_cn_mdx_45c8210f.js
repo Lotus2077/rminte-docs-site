@@ -149,7 +149,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$fumadocs$2d$
 ;
 let lastModified = undefined;
 let frontmatter = {
-    "title": "服务商部署指南",
+    "title": "服务商部署及交付指南",
     "icon": "Compass"
 };
 let structuredData = {
@@ -164,7 +164,7 @@ let structuredData = {
         },
         {
             "heading": "概览",
-            "content": "💼 服务商部署流程"
+            "content": "💼 服务商部署及交付流程"
         },
         {
             "heading": "概览",
@@ -337,8 +337,8 @@ let structuredData = {
             "content": "概览"
         },
         {
-            "id": "服务商部署流程",
-            "content": "服务商部署流程"
+            "id": "服务商部署及交付流程",
+            "content": "服务商部署及交付流程"
         },
         {
             "id": "1-前期准备工作",
@@ -406,9 +406,9 @@ const toc = [
     },
     {
         depth: 2,
-        url: "#服务商部署流程",
+        url: "#服务商部署及交付流程",
         title: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: "服务商部署流程"
+            children: "服务商部署及交付流程"
         })
     },
     {
@@ -535,8 +535,8 @@ function _createMdxContent(props) {
                     "\n",
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.li, {
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.a, {
-                            href: "#%E6%9C%8D%E5%8A%A1%E5%95%86%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B",
-                            children: "💼 服务商部署流程"
+                            href: "#%E6%9C%8D%E5%8A%A1%E5%95%86%E9%83%A8%E7%BD%B2%E5%8F%8A%E4%BA%A4%E4%BB%98%E6%B5%81%E7%A8%8B",
+                            children: "💼 服务商部署及交付流程"
                         })
                     }),
                     "\n",
@@ -558,8 +558,8 @@ function _createMdxContent(props) {
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h2, {
-                id: "服务商部署流程",
-                children: "服务商部署流程"
+                id: "服务商部署及交付流程",
+                children: "服务商部署及交付流程"
             }),
             "\n",
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])(_components.h3, {
@@ -2520,7 +2520,7 @@ function _createMdxContent(props) {
                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("div", {
                                                     className: "mt-2",
                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsx"])("a", {
-                                                        href: "https://docs.rminte.com",
+                                                        href: "https://rminte-docs-site.vercel.app/",
                                                         className: "text-xs text-blue-600 dark:text-blue-300 font-medium",
                                                         children: "docs.rminte.com"
                                                     })
