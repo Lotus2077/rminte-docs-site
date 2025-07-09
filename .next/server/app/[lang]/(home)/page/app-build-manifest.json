@@ -1,23 +1,23 @@
 {
   "pages": {
     "/[lang]/(home)/page": [
-      "static/chunks/node_modules_next_dist_1a6ee436._.js",
-      "static/chunks/node_modules_next_dist_client_components_not-found-error_c0237562.js",
-      "static/chunks/node_modules_fumadocs-ui_dist_components_dialog_search-default_3ed03179.js",
-      "static/chunks/node_modules_fd1ea4db._.js",
-      "static/chunks/app_[lang]_layout_tsx_c0237562._.js",
-      "static/chunks/node_modules_1f87343e._.js",
+      "static/chunks/25a64_next_dist_07f184de._.js",
+      "static/chunks/25a64_next_dist_client_components_not-found-error_296892bb.js",
+      "static/chunks/9b66a_fumadocs-ui_dist_components_dialog_search-default_db7c4324.js",
+      "static/chunks/node_modules__pnpm_762a3440._.js",
+      "static/chunks/app_[lang]_layout_tsx_296892bb._.js",
+      "static/chunks/node_modules__pnpm_68d36a0b._.js",
       "static/chunks/app_global_d684f999.css",
-      "static/chunks/app_[lang]_(home)_layout_tsx_df0aee67._.js",
-      "static/chunks/_d8d6d04c._.js",
-      "static/chunks/app_[lang]_(home)_page_tsx_c9969f37._.js",
-      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_fd44f5a4._.js",
-      "static/chunks/node_modules_next_dist_compiled_2ce9398a._.js",
-      "static/chunks/node_modules_next_dist_client_8f19e6fb._.js",
-      "static/chunks/node_modules_next_dist_2ecbf5fa._.js",
-      "static/chunks/node_modules_@swc_helpers_cjs_00636ac3._.js",
+      "static/chunks/app_[lang]_(home)_layout_tsx_57513c60._.js",
+      "static/chunks/_f82b89dd._.js",
+      "static/chunks/app_[lang]_(home)_page_tsx_44631d23._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_ab57219a._.js",
+      "static/chunks/25a64_next_dist_compiled_f93ea3b1._.js",
+      "static/chunks/25a64_next_dist_client_5a7dfb24._.js",
+      "static/chunks/25a64_next_dist_881a9ee6._.js",
+      "static/chunks/61dca_@swc_helpers_cjs_e27e0aca._.js",
       "static/chunks/_e69f0d32._.js",
-      "static/chunks/_93808211._.js"
+      "static/chunks/_9e0c23ab._.js"
     ]
   }
 }

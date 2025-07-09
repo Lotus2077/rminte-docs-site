@@ -1,0 +1,468 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+
+```mdx
+# Fumadocs Cursor Rules
+
+These rules provide a framework for creating exceptional technical documentation using Fumadocs and MDX. As an AI writing assistant, follow these guidelines to ensure documentation is clear, consistent, and leverages Fumadocs' features effectively.
+
+## Core Writing Principles
+
+### Language and Style Requirements
+
+- Use clear, direct language suitable for technical audiences.
+- Address the reader as "you" for instructions and procedures.
+- Prefer active voice over passive voice.
+- Use present tense for current states and future tense for outcomes.
+- Avoid unnecessary jargon; define terms when first introduced.
+- Maintain consistent terminology across all documentation.
+- Keep sentences concise while providing necessary context.
+- Use parallel structure in lists, headings, and procedures.
+
+### Content Organization Standards
+- Start with the most important information (inverted pyramid structure).
+- Introduce basic concepts before advanced ones (progressive disclosure).
+- Break complex procedures into numbered steps using the `<Steps>` component.
+- Include prerequisites and context before instructions.
+- Provide expected outcomes for each major step.
+- Use descriptive, keyword-rich headings for navigation and SEO.
+- Group related information logically with clear section breaks.
+
+### User-Centered Approach
+
+- Focus on user goals and outcomes rather than just system features.
+- Anticipate and proactively address common questions.
+- Include troubleshooting tips for likely failure points using `<Callout type="warn">`.
+- Write for scannability with headings, lists, and white space.
+- Include verification steps (e.g., `<Callout type="success">`) to confirm success.
+
+## Fumadocs Component Reference
+
+Fumadocs offers a variety of MDX components to enhance documentation. Below are the key components and their usage examples.
+
+### Callouts
+
+Highlight important information, warnings, or tips.
+
+```mdx
+<Callout>
+  General information or note
+</Callout>
+
+<Callout title="Pro Tip" type="info">
+  Expert advice to enhance user success
+</Callout>
+
+<Callout type="warn">
+  Caution about potential issues
+</Callout>
+
+<Callout type="error" title="Important">
+  Critical information about errors
+</Callout>
+
+<Callout type="success">
+  Confirmation of successful completion
+</Callout>
+```
+
+### Tabs
+
+Show alternative content, such as code in different languages or platform-specific instructions.
+
+```mdx
+<Tabs items={['npm', 'pnpm', 'yarn', 'bun']}>
+  <Tab value="npm">
+    ```bash
+    npm install fumadocs-ui
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm add fumadocs-ui
+    ```
+  </Tab>
+  <Tab value="yarn">
+    ```bash
+    yarn add fumadocs-ui
+    ```
+  </Tab>
+  <Tab value="bun">
+    ```bash
+    bun add fumadocs-ui
+    ```
+  </Tab>
+</Tabs>
+```
+
+### Cards
+
+Use for navigation links or to highlight features.
+
+```mdx
+<Cards>
+  <Card href="/docs/getting-started" title="Getting Started">
+    Learn the basics of Fumadocs
+  </Card>
+  <Card href="/docs/api" title="API Reference" icon={<BookIcon />}>
+    Complete API documentation
+  </Card>
+  <Card title="Feature Overview">
+    A card without a link
+  </Card>
+</Cards>
+```
+
+### Steps
+
+Present sequential instructions or procedures.
+
+```mdx
+<Steps>
+  <Step>
+    ### Install Dependencies
+    Install required packages using your package manager.
+  </Step>
+  <Step>
+    ### Configure Settings
+    Set up your configuration file.
+  </Step>
+  <Step>
+    ### Start Development
+    Launch the development server.
+  </Step>
+</Steps>
+```
+
+### File Trees
+
+Display project structures or directory layouts.
+
+```mdx
+<Files>
+  <Folder name="src" defaultOpen>
+    <File name="index.ts" />
+    <File name="config.ts" />
+    <Folder name="components">
+      <File name="Button.tsx" />
+    </Folder>
+  </Folder>
+  <File name="package.json" />
+</Files>
+```
+
+### Code Blocks
+
+Display code with syntax highlighting, titles, and line highlighting.
+
+```mdx
+```typescript title="src/config.ts"
+export const config = {
+  name: 'My App',
+  version: '1.0.0'
+};
+```
+
+```typescript lineNumbers
+function calculateSum(a: number, b: number): number {
+  return a + b;
+}
+```
+
+```typescript
+const a = 1; // [!code highlight]
+const b = 2;
+```
+```
+
+### Type Tables
+
+Document TypeScript types automatically or manually.
+
+```mdx
+<AutoTypeTable path="./src/types.ts" name="UserInterface" />
+
+<TypeTable
+  type={{
+    name: {
+      type: 'string',
+      description: 'User name',
+      required: true,
+    },
+    age: {
+      type: 'number',
+      description: 'User age',
+      default: 0,
+    },
+  }}
+/>
+```
+
+### Images
+
+Enhance documentation with visuals.
+
+```mdx
+![Diagram](mdc:images/diagram.png "Diagram title")
+
+import Image from 'next/image';
+import myImage from './my-image.png';
+
+<Image src={myImage} alt="Description" />
+```
+
+## Required Page Structure
+
+Every MDX file must begin with YAML frontmatter:
+
+```mdx
+---
+title: "Clear, Specific, Keyword-Rich Title"
+description: "Concise description explaining page purpose and value"
+icon: "BookIcon" # Optional, for sidebar navigation
+full: true # Optional, for full-width layout
+---
+```
+
+## Content Quality Standards
+
+### Code Examples
+
+- Provide complete, runnable examples that users can copy and execute.
+- Include error handling and edge cases where applicable.
+- Use realistic data instead of placeholders.
+- Show expected outputs or results for verification.
+- Test all examples thoroughly before inclusion.
+- Specify the language and filename (e.g., `title="src/index.ts"`).
+- Add explanatory comments for complex logic.
+- Never include real API keys or secrets.
+
+Example:
+
+```mdx
+```typescript title="src/api.ts"
+async function fetchData(id: string): Promise<Data> {
+  try {
+    const response = await fetch(`/api/data/${id}`);
+    if (!response.ok) throw new Error('Network error');
+    return response.json();
+  } catch (error) {
+    console.error('Fetch failed:', error);
+    throw error;
+  }
+}
+// Example output: { id: "1", name: "Example" }
+```
+```
+
+### API Documentation
+
+- Document all parameters, including optional ones, with descriptions.
+- Provide success and error response examples with realistic data.
+- Include rate limiting details and specific limits.
+- Show authentication examples with proper formatting.
+- Explain relevant HTTP status codes and error handling.
+- Use the `<APIPage>` component for OpenAPI schemas where applicable.
+
+Example:
+
+```mdx
+<APIPage
+  document="./openapi.json"
+  operations={[{ path: '/users', method: 'GET' }]}
+  hasHead={false}
+/>
+```
+
+### Accessibility
+
+- Include descriptive alt text for all images and diagrams.
+- Use specific, actionable link text (e.g., "Learn more" instead of "click here").
+- Maintain proper heading hierarchy starting with H2 under the frontmatter title.
+- Provide keyboard navigation considerations where relevant.
+- Ensure sufficient color contrast in examples and visuals.
+- Structure content for scannability with headers, lists, and components.
+
+## Component Selection Logic
+
+- Use **Callouts** for notes, tips, warnings, errors, or success messages.
+- Use **Tabs** for platform-specific content or multi-language code examples.
+- Use **Cards** for navigation links, feature highlights, or section overviews.
+- Use **Steps** for sequential instructions or procedures.
+- Use **File Trees** to show project structures or directory layouts.
+- Use **Code Blocks** for all code examples, with appropriate features like highlighting.
+- Use **Type Tables** for TypeScript types or structured data documentation.
+- Use **Images** to provide visual context or diagrams where beneficial.
+
+## Best Practices and Common Patterns
+
+### Frontmatter
+
+Always include frontmatter with at least a title and description.
+
+```mdx
+---
+title: "Page Title"
+description: "Brief description of the page content"
+---
+```
+
+### Structure and Readability
+
+- Use clear, hierarchical headings without skipping levels (H2, H3, etc.).
+- Break long content into manageable sections.
+- Use lists for related items to improve readability.
+- Add visual breaks with components like `<Cards>` or `<Callout>`.
+
+### Code Examples
+
+- Include practical, runnable code examples.
+- Show installation commands for multiple package managers using `<Tabs>`.
+- Add titles in code blocks for context (e.g., `title="src/index.ts"`).
+- Use highlighting (`// [!code highlight]`) to emphasize key lines.
+
+### Navigation
+
+- Use `<Cards>` for section overviews or related content links.
+- Add "Next Steps" sections with links to related documentation.
+- Include breadcrumbs for deep hierarchies via `<DocsLayout>` configuration.
+
+### Visual Hierarchy
+
+- Use `<Callout>` to emphasize critical information.
+- Break up text with components to enhance readability.
+- Use `<Steps>` for procedures to guide users clearly.
+- Include diagrams and images where they add value.
+
+### Accessibility
+
+- Always provide alt text for images (e.g., `![Alt text](mdc:image.png)`).
+- Use semantic heading structures (H2 under frontmatter H1).
+- Ensure callouts have sufficient contrast.
+- Add ARIA labels for interactive elements where necessary.
+
+### SEO Optimization
+
+- Write descriptive titles and descriptions in frontmatter.
+- Use proper heading hierarchy for better indexing.
+- Include relevant keywords naturally in content.
+- Use structured data (e.g., `structuredData` from MDX) where applicable.
+
+### Common Patterns
+
+#### API Documentation
+
+Use a consistent structure for API reference pages:
+
+```mdx
+---
+title: "API Reference - getUser"
+description: "Retrieve user details by ID"
+---
+
+# getUser
+
+Fetches user information based on a provided ID.
+
+## Request
+
+<APIPage
+  document="./openapi.json"
+  operations={[{ path: '/users/{id}', method: 'GET' }]}
+  hasHead={false}
+/>
+
+## Response
+
+Describe the response format and status codes.
+
+## Examples
+
+<Tabs items={['JavaScript', 'cURL']}>
+  <Tab value="JavaScript">
+    ```javascript
+    const response = await fetch('/users/123');
+    const user = await response.json();
+    ```
+  </Tab>
+  <Tab value="cURL">
+    ```bash
+    curl -X GET 'https://api.example.com/users/123'
+    ```
+  </Tab>
+</Tabs>
+```
+
+#### Tutorials
+
+Use `<Steps>` for step-by-step guides:
+
+```mdx
+---
+title: "Getting Started with Fumadocs"
+description: "Set up your first Fumadocs project"
+---
+
+# Getting Started with Fumadocs
+
+<Callout>
+  Ensure Node.js is installed before proceeding.
+</Callout>
+
+## Overview
+
+Learn how to set up Fumadocs in three steps.
+
+<Steps>
+  <Step>
+    ### Install Dependencies
+    <Tabs items={['npm', 'pnpm']}>
+      <Tab value="npm">
+        ```bash
+        npm install fumadocs-ui fumadocs-core
+        ```
+      </Tab>
+      <Tab value="pnpm">
+        ```bash
+        pnpm add fumadocs-ui fumadocs-core
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step>
+    ### Configure Layout
+    Create a layout file with DocsLayout.
+    ```tsx title="app/docs/layout.tsx"
+    import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+    export default function Layout({ children }) {
+      return <DocsLayout tree={source.pageTree}>{children}</DocsLayout>;
+    }
+    ```
+  </Step>
+  <Step>
+    ### Add Content
+    Write your first MDX page.
+  </Step>
+</Steps>
+
+## Next Steps
+
+<Cards>
+  <Card href="/docs/api" title="API Reference">
+    Explore the API documentation
+  </Card>
+</Cards>
+```
+
+## Conclusion
+
+Adhering to these Fumadocs Cursor Rules ensures your documentation is consistent, user-friendly, and fully utilizes Fumadocs' capabilities. Follow these guidelines to create engaging, informative, and accessible technical documentation.
+```
+
+---
+
+This MDX file provides a comprehensive set of rules for writing Fumadocs documentation, mirroring the structure and intent of the Mintlify Cursor Rules while incorporating Fumadocs-specific components and conventions. It includes detailed examples, best practices, and quality standards to guide the creation of effective documentation.

@@ -1,102 +1,96 @@
 ---
 title: Service Provider Deployment and Delivery Guide
 icon: Compass
+description: Comprehensive guide for service providers to deploy and deliver RMinte RM-01 Portable AI Supercomputer to enterprise customers
 ---
+
 import { Step, Steps } from 'fumadocs-ui/components/steps'
 import { Callout } from 'fumadocs-ui/components/callout'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
 
-<Callout type="info">
+<Callout title="RMinte RM-01 Deployment Guide">
   Welcome to the RMinte RM-01 Portable AI Supercomputer Deployment Guide. This document aims to help service providers understand how to quickly deploy models and AI applications for enterprise customers using RM-01, achieving a true "plug-and-play" AI experience.
 </Callout>
 
 ## Overview
 
-- [💼 Service Provider Deployment and Delivery Process](#service-provider-deployment-and-delivery-process)
-- [❓ Frequently Asked Questions](#frequently-asked-questions)
-- [🛟 Technical Support](#technical-support)
+<Cards>
+  <Card title="💼 Service Provider Deployment" href="#service-provider-deployment-and-delivery-process">
+    Complete step-by-step deployment and delivery process for enterprise customers
+  </Card>
+  <Card title="❓ Frequently Asked Questions" href="#frequently-asked-questions">
+    Answers to common questions about device functionality, software, and business models
+  </Card>
+  <Card title="🛟 Technical Support" href="#technical-support">
+    Professional support channels and resources for ongoing assistance
+  </Card>
+</Cards>
 
 ## Service Provider Deployment and Delivery Process
 
-### 1. Pre-deployment Preparation
+The deployment process consists of 5 main phases designed to ensure smooth implementation and successful delivery to enterprise customers.
 
 <Steps>
   <Step>
-    #### Model and Application Preparation
-    
-    Prepare suitable models and applications based on enterprise requirements:
-    
-    - **Standard Model Package**: Includes common open-source models such as DeepSeek, Zhipu, Qwen, etc.
-    - **Industry-specific Model Package**: Select vertical domain models suitable for the enterprise's industry
-    - **Enterprise Custom Models**: If the enterprise has its own trained models, ensure they are converted to formats suitable for RM-01 and stored in the specified directory on the CFexpress card
-    - **Enterprise Custom Applications**: AI applications developed using Dify or other development tools based on the RMinte platform, stored as encrypted Docker Images in the specified directory on the CFexpress card
-  </Step>
+    ### Pre-deployment Preparation
 
-  <Step>
-    #### Enterprise Environment Assessment
-    
-    Conduct environment assessment before deployment:
-    
-    - **Network Environment**: Evaluate the feasibility of connecting RM-01 to the enterprise internal network according to customer requirements
-    - **Power Supply**: Ensure stable power supply at the deployment location
-    - **Physical Security**: Assess the physical security of the device placement location and develop corresponding security measures
-    - **IT Infrastructure**: Understand the enterprise's existing IT infrastructure to ensure smooth integration of RM-01
-  </Step>
-  
-  <Step>
-    #### Device and Accessories Verification
+    Prepare models, assess enterprise environment, and verify device package contents.
+
+    **Model and Application Preparation**
+    - **Standard Model Package**: Common open-source models (DeepSeek, Zhipu, Qwen)
+    - **Industry-specific Model Package**: Vertical domain models for the enterprise's industry
+    - **Enterprise Custom Models**: Customer-trained models converted for RM-01
+    - **Enterprise Custom Applications**: AI applications developed using Dify or other tools
+
+    **Enterprise Environment Assessment**
+    - **Network Environment**: Evaluate RM-01 connectivity to internal network
+    - **Power Supply**: Ensure stable power at deployment location
+    - **Physical Security**: Assess device placement security
+    - **IT Infrastructure**: Understand existing systems for smooth integration
+
+    **Device and Accessories Verification**
     
     Before delivery to the enterprise, ensure the following items are complete:
-    
-    <div className="p-4 border rounded-lg">
-      <strong>RM-01 Device Package</strong>
-      <ul className="list-disc pl-6 mt-2">
-        <li>RM-01 Host</li>
-        <li>CFexpress Type B Storage Card (pre-installed with models and applications)</li>
-        <li>MicroSD Card</li>
-        <li>Quick Start Guide</li>
-        <li>Warranty Card</li>
-      </ul>
-      <strong>RM-01 Accessories Package</strong>
-      <ul className="list-disc pl-6 mt-2">
-        <li>USB-C Power Adapter (PD3.1, up to 140W)</li>
-        <li>USB-C to Ethernet Adapter</li>
-      </ul>
-    </div>
+
+    **RM-01 Device Package**
+    - RM-01 Host
+    - CFexpress Type B Storage Card (pre-installed with models and applications)
+    - MicroSD Card
+    - Quick Start Guide
+    - Warranty Card
+
+    **RM-01 Accessories Package**
+    - USB-C Power Adapter (PD3.1, up to 140W)
+    - USB-C to Ethernet Adapter
   </Step>
-</Steps>
-
-### 2. Hardware Deployment Process
-
-<Steps>
+  
   <Step>
-    #### Device Installation
-    
-    1. Choose a suitable location for RM-01 (desktop or dedicated cabinet)
-    2. Insert the CFexpress storage card pre-installed with required models and applications
-    3. Insert the MicroSD card
-    4. Connect the power adapter
-    5. If wired network is needed, connect the USB-C to Ethernet adapter
-    
-    <Callout type="warning">
+    ### Hardware Deployment Process
+
+    Install, initialize, and configure the RM-01 device.
+
+    **Device Installation**
+    1. Choose suitable location (desktop or dedicated cabinet)
+    2. Insert CFexpress storage card with models and applications
+    3. Insert MicroSD card
+    4. Connect power adapter
+    5. Connect USB-C to Ethernet adapter if needed
+
+    <Callout title="Installation Safety" type="warn">
       Ensure the device is placed in a well-ventilated environment, avoiding obstruction of heat dissipation vents.
     </Callout>
-  </Step>
-  
-  <Step>
-    #### Startup and Initialization
-    
-    1. Press the power button to start
-    2. The device will automatically initialize and load models and applications from the storage card (approximately 5 minutes)
-    3. After 5 minutes, RM-01 will complete loading models and applications and enter a ready-to-use state
 
-    <Callout type="info">
-      During initialization, you can connect a laptop via USB-C port to monitor device status
+    **Startup and Initialization**
+    1. Press power button to start
+    2. Device automatically initializes (approximately 5 minutes)
+    3. RM-01 enters ready-to-use state
+
+    <Callout title="Monitoring Initialization">
+      During initialization, you can connect a laptop via USB-C port to monitor device status and track the loading progress.
     </Callout>
-  </Step>
-  
-  <Step>
-    #### Network Configuration
-    
+
+    **Network Configuration**
     1. Connect to the enterprise LAN through the USB-C port (with adapter if needed)
     2. Configure network parameters:
        - IP Address (Static/DHCP)
@@ -105,699 +99,150 @@ import { Callout } from 'fumadocs-ui/components/callout'
        - DNS Servers
     3. Verify network connection
   </Step>
+  
+  <Step>
+    ### Verification and Testing
+
+    Conduct comprehensive testing to ensure optimal performance.
+
+    **Testing Areas**
+    - **Functional Testing**: Model loading, application functionality, user authorization
+    - **Performance Testing**: Inference speed, concurrent processing, stability
+    - **Connectivity Testing**: System integration, API connections, external calls
+
+    <Callout title="Testing Recommendation" type="success">
+      It is recommended to conduct comprehensive functional benchmark testing based on the RM-01 testing checklist to ensure optimal device performance in the customer environment. Generate a test report upon completion as part of delivery documentation.
+    </Callout>
+  </Step>
+  
+  <Step>
+    ### Training and Delivery
+
+    Provide comprehensive training and deliver complete documentation.
+
+    **Enterprise Administrator Training**
+    1. **Device Operation and Maintenance** - Basic startup/shutdown and hardware maintenance
+    2. **Management Interface Usage** - System settings and monitoring
+    3. **Model and Application Management** - Updates and configuration
+    4. **Troubleshooting** - Common issues diagnosis and resolution
+
+    **End User Training**
+    - **Application Access Methods**: How to log in and find needed applications
+    - **Basic Operation Guide**: Common functions and operation flow demonstration
+    - **Usage Tips and Best Practices**: Professional suggestions for improving efficiency
+    - **Common Issues Resolution**: Handling operational errors and exceptions
+
+    **Documentation Delivery**
+    - **Device User Manual**: Hardware specifications and basic operation guide
+    - **Administrator Guide**: System management and troubleshooting
+    - **User Operation Guide**: Application usage steps and instructions
+    - **Troubleshooting Guide**: Common issues and solutions
+
+    <Callout title="Training Best Practice">
+      It is recommended to record training videos for administrator reference and customize training content for different department users to improve training effectiveness.
+    </Callout>
+  </Step>
+  
+  <Step>
+    ### After-sales Support
+
+    Provide ongoing support and maintenance services.
+
+    **Support Services**
+    - **Remote Support**: Health checks, troubleshooting, 24/7 emergency support
+    - **Updates & Maintenance**: Model updates, firmware assistance, optimization
+    - **Extended Services**: Custom development, data integration, on-site support
+
+    **Service Level Agreements**
+    - **Standard Response**: 4-hour response during business hours
+    - **Premium Response**: 2-hour response during business hours
+    - **Emergency Response**: 30-minute response 24/7
+
+    <Callout title="SLA Guarantee">
+      All SLA commitments are backed by service quality guarantees with compensation for unmet standards. Flexible SLA options available, customizable based on enterprise requirements.
+    </Callout>
+  </Step>
 </Steps>
-
-### 3. Verification and Testing
-
-<div className="mb-8 rounded-lg overflow-hidden">
-  <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 p-5 border border-emerald-100 dark:border-emerald-800">
-    <h4 className="text-lg font-bold mb-4 text-center dark:text-white">Comprehensive Testing Checklist</h4>
-    
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
-        <div className="flex items-center mb-3">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-2" style={{ minWidth: '2rem' }}>
-            <span className="text-sm">✓</span>
-          </div>
-          <h5 className="font-semibold text-blue-800 dark:text-blue-300">Functional Testing</h5>
-        </div>
-        
-        <ul className="pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300">
-          <li>Model loading and execution testing</li>
-          <li>Basic application functionality testing</li>
-          <li>User authorization and access control</li>
-          <li>Offline environment functionality verification</li>
-        </ul>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 border-l-4 border-purple-400">
-        <div className="flex items-center mb-3">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 mr-2" style={{ minWidth: '2rem' }}>
-            <span className="text-sm">⚡</span>
-          </div>
-          <h5 className="font-semibold text-purple-800 dark:text-purple-300">Performance Testing</h5>
-        </div>
-        
-        <ul className="pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300">
-          <li>Model inference speed testing</li>
-          <li>Concurrent processing capability testing</li>
-          <li>High-load stability testing</li>
-          <li>Resource usage monitoring</li>
-        </ul>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 border-l-4 border-green-400">
-        <div className="flex items-center mb-3">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2" style={{ minWidth: '2rem' }}>
-            <span className="text-sm">🔄</span>
-          </div>
-          <h5 className="font-semibold text-green-800 dark:text-green-300">Connectivity Testing</h5>
-        </div>
-        
-        <ul className="pl-10 list-disc text-sm space-y-2 text-slate-700 dark:text-slate-300">
-          <li>Internal system integration testing</li>
-          <li>API connection testing</li>
-          <li>External application call testing</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div className="mt-4 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-teal-100 dark:border-teal-800">
-      <div className="flex">
-        <div className="w-10 flex-shrink-0 pt-1">
-          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900 text-amber-600 dark:text-amber-300">
-            <span className="text-xs">💡</span>
-          </div>
-        </div>
-        <div className="flex-grow">
-          <h5 className="font-semibold text-sm mb-1 dark:text-white">Professional Testing Recommendation</h5>
-          <p className="text-xs text-slate-600 dark:text-slate-400">It is recommended to conduct comprehensive functional benchmark testing based on the RM-01 testing checklist to ensure optimal device performance in the customer environment. Generate a test report upon completion as part of the delivery documentation.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-### 4. Training and Delivery
-
-<div className="mb-8 rounded-lg overflow-hidden">
-  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 p-6 border border-blue-100 dark:border-blue-800/60">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="col-span-1 md:col-span-2 bg-white dark:bg-gray-800/90 rounded-xl shadow-sm p-4 border border-indigo-100 dark:border-indigo-700/50">
-        <h4 className="text-lg font-bold mb-3 text-center text-indigo-800 dark:text-indigo-300">Training and Delivery Flowchart</h4>
-        <div className="flex flex-wrap justify-center items-center text-center">
-          <div className="w-full md:w-1/4 p-2">
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-100 dark:border-blue-700/40 h-full">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 mx-auto mb-2">
-                <span className="text-blue-600 dark:text-blue-300 text-lg">1</span>
-              </div>
-              <div className="font-medium text-sm dark:text-white">Administrator Training</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Basic configuration and daily management</div>
-            </div>
-          </div>
-          <div className="hidden md:block w-10 text-gray-300 dark:text-gray-600">→</div>
-          <div className="w-full md:w-1/4 p-2">
-            <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-3 border border-indigo-100 dark:border-indigo-700/40 h-full">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 mx-auto mb-2">
-                <span className="text-indigo-600 dark:text-indigo-300 text-lg">2</span>
-              </div>
-              <div className="font-medium text-sm dark:text-white">User Training</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Application operation and usage tips</div>
-            </div>
-          </div>
-          <div className="hidden md:block w-10 text-gray-300 dark:text-gray-600">→</div>
-          <div className="w-full md:w-1/4 p-2">
-            <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3 border border-purple-100 dark:border-purple-700/40 h-full">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 mx-auto mb-2">
-                <span className="text-purple-600 dark:text-purple-300 text-lg">3</span>
-              </div>
-              <div className="font-medium text-sm dark:text-white">Documentation Delivery</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">User manuals and technical documentation</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700/50">
-        <div className="flex items-center mb-6">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-3">
-            <span className="text-xl">👨‍💼</span>
-          </div>
-          <h5 className="text-lg font-semibold dark:text-white">Enterprise Administrator Training</h5>
-        </div>
-        <ol className="space-y-4">
-          <li className="flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg">1</div>
-            <div>
-              <div className="font-medium text-base dark:text-white">Device Operation and Maintenance</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Basic startup/shutdown and hardware maintenance</div>
-            </div>
-          </li>
-          <li className="flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg">2</div>
-            <div>
-              <div className="font-medium text-base dark:text-white">Management Interface Usage</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">System settings and monitoring</div>
-            </div>
-          </li>
-          <li className="flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg">3</div>
-            <div>
-              <div className="font-medium text-base dark:text-white">Model and Application Management</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Updates and configuration</div>
-            </div>
-          </li>
-          <li className="flex items-start bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-600 dark:text-blue-300 mr-4 font-bold text-lg">4</div>
-            <div>
-              <div className="font-medium text-base dark:text-white">Troubleshooting</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Common issues diagnosis and resolution</div>
-            </div>
-          </li>
-        </ol>
-        <div className="mt-6 p-3 bg-amber-50 dark:bg-amber-900/20 rounded-md text-sm text-amber-800 dark:text-amber-300">
-          It is recommended to record training videos for administrator reference
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-indigo-200 dark:border-indigo-700/50">
-        <div className="flex items-center mb-6">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-800/60 text-indigo-600 dark:text-indigo-300 mr-3">
-            <span className="text-xl">👥</span>
-          </div>
-          <h5 className="text-lg font-semibold dark:text-white">End User Training</h5>
-        </div>
-        <ul className="list-disc pl-6 space-y-3 text-sm text-slate-700 dark:text-slate-300">
-          <li>
-            <span className="font-medium text-indigo-700 dark:text-indigo-300">Application Access Methods:</span>
-            <span className="block text-xs text-slate-600 dark:text-slate-400 mt-1">How to log in and find needed applications</span>
-          </li>
-          <li>
-            <span className="font-medium text-indigo-700 dark:text-indigo-300">Basic Operation Guide:</span>
-            <span className="block text-xs text-slate-600 dark:text-slate-400 mt-1">Common functions and operation flow demonstration</span>
-          </li>
-          <li>
-            <span className="font-medium text-indigo-700 dark:text-indigo-300">Usage Tips and Best Practices:</span>
-            <span className="block text-xs text-slate-600 dark:text-slate-400 mt-1">Professional suggestions for improving efficiency</span>
-          </li>
-          <li>
-            <span className="font-medium text-indigo-700 dark:text-indigo-300">Common Issues Resolution:</span>
-            <span className="block text-xs text-slate-600 dark:text-slate-400 mt-1">Handling operational errors and exceptions</span>
-          </li>
-        </ul>
-        <div className="mt-6 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-md text-sm text-indigo-800 dark:text-indigo-300">
-          It is recommended to customize training content for different department users to improve training effectiveness
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-purple-200 dark:border-purple-700/50">
-        <div className="flex items-center mb-6">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800/60 text-purple-600 dark:text-purple-300 mr-3">
-            <span className="text-xl">📄</span>
-          </div>
-          <h5 className="text-lg font-semibold dark:text-white">Documentation Delivery</h5>
-        </div>
-        <ul className="space-y-4">
-          <li className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
-            <div className="font-medium text-base text-purple-800 dark:text-purple-300">Device User Manual</div>
-            <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Hardware specifications and basic operation guide</div>
-          </li>
-          <li className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
-            <div className="font-medium text-base text-purple-800 dark:text-purple-300">Administrator Guide</div>
-            <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">System management and troubleshooting</div>
-          </li>
-          <li className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
-            <div className="font-medium text-base text-purple-800 dark:text-purple-300">User Operation Guide</div>
-            <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Application usage steps and instructions</div>
-          </li>
-          <li className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
-            <div className="font-medium text-base text-purple-800 dark:text-purple-300">Troubleshooting Guide</div>
-            <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Common issues and solutions</div>
-          </li>
-        </ul>
-        <div className="mt-6 p-3 bg-blue-100 dark:bg-blue-800/60 rounded-md text-sm text-blue-600 dark:text-blue-300">
-          All documentation is provided in both electronic and printed formats, with the latest versions available through the management interface
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-emerald-200 dark:border-emerald-700/50">
-        <div className="flex items-center mb-6">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-3">
-            <span className="text-xl">✅</span>
-          </div>
-          <h5 className="text-lg font-semibold dark:text-white">Device Delivery Confirmation</h5>
-        </div>
-        
-        <div className="space-y-2">
-          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
-            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
-              <span className="text-xs">✓</span>
-            </span>
-            <span className="text-sm dark:text-gray-300">Obtain enterprise-signed acceptance form</span>
-          </div>
-          
-          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
-            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
-              <span className="text-xs">✓</span>
-            </span>
-            <span className="text-sm dark:text-gray-300">Confirm all configurations and training completed</span>
-          </div>
-          
-          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
-            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
-              <span className="text-xs">✓</span>
-            </span>
-            <span className="text-sm dark:text-gray-300">Provide warranty information and support contact details</span>
-          </div>
-          
-          <div className="flex items-center p-2 bg-slate-50 dark:bg-slate-800/80 rounded">
-            <span className="w-6 h-6 inline-flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-800/60 text-emerald-600 dark:text-emerald-300 mr-2">
-              <span className="text-xs">✓</span>
-            </span>
-            <span className="text-sm dark:text-gray-300">Schedule first remote check and follow-up visit</span>
-          </div>
-        </div>
-        
-        <div className="mt-3 p-2 bg-emerald-50 dark:bg-emerald-900/20 rounded-md text-xs text-emerald-800 dark:text-emerald-300">
-          It is recommended to use a standardized delivery checklist to ensure no items are missed
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-### 5. After-sales Support
-
-<div className="mb-8 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-950/30 dark:to-indigo-950/30 rounded-lg border border-purple-100 dark:border-purple-700 overflow-hidden">
-  <div className="p-6">
-    <h4 className="text-lg font-bold mb-5 text-center dark:text-white">Comprehensive After-sales Support System</h4>
-    
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border-l-4 border-blue-400 flex flex-col">
-        <div className="flex items-center mb-3">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">💻</span>
-          </div>
-          <h5 className="text-lg font-semibold">Remote Support Services</h5>
-        </div>
-        
-        <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
-          <li>Regular device health status checks</li>
-          <li>Remote troubleshooting and resolution</li>
-          <li>24/7 emergency technical support</li>
-        </ul>
-        
-        <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-center text-blue-600">
-          Standard service includes 12 months of remote support
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border-l-4 border-purple-400 flex flex-col">
-        <div className="flex items-center mb-3">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">🔄</span>
-          </div>
-          <h5 className="text-lg font-semibold">Updates and Maintenance</h5>
-        </div>
-        
-        <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
-          <li>Regular model updates and adaptations</li>
-          <li>Firmware update assistance</li>
-          <li>System performance optimization</li>
-          <li>Resource usage efficiency recommendations</li>
-        </ul>
-        
-        <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-center text-purple-600">
-          Recommended quarterly comprehensive system check
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border-l-4 border-green-400 flex flex-col">
-        <div className="flex items-center mb-3">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-3" style={{ minWidth: '2.5rem' }}>
-            <span className="text-xl">🚀</span>
-          </div>
-          <h5 className="text-lg font-semibold">Extended Services</h5>
-        </div>
-        
-        <ul className="list-disc pl-5 text-sm space-y-2 text-slate-700 flex-grow">
-          <li>Model customization and optimization</li>
-          <li>Enterprise-specific application development</li>
-          <li>Data integration and analysis services</li>
-          <li>On-site technical support</li>
-        </ul>
-        
-        <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-center text-green-600">
-          Additional value-added services available on demand
-        </div>
-      </div>
-    </div>
-    
-    <div className="mt-6 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-indigo-100">
-      <div className="flex items-start">
-        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900 text-amber-600 dark:text-amber-300 mr-3 mt-1" style={{ minWidth: '2.5rem' }}>
-          <span className="text-lg">📋</span>
-        </div>
-        <div>
-          <h5 className="font-semibold text-sm mb-2">Service Level Agreement (SLA)</h5>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mt-2">
-            <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-              <div className="font-medium text-blue-700 dark:text-blue-300">Standard Response</div>
-              <div className="mt-1 dark:text-gray-300">4-hour response during business hours</div>
-            </div>
-            <div className="p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg">
-              <div className="font-medium text-indigo-700 dark:text-indigo-300">Premium Response</div>
-              <div className="mt-1 dark:text-gray-300">2-hour response during business hours</div>
-            </div>
-            <div className="p-2 bg-violet-50 dark:bg-violet-900/20 rounded-lg">
-              <div className="font-medium text-violet-700 dark:text-violet-300">Emergency Response</div>
-              <div className="mt-1 dark:text-gray-300">30-minute response 24/7</div>
-            </div>
-          </div>
-          <p className="text-xs text-slate-600 mt-3">
-            Flexible SLA options available, customizable based on enterprise requirements. All SLA commitments are backed by service quality guarantees with compensation for unmet standards.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 ## Frequently Asked Questions
 
-<div className="mb-8 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/50 dark:to-gray-900/50 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
-  <div className="p-6">
-    <div className="mb-6 text-center">
-      <h3 className="text-xl font-bold mb-2 dark:text-white">Answering Customer Questions</h3>
-      <p className="text-sm text-slate-600 dark:text-slate-400">Below are the most frequently asked questions and their answers to help you efficiently advance the sales process</p>
-    </div>
-    
-    <div className="grid grid-cols-1 gap-6">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-100 dark:border-blue-800">
-        <h4 className="text-lg font-bold mb-3 text-blue-800 dark:text-blue-300">About the Device</h4>
-        
-        <div className="space-y-4">
-          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">Does RM-01 require continuous internet connection?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">No. RM-01 is designed to operate completely offline.</div>
-            </div>
-          </div>
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">What is RM-01's power consumption?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">RM-01 has a maximum power consumption of 100W, with a TDP of 60W, saving 98.6% energy compared to traditional AI (single A100) servers. Annual electricity cost for 24/7 operation is approximately $480.</div>
-            </div>
-          </div>
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">What model sizes does RM-01 support?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">RM-01 supports models ranging from 0.5B to 235B (GPTQ Int4) parameters, covering mainstream open-source models.</div>
-            </div>
-          </div>
-          
-          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">Does the device require professional IT staff for maintenance?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">No. RM-01 features zero-maintenance design, allowing regular users to easily use and manage it after basic training.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-purple-100 dark:border-purple-800">
-        <h4 className="text-lg font-bold mb-3 text-purple-800 dark:text-purple-300">About Software and Applications</h4>
-        
-        <div className="space-y-4">
-          <div className="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">How to add new models to RM-01?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">Store model files on the CFexpress storage card at specified directory, insert it into the device, and the system will automatically recognize and load the models.</div>
-            </div>
-          </div>
-          
-          <div className="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">How is enterprise data kept confidential?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">RM-01 uses hardware-level asymmetric encryption, with all data processed locally and never uploaded to the cloud, ensuring absolute enterprise data security.</div>
-            </div>
-          </div>
-          
-          <div className="bg-purple-50 dark:bg-purple-900/30 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">Do application development require special skills?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">Developers familiar with Docker and Dify development technologies can quickly develop applications for RM-01. RMinte provides complete developer documentation and SDK.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800/90 rounded-lg shadow-sm p-5 border border-pink-100 dark:border-pink-800/60">
-        <h4 className="text-lg font-bold mb-3 text-pink-800 dark:text-pink-300">About Business Models</h4>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">How can application developers profit from RM-01?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">Developers can build applications on any platform and deploy them on the RMinte platform, ultimately generating revenue by providing 'Software + Hardware' solutions to end customers.</div>
-            </div>
-          </div>
-          
-          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">How do enterprises evaluate RM-01's ROI?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">Compared to traditional AI deployment, RM-01 saves 80% in initial investment, reduces operational costs by 98%, and achieves 99% total cost of ownership savings over 3 years.</div>
-            </div>
-          </div>
-          
-          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">Are there rental or subscription models available?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">Yes, developers or service providers can offer device rental and DaaS (Device as a Service) subscription models to reduce enterprise initial investment.</div>
-            </div>
-          </div>
-          
-          <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
-            <div className="flex items-start">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-800/60 text-pink-600 dark:text-pink-300 mr-2 mt-0.5">
-                <span className="text-xs">Q</span>
-              </div>
-              <div className="font-bold text-sm dark:text-white">Is there a trial service available?</div>
-            </div>
-            <div className="flex items-start mt-2">
-              <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-800/60 text-green-600 dark:text-green-300 mr-2 mt-0.5">
-                <span className="text-xs">A</span>
-              </div>
-              <div className="text-sm dark:text-gray-300">Yes, we offer a 7-day free trial service for enterprise customers, with professional technical staff providing on-site support.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<Accordions type="multiple">
+  <Accordion title="Does RM-01 require continuous internet connection?">
+    No. RM-01 is designed to operate completely offline, ensuring enterprise data never leaves the local environment.
+  </Accordion>
+  <Accordion title="What is RM-01's power consumption?">
+    RM-01 has a maximum power consumption of 100W, with a TDP of 60W, saving 98.6% energy compared to traditional AI (single A100) servers. Annual electricity cost for 24/7 operation is approximately $480.
+  </Accordion>
+  <Accordion title="What model sizes does RM-01 support?">
+    RM-01 supports models ranging from 0.5B to 235B (GPTQ Int4) parameters, covering mainstream open-source models including DeepSeek, Zhipu, Qwen, and many others.
+  </Accordion>
+  <Accordion title="Does the device require professional IT staff for maintenance?">
+    No. RM-01 features zero-maintenance design, allowing regular users to easily use and manage it after basic training provided during deployment.
+  </Accordion>
+  <Accordion title="How to add new models to RM-01?">
+    Store model files on the CFexpress storage card at the specified directory, insert it into the device, and the system will automatically recognize and load the models.
+  </Accordion>
+  <Accordion title="How is enterprise data kept confidential?">
+    RM-01 uses hardware-level asymmetric encryption, with all data processed locally and never uploaded to the cloud, ensuring absolute enterprise data security.
+  </Accordion>
+  <Accordion title="Do application development require special skills?">
+    Developers familiar with Docker and Dify development technologies can quickly develop applications for RM-01. RMinte provides complete developer documentation and SDK support.
+  </Accordion>
+  <Accordion title="How can application developers profit from RM-01?">
+    Developers can build applications on any platform and deploy them on the RMinte platform, ultimately generating revenue by providing 'Software + Hardware' solutions to end customers.
+  </Accordion>
+  <Accordion title="How do enterprises evaluate RM-01's ROI?">
+    Compared to traditional AI deployment, RM-01 saves 80% in initial investment, reduces operational costs by 98%, and achieves 99% total cost of ownership savings over 3 years.
+  </Accordion>
+  <Accordion title="Are there rental or subscription models available?">
+    Yes, developers or service providers can offer device rental and DaaS (Device as a Service) subscription models to reduce enterprise initial investment barriers.
+  </Accordion>
+  <Accordion title="Is there a trial service available?">
+    Yes, we offer a 7-day free trial service for enterprise customers, with professional technical staff providing on-site support during the evaluation period.
+  </Accordion>
+</Accordions>
 
 ## Technical Support
 
-<div className="mb-8 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 rounded-lg border border-blue-100 dark:border-blue-700 overflow-hidden">
-  <div className="p-6">
-    <h3 className="text-xl font-bold mb-5 text-center dark:text-white">Multi-channel Professional Support</h3>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-blue-200 dark:border-blue-700">
-        <h4 className="text-lg font-semibold mb-4 text-center text-blue-800 dark:text-blue-300">Contact Information</h4>
-        
-        <div className="space-y-4">
-          <div className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-            <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-4">
-              <span className="text-2xl">📞</span>
-            </div>
-            <div>
-              <div className="font-medium dark:text-white">Technical Support Hotline</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300">158-8200-8185</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Business Hours: Monday to Friday 9:00-21:00</div>
-            </div>
-          </div>
-          
-          <div className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-            <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-4">
-              <span className="text-2xl">📧</span>
-            </div>
-            <div>
-              <div className="font-medium dark:text-white">Email</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300">support@rminte.com</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">24-hour response</div>
-            </div>
-          </div>
-          
-          <div className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-            <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mr-4">
-              <span className="text-2xl">💬</span>
-            </div>
-            <div>
-              <div className="font-medium dark:text-white">Online Support</div>
-              <div className="text-sm text-blue-700 dark:text-blue-300">rminte.com</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Real-time online customer service, second-level response during business hours</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-cyan-200 dark:border-cyan-700">
-        <h4 className="text-lg font-semibold mb-4 text-center text-cyan-800 dark:text-cyan-300">Support Process</h4>
-        
-        <div className="flex flex-col space-y-4">
-          <div className="flex">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
-              <span className="font-semibold">1</span>
-            </div>
-            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
-              <div className="font-medium text-sm dark:text-white">Submit Support Request</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Submit support request via phone, email, or online customer service</div>
-            </div>
-          </div>
-          
-          <div className="flex">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
-              <span className="font-semibold">2</span>
-            </div>
-            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
-              <div className="font-medium text-sm dark:text-white">Confirmation and Classification</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Technical support team confirms the issue and prioritizes it</div>
-            </div>
-          </div>
-          
-          <div className="flex">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
-              <span className="font-semibold">3</span>
-            </div>
-            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
-              <div className="font-medium text-sm dark:text-white">Remote or On-site Support</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Provide remote diagnosis or arrange on-site support based on issue nature</div>
-            </div>
-          </div>
-          
-          <div className="flex">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 mr-2">
-              <span className="font-semibold">4</span>
-            </div>
-            <div className="bg-cyan-50 dark:bg-cyan-900/30 rounded-lg p-3 flex-grow">
-              <div className="font-medium text-sm dark:text-white">Issue Resolution and Confirmation</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Confirm with customer after resolution and document the solution</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm border border-blue-100 dark:border-blue-700">
-      <h4 className="text-lg font-semibold mb-4 text-center dark:text-white">Resources and Documentation</h4>
-      
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
-          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 mb-3">
-            <span className="text-2xl">📚</span>
-          </div>
-          <div className="font-medium text-sm mb-1 dark:text-white">Product Documentation</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">Detailed technical documentation and guides</div>
-          <div className="mt-2">
-            <a href="https://rminte-docs-site.vercel.app/" className="text-xs text-blue-600 dark:text-blue-300 font-medium">docs.rminte.com</a>
-          </div>
-        </div>
-        
-        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 justify-center text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
-          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 mb-3">
-            <span className="text-2xl">👨‍💻</span>
-          </div>
-          <div className="font-medium text-sm mb-1 dark:text-white">Developer Community</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">Technical exchange and best practices</div>
-        </div>
-        
-        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
-          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 mb-3">
-            <span className="text-2xl">🛒</span>
-          </div>
-          <div className="font-medium text-sm mb-1 dark:text-white">Application Marketplace</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">Discover and connect with professional applications (teams)</div>
-        </div>
-        
-        <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 justify-center text-center border border-gray-100 dark:border-gray-600/40 transition-all hover:border-blue-200 dark:hover:border-blue-700/60 hover:shadow-sm">
-          <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300 mb-3">
-            <span className="text-2xl">🎓</span>
-          </div>
-          <div className="font-medium text-sm mb-1 dark:text-white">Tutorials and Videos</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">Learning and training resources</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+### Contact Information
 
-<div className="my-8 text-center">
-  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
-</div>
+**Technical Support Hotline**  
+📞 158-8200-8185  
+Business Hours: Monday to Friday 9:00-21:00
+
+**Email Support**  
+📧 support@rminte.com  
+24-hour response guarantee
+
+**Online Support**  
+💬 rminte.com  
+Real-time online customer service, second-level response during business hours
+
+### Support Process
+
+1. **Submit Support Request** - Submit support request via phone, email, or online customer service
+2. **Confirmation and Classification** - Technical support team confirms the issue and prioritizes it
+3. **Remote or On-site Support** - Provide remote diagnosis or arrange on-site support based on issue nature
+4. **Issue Resolution and Confirmation** - Confirm with customer after resolution and document the solution
+
+### Resources and Documentation
+
+<Cards>
+  <Card title="📚 Product Documentation" href="https://rminte-docs-site.vercel.app/">
+    Detailed technical documentation and guides
+  </Card>
+  <Card title="👨‍💻 Developer Community">
+    Technical exchange and best practices sharing
+  </Card>
+  <Card title="🛒 Application Marketplace">
+    Discover and connect with professional applications
+  </Card>
+  <Card title="🎓 Tutorials and Videos">
+    Learning and training resources for all skill levels
+  </Card>
+</Cards>
+
+---
 
 <div className="text-sm text-gray-500 mt-8">
   © 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved.

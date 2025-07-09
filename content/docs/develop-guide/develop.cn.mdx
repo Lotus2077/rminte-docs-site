@@ -1,175 +1,175 @@
 ---
 title: 系统架构说明
 icon: LaptopMinimal
+description: 为应用开发商提供全面的技术参考，详细说明三部分系统架构及其配置要求
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout'
 import { Card, Cards } from 'fumadocs-ui/components/card'
 import { Step, Steps } from 'fumadocs-ui/components/steps'
 import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+import { Files, File, Folder } from 'fumadocs-ui/components/files'
 
-<Callout type="info">
+<Callout>
   本文档详细说明了系统的三部分架构及其关键组件，为应用开发商提供全面的技术参考。系统由计算单元、应用单元和硬件控制单元组成，每个单元都有其特定的功能和配置要求。
 </Callout>
 
 ## 系统架构概览
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-  <Card title="计算单元" icon="🧠">
-    <div className="p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg mb-2">
-      <div className="font-bold text-sm text-blue-800 dark:text-blue-300">核心功能</div>
-      <div className="text-sm dark:text-gray-300">负责运行推理框架和模型，提供计算服务</div>
-    </div>
-    <ul className="list-disc pl-5 text-sm dark:text-gray-300">
-      <li>IP地址：10.10.99.98</li>
-      <li>端口范围：58000~58999</li>
-      <li>支持多种推理框架</li>
-      <li>灵活的模型存储方案</li>
-    </ul>
+RM-01 系统架构由三个专门的单元组成，它们协同工作提供完整的 AI 计算平台：
+
+<Cards>
+  <Card title="🧠 计算单元">
+    负责运行推理框架和模型，提供计算服务。IP地址：10.10.99.98，端口范围：58000~58999，支持多种推理框架和灵活的模型存储方案。
   </Card>
-  
-  <Card title="应用单元" icon="🖥️">
-    <div className="p-3 bg-purple-50 dark:bg-purple-900/30 rounded-lg mb-2">
-      <div className="font-bold text-sm text-purple-800 dark:text-purple-300">核心功能</div>
-      <div className="text-sm dark:text-gray-300">运行用户应用和系统平台，提供应用服务</div>
-    </div>
-    <ul className="list-disc pl-5 text-sm dark:text-gray-300">
-      <li>IP地址：10.10.99.99</li>
-      <li>端口范围：59000~59299</li>
-      <li>支持多种应用部署</li>
-      <li>高效的应用管理</li>
-    </ul>
+  <Card title="🖥️ 应用单元">
+    运行用户应用和系统平台，提供应用服务。IP地址：10.10.99.99，端口范围：59000~59299，支持多种应用部署和高效的应用管理。
   </Card>
-  
-  <Card title="硬件控制单元" icon="🔒">
-    <div className="p-3 bg-green-50 dark:bg-green-900/30 rounded-lg mb-2">
-      <div className="font-bold text-sm text-green-800 dark:text-green-300">核心功能</div>
-      <div className="text-sm dark:text-gray-300">提供硬件监控及相关配置</div>
-    </div>
-    <ul className="list-disc pl-5 text-sm dark:text-gray-300">
-      <li>IP地址：10.10.99.97</li>
-      <li>硬件监控服务：端口80</li>
-      <li>支持矩阵显示配置</li>
-      <li>实时硬件状态监测</li>
-    </ul>
+  <Card title="🔒 硬件控制单元">
+    提供硬件监控及相关配置。IP地址：10.10.99.97，硬件监控服务端口80，支持矩阵显示配置和实时硬件状态监测。
   </Card>
-</div>
+</Cards>
 
 ## 详细配置说明
 
 ### 1. 计算单元
 
-<Callout type="tip">
-  计算单元是系统的核心处理单元，负责运行各种AI模型和推理框架
+<Callout title="计算单元">
+  计算单元是系统的核心处理单元，负责运行各种AI模型和推理框架。它配置了专门的端口范围和存储结构，以确保高效的模型管理和推理服务。
 </Callout>
 
 #### 推理框架配置
+
+计算单元支持多个推理框架，具有专门的端口分配：
+
 - **vLLM推理框架**
   - 大语言模型（LLM）服务
   - 端口：58000
+  - 用途：高性能LLM推理
+
 - **TEI Embedding模型**
   - 端口：58080
+  - 用途：文本嵌入生成
+
 - **TEI Reranker模型**
   - 端口：58081
+  - 用途：文档排序和检索
 
 #### 存储路径配置
-<Tabs items={['手动配置模型存储', '自动拉起模型存储']}>
-  <Tab>
-    ```
-    ~/cfe/model/
-    ├── llm/          # 大语言模型
-    ├── embedding/    # Embedding模型
-    └── reranker/     # Reranker模型
-    ```
-  </Tab>
-  <Tab>
-    ```
-    ~/cfe/autoModel/
-    ├── llm/          # 大语言模型
-    ├── embedding/    # Embedding模型
-    └── reranker/     # Reranker模型
-    ```
-  </Tab>
-</Tabs>
+
+计算单元使用两个主要存储位置进行模型管理：
+
+<Files>
+  <Folder name="cfe" defaultOpen>
+    <Folder name="model">
+      <File name="llm/" />
+      <File name="embedding/" />
+      <File name="reranker/" />
+    </Folder>
+    <Folder name="autoModel">
+      <File name="llm/" />
+      <File name="embedding/" />
+      <File name="reranker/" />
+    </Folder>
+  </Folder>
+</Files>
+
+**手动配置模型存储** (`~/cfe/model/`) - 手动管理的模型存储位置
+**自动拉起模型存储** (`~/cfe/autoModel/`) - 系统自动启动的模型存储位置
 
 #### 自动拉起配置
-- 路径：`~/cfe/autorun.sh`
-- 说明：非加密自动拉起脚本，用户可编辑，用于指定默认自动启动的模型脚本
+
+- **路径**：`~/cfe/autorun.sh`
+- **说明**：非加密自动拉起脚本，用户可编辑，用于指定默认自动启动的模型脚本
 
 ### 2. 应用单元
 
-<Callout type="tip">
-  应用单元负责运行和管理各类应用服务，提供灵活的应用部署方案
+<Callout title="应用单元">
+  应用单元负责运行和管理各类应用服务，提供灵活的应用部署方案。它托管包括Nginx、Dify和Altai在内的多个关键服务。
 </Callout>
 
 #### 服务配置
+
 - **Nginx**
   - 用户应用服务
   - 端口：80
+  - 用途：Web服务器和反向代理
+
 - **系统平台**
-  - Dify：端口59080
-  - Altai（本地部署版本）：端口59299
+  - Dify：端口59080 - AI应用开发平台
+  - Altai（本地部署版本）：端口59299 - 本地AI管理界面
 
 #### 存储路径配置
-<Tabs items={['导入应用存储', '运行应用存储']}>
-  <Tab>
+
+<Tabs items={["导入应用存储","运行应用存储"]}>
+  <Tab value="导入应用存储">
     ```
-    ~/cfe/app/    # 导入非加密应用的存储位置
-    ```
+~/cfe/app/    # 导入非加密应用的存储位置
+```
   </Tab>
-  <Tab>
+  <Tab value="运行应用存储">
     ```
-    ~/app/        # 运行应用的存储位置（位于应用单元的NVMe硬盘）
-    ```
+~/app/        # 运行应用的存储位置（位于应用单元的NVMe硬盘）
+```
   </Tab>
 </Tabs>
 
 ### 3. 硬件控制单元
 
-<Callout type="tip">
-  硬件控制单元提供全面的硬件监控和配置功能，确保系统稳定运行
+<Callout title="硬件控制单元">
+  硬件控制单元提供全面的硬件监控和配置功能，确保系统稳定运行。它允许用户自定义监控界面和矩阵显示配置。
 </Callout>
 
 #### 存储路径配置
+
 - **硬件监控前端**
   - 路径：`/sdcard/web`
   - 说明：用户可自行修改硬件监控的前端界面
+
 - **矩阵显示Logo配置**
   - 路径：`/sdcard/matrix.json`
   - 说明：用于配置矩阵显示的Logo
+
+## 网络架构
+
+三个单元通过私有网络通信，配置如下：
+
+```text title="网络架构配置"
+计算单元:      10.10.99.98 (端口: 58000-58999)
+应用单元:      10.10.99.99 (端口: 59000-59299)
+硬件控制:      10.10.99.97 (端口: 80)
+```
 
 ## 注意事项
 
 <Steps>
   <Step>
     ### 端口管理
-    各单元的端口范围已明确划分，开发时请确保端口不冲突
+
+    各单元的端口范围已明确划分，开发时请确保端口不冲突。计算单元使用58000~58999端口范围，应用单元使用59000~59299端口范围，硬件控制单元使用端口80。
   </Step>
-  
   <Step>
     ### 存储路径
-    请严格按照指定路径存储模型和应用，确保系统自动识别和运行
+
+    请严格按照指定路径存储模型和应用，确保系统自动识别和运行。使用指定的模型和应用目录，维护正确的目录结构，遵循命名约定。
   </Step>
-  
   <Step>
     ### 用户可编辑内容
-    - 计算单元的`~/cfe/autorun.sh`脚本可由用户自定义
-    - 硬件控制单元的`/sdcard/web`前端界面支持用户修改
+
+    某些配置文件可由用户自定义。计算单元的`~/cfe/autorun.sh`脚本可自定义，硬件控制单元的`/sdcard/web`前端界面支持修改，矩阵显示的`/sdcard/matrix.json`用于Logo配置。
   </Step>
-  
   <Step>
     ### 安全性考虑
-    所有导入的应用和脚本均为非加密格式，请确保安全性
+
+    所有导入的应用和脚本均为非加密格式，请确保适当的安全措施。验证所有导入的应用，实施访问控制，监控系统资源，定期安全审计。
   </Step>
 </Steps>
 
-<Callout type="warning">
-  如需进一步技术支持或详细配置指南，请联系系统管理员
+<Callout type="warn">
+  如需进一步技术支持或详细配置指南，请联系系统管理员。在修改任何系统配置之前，建议创建备份以防止数据丢失。
 </Callout>
 
-<div className="my-8 text-center">
-  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
-</div>
+---
 
 <div className="text-sm text-gray-500 mt-8">
   © 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. 保留所有权利。

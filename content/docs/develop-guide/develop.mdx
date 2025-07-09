@@ -1,124 +1,124 @@
 ---
 title: System Architecture
 icon: LaptopMinimal
+description: Comprehensive technical reference for application developers detailing the three-part system architecture and configuration requirements
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout'
 import { Card, Cards } from 'fumadocs-ui/components/card'
 import { Step, Steps } from 'fumadocs-ui/components/steps'
 import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+import { Files, Folder, File } from 'fumadocs-ui/components/files'
 
-<Callout type="info">
+<Callout>
   This document provides a comprehensive technical reference for application developers, detailing the three-part system architecture and its key components. The system consists of a Computing Unit, Application Unit, and Hardware Control Unit, each with specific functions and configuration requirements.
 </Callout>
 
 ## System Architecture Overview
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-  <Card title="Computing Unit" icon="🧠">
-    <div className="p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg mb-2">
-      <div className="font-bold text-sm text-blue-800 dark:text-blue-300">Core Function</div>
-      <div className="text-sm dark:text-gray-300">Runs inference frameworks and models, provides computing services</div>
-    </div>
-    <ul className="list-disc pl-5 text-sm dark:text-gray-300">
-      <li>IP Address: 10.10.99.98</li>
-      <li>Port Range: 58000~58999</li>
-      <li>Multiple inference frameworks</li>
-      <li>Flexible model storage solutions</li>
-    </ul>
+The RM-01 system architecture consists of three specialized units that work together to provide a complete AI computing platform:
+
+<Cards>
+  <Card title="🧠 Computing Unit">
+    Core processing unit for AI models and inference frameworks • IP: 10.10.99.98 • Ports: 58000~58999
   </Card>
-  
-  <Card title="Application Unit" icon="🖥️">
-    <div className="p-3 bg-purple-50 dark:bg-purple-900/30 rounded-lg mb-2">
-      <div className="font-bold text-sm text-purple-800 dark:text-purple-300">Core Function</div>
-      <div className="text-sm dark:text-gray-300">Runs user applications and system platforms, provides application services</div>
-    </div>
-    <ul className="list-disc pl-5 text-sm dark:text-gray-300">
-      <li>IP Address: 10.10.99.99</li>
-      <li>Port Range: 59000~59299</li>
-      <li>Multiple application deployments</li>
-      <li>Efficient application management</li>
-    </ul>
+  <Card title="🖥️ Application Unit">
+    Application services and platform management • IP: 10.10.99.99 • Ports: 59000~59299
   </Card>
-  
-  <Card title="Hardware Control Unit" icon="🔒">
-    <div className="p-3 bg-green-50 dark:bg-green-900/30 rounded-lg mb-2">
-      <div className="font-bold text-sm text-green-800 dark:text-green-300">Core Function</div>
-      <div className="text-sm dark:text-gray-300">Provides hardware monitoring and configuration</div>
-    </div>
-    <ul className="list-disc pl-5 text-sm dark:text-gray-300">
-      <li>IP Address: 10.10.99.97</li>
-      <li>Hardware monitoring service: Port 80</li>
-      <li>Matrix display configuration</li>
-      <li>Real-time hardware status monitoring</li>
-    </ul>
+  <Card title="🔒 Hardware Control Unit">
+    Hardware monitoring and configuration services • IP: 10.10.99.97 • Port: 80
   </Card>
-</div>
+</Cards>
 
 ## Detailed Configuration Guide
 
 ### 1. Computing Unit
 
-<Callout type="tip">
-  The Computing Unit is the core processing unit of the system, responsible for running various AI models and inference frameworks
+<Callout title="Computing Unit">
+  The Computing Unit is the core processing unit of the system, responsible for running various AI models and inference frameworks.
 </Callout>
 
 #### Inference Framework Configuration
+
+The Computing Unit supports multiple inference frameworks with dedicated port assignments:
+
 - **vLLM Inference Framework**
-  - Large Language Model (LLM) Service
-  - Port: 58000
+  - Service: Large Language Model (LLM) Service
+  - Port: `58000`
+  - Purpose: High-performance LLM inference
+
 - **TEI Embedding Model**
-  - Port: 58080
+  - Port: `58080`
+  - Purpose: Text embeddings generation
+
 - **TEI Reranker Model**
-  - Port: 58081
+  - Port: `58081`
+  - Purpose: Document ranking and retrieval
 
 #### Storage Path Configuration
-<Tabs items={['Manual Model Storage', 'Auto-launch Model Storage']}>
-  <Tab>
-    ```
-    ~/cfe/model/
-    ├── llm/          # Large Language Models
-    ├── embedding/    # Embedding Models
-    └── reranker/     # Reranker Models
-    ```
-  </Tab>
-  <Tab>
-    ```
-    ~/cfe/autoModel/
-    ├── llm/          # Large Language Models
-    ├── embedding/    # Embedding Models
-    └── reranker/     # Reranker Models
-    ```
-  </Tab>
-</Tabs>
+
+The Computing Unit uses two main storage locations for models:
+
+**Manual Model Storage**: `~/cfe/model/` - For manually managed models
+**Auto-launch Model Storage**: `~/cfe/autoModel/` - For automatically launched models
+
+<Files>
+  <Folder name="cfe" defaultOpen>
+    <Folder name="model" defaultOpen>
+      <File name="llm/" />
+      <File name="embedding/" />
+      <File name="reranker/" />
+    </Folder>
+    <Folder name="autoModel">
+      <File name="llm/" />
+      <File name="embedding/" />
+      <File name="reranker/" />
+    </Folder>
+  </Folder>
+</Files>
 
 #### Auto-launch Configuration
-- Path: `~/cfe/autorun.sh`
-- Description: Non-encrypted auto-launch script, user-editable, used to specify default auto-start model scripts
+
+- **Path**: `~/cfe/autorun.sh`
+- **Type**: Non-encrypted shell script
+- **Permissions**: User-editable
+- **Purpose**: Specify default auto-start model scripts
+
+```bash title="~/cfe/autorun.sh"
+#!/bin/bash
+# Auto-launch configuration script
+# Customize this script to define your default model startup sequence
+```
 
 ### 2. Application Unit
 
-<Callout type="tip">
-  The Application Unit is responsible for running and managing various application services, providing flexible application deployment solutions
+<Callout title="Application Unit">
+  The Application Unit is responsible for running and managing various application services, providing flexible application deployment solutions.
 </Callout>
 
 #### Service Configuration
+
+The Application Unit hosts multiple services with specific port assignments:
+
 - **Nginx**
-  - User application service
-  - Port: 80
-- **System Platforms**
-  - Dify: Port 59080
-  - Altai (Local Deployment Version): Port 59299
+  - Service: User application service
+  - Port: `80`
+  - Purpose: Web server and reverse proxy
+
+- **System Platforms**:
+  - **Dify**: Port `59080` - AI application development platform
+  - **Altai (Local Deployment)**: Port `59299` - Local AI management interface
 
 #### Storage Path Configuration
-<Tabs items={['Import Application Storage', 'Runtime Application Storage']}>
-  <Tab>
-    ```
+
+<Tabs items={["Import Application Storage","Runtime Application Storage"]}>
+  <Tab value="Import Application Storage">
+    ```bash title="Import Application Storage"
     ~/cfe/app/    # Storage location for imported non-encrypted applications
     ```
   </Tab>
-  <Tab>
-    ```
+  <Tab value="Runtime Application Storage">
+    ```bash title="Runtime Application Storage"
     ~/app/        # Runtime application storage (located on Application Unit's NVMe SSD)
     ```
   </Tab>
@@ -126,50 +126,143 @@ import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
 
 ### 3. Hardware Control Unit
 
-<Callout type="tip">
-  The Hardware Control Unit provides comprehensive hardware monitoring and configuration capabilities, ensuring stable system operation
+<Callout title="Hardware Control Unit">
+  The Hardware Control Unit provides comprehensive hardware monitoring and configuration capabilities, ensuring stable system operation.
 </Callout>
 
-#### Storage Path Configuration
-- **Hardware Monitoring Frontend**
-  - Path: `/sdcard/web`
-  - Description: User-modifiable hardware monitoring frontend interface
-- **Matrix Display Logo Configuration**
-  - Path: `/sdcard/matrix.json`
-  - Description: Used for configuring matrix display logos
+#### Service Configuration
 
-## Important Notes
+- **Hardware Monitoring Service**
+  - Port: `80`
+  - Purpose: Real-time hardware status monitoring
+  - Interface: Web-based dashboard
+
+#### Storage Path Configuration
+
+**Hardware Monitoring Frontend**
+- **Path**: `/sdcard/web`
+- **Type**: User-modifiable frontend interface
+- **Purpose**: Customize hardware monitoring dashboard
+
+```bash title="Hardware Monitoring Frontend"
+/sdcard/web/
+├── index.html        # Main dashboard page
+├── css/             # Stylesheets
+├── js/              # JavaScript files
+└── assets/          # Images and resources
+```
+
+**Matrix Display Logo Configuration**
+- **Path**: `/sdcard/matrix.json`
+- **Type**: JSON configuration file
+- **Purpose**: Configure matrix display logos and animations
+
+```json title="/sdcard/matrix.json"
+{
+  "logo": {
+    "enabled": true,
+    "path": "/assets/logo.png",
+    "animation": "fade"
+  }
+}
+```
+
+## Network Architecture
+
+The three units communicate through a private network with the following configuration:
+
+```bash title="Network Configuration"
+Computing Unit:      10.10.99.98 (Ports: 58000-58999)
+Application Unit:    10.10.99.99 (Ports: 59000-59299)
+Hardware Control:    10.10.99.97 (Port: 80)
+```
+
+## Important Configuration Notes
 
 <Steps>
   <Step>
     ### Port Management
-    Port ranges are clearly defined for each unit. Ensure no port conflicts during development
+
+    Port ranges are clearly defined for each unit. Ensure no port conflicts during development.
+
+    - **Computing Unit**: 58000~58999
+    - **Application Unit**: 59000~59299
+    - **Hardware Control Unit**: Port 80
   </Step>
-  
   <Step>
     ### Storage Paths
-    Strictly follow the specified paths for model and application storage to ensure automatic system recognition and operation
+
+    Strictly follow the specified paths for model and application storage to ensure automatic system recognition and operation.
+
+    - Use designated directories for models and applications
+    - Maintain proper directory structure
+    - Follow naming conventions
   </Step>
-  
   <Step>
     ### User-editable Content
-    - Computing Unit's `~/cfe/autorun.sh` script can be customized by users
-    - Hardware Control Unit's `/sdcard/web` frontend interface supports user modifications
+
+    Certain configuration files can be customized by users:
+
+    - **Computing Unit**: `~/cfe/autorun.sh` script can be customized
+    - **Hardware Control Unit**: `/sdcard/web` frontend interface supports modifications
+    - **Matrix Display**: `/sdcard/matrix.json` for logo configuration
   </Step>
-  
   <Step>
     ### Security Considerations
-    All imported applications and scripts are in non-encrypted format. Ensure proper security measures
+
+    All imported applications and scripts are in non-encrypted format. Ensure proper security measures:
+
+    - Validate all imported applications
+    - Implement access controls
+    - Monitor system resources
+    - Regular security audits
   </Step>
 </Steps>
 
-<Callout type="warning">
-  For additional technical support or detailed configuration guidance, please contact the system administrator
+## Development Best Practices
+
+### Model Deployment
+
+1. **Prepare Models**: Ensure models are in the correct format for the target framework
+2. **Storage Location**: Place models in the appropriate directory structure
+3. **Configuration**: Update auto-launch scripts if needed
+4. **Testing**: Verify model loading and inference functionality
+
+### Application Development
+
+1. **Port Assignment**: Use designated port ranges for your applications
+2. **Storage Management**: Organize applications in the proper directories
+3. **Resource Monitoring**: Monitor system resources during development
+4. **Documentation**: Document custom configurations and dependencies
+
+### Hardware Integration
+
+1. **Monitoring Setup**: Configure hardware monitoring for your applications
+2. **Display Configuration**: Customize matrix display for branding
+3. **Performance Optimization**: Optimize for the specific hardware platform
+
+<Callout title="Technical Support" type="warn">
+  For additional technical support or detailed configuration guidance, please contact the system administrator or refer to the developer documentation.
 </Callout>
 
-<div className="my-8 text-center">
-  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
-</div>
+## Next Steps
+
+<Cards>
+  <Card title="🚀 Quick Start Guide" href="/docs/quick-start">
+    Get started with basic development setup
+  </Card>
+  <Card title="📚 API Documentation" href="/docs/api">
+    Explore available APIs and endpoints
+  </Card>
+  <Card title="🔧 Configuration Examples" href="/docs/examples">
+    View practical configuration examples
+  </Card>
+  <Card title="🛠️ Development Tools" href="/docs/tools">
+    Access development tools and utilities
+  </Card>
+</Cards>
+
+---
 
 <div className="text-sm text-gray-500 mt-8">
   © 2025 Panidea (Chengdu) Artificial Intelligence Technology Co., Ltd. All rights reserved.
